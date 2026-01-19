@@ -78,7 +78,7 @@ Este proyecto fue desarrollado por el equipo **Bugbusters** como parte del Proye
 | **Hageo Balam** |  /  | [@user](https://github.com/) |
 | **Gabriel Flores** |   | [@user](https://github.com/) |
 | **Emmanuel Montiel** |  / | [@user](https://github.com/) |
-| **José Evelio** | / | [@user](https://github.com/) |
+| **José Evelio** | / | [@josesnowdev]([https://github.com/](https://github.com/josesnowdev)) | 
 | **Mariana Carmona** | / | [@user](https://github.com/) |
 | **Andrea Meneses** |  / | [@user](https://github.com/) |
 | **Juan Ariel Alarcón** | /  | [@user](https://github.com/) |
