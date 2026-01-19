@@ -75,7 +75,7 @@ Este proyecto fue desarrollado por el equipo **Bugbusters** como parte del Proye
 
 | Integrante             | Rol Principal           | GitHub                                                   |
 | :--------------------- | :---------------------- | :------------------------------------------------------- |
-| **Isaura Casas**       | Backend / Data Engineer | [@user](https://github.com/)                             |
+| **Isaura Casas**       | Backend / Data Engineer | [@isa-capa](https://github.com/isa-capa)                             |
 | **Oscar Monroy**       | FullStack Dev / Java    | [@user](https://github.com/omonroyt)                     |
 | **Hageo Balam**        | Backend / Data Engineer | [@Ajo-png](https://github.com/Ajo-png)                   |
 | **Gabriel Flores**     |                         | [@Gabriel-Onitsuaf](https://github.com/Gabriel-Onitsuaf) |
