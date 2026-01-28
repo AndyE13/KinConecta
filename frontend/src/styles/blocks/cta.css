@@ -1,0 +1,53 @@
+.cta {
+    background-color: var(--color-bg-dark);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.cta__bg-effect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(circle at center, #db7006 0%, transparent 70%);
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.cta__content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.cta__title {
+    color: var(--color-text-inverse);
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+}
+
+.cta__text {
+    color: #d1d5db; /* Gris claro fijo para fondo oscuro */
+    font-size: 1.125rem;
+}
+
+.cta__action {
+    position: relative;
+    z-index: 10;
+}
+
+@media (min-width: 768px) {
+    .cta {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 4rem;
+    }
+    .cta__content { text-align: left; max-width: 60%; }
+}

@@ -1,0 +1,30 @@
+:root {
+    /* Colors */
+    --color-primary: #db7006;
+    --color-primary-hover: #b85d05;
+    
+    --color-bg-light: #f8f7f5;
+    --color-bg-white: #ffffff;
+    --color-bg-dark: #181411;
+    
+    --color-text-main: #181411;
+    --color-text-muted: #8c755f;
+    --color-text-inverse: #ffffff;
+    
+    --color-border: #e6e0db;
+    --color-border-nav: #f5f2f0;
+
+    /* Fonts */
+    --font-family-base: "Spline Sans", "Noto Sans", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg-light: #23190f;
+        --color-bg-white: #1a120b;
+        --color-text-main: #ffffff;
+        --color-text-muted: #9ca3af;
+        --color-border: #3a2e26;
+        --color-border-nav: #3a2e26;
+    }
+}

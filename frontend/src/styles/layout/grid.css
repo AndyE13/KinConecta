@@ -1,0 +1,21 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+/* Grid System genérico */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid--3-cols { grid-template-columns: repeat(3, 1fr); }
+    .grid--4-cols { grid-template-columns: repeat(2, 1fr); } /* 2 cols en tablet */
+}
+
+@media (min-width: 1024px) {
+    .grid--4-cols { grid-template-columns: repeat(4, 1fr); }
+}
