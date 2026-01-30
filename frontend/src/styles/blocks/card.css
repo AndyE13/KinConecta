@@ -1,73 +1,107 @@
 .card {
-    background-color: var(--color-bg-light);
-    border: 1px solid var(--color-border);
-    border-radius: 0.75rem;
-    padding: 2rem;
-    transition: all 0.3s;
+  background-color: var(--color-bg-page);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  transition: all 0.3s;
 }
 
 .card:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border-color: rgba(219, 112, 6, 0.5);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  border-color: rgba(219, 112, 6, 0.35);
 }
 
 .card__title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-text-main);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-main);
 }
 
 .card__text {
-    color: var(--color-text-muted);
-    line-height: 1.6;
+  color: var(--color-text-muted);
+  line-height: 1.6;
 }
 
 /* Modificador: Value Card */
 .card--value .card__icon-wrapper {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background-color: rgba(219, 112, 6, 0.1);
-    color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    transition: background-color 0.3s, color 0.3s;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: rgba(219, 112, 6, 0.1);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .card--value:hover .card__icon-wrapper {
-    background-color: var(--color-primary);
-    color: white;
+  background-color: var(--color-primary);
+  color: white;
 }
 
 /* Modificador: Profile (Team) Card */
 .card--profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
-    border-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  border-color: transparent;
+  background-color: var(--color-bg-page);
 }
 
 .card--profile:hover {
-    border-color: rgba(219, 112, 6, 0.2);
+  border-color: rgba(219, 112, 6, 0.18);
 }
 
 .card__avatar {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    border: 2px solid var(--color-bg-white);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 2px solid var(--color-bg-surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .card__role {
-    color: var(--color-primary);
-    font-size: 0.875rem;
-    font-weight: 500;
-    margin-bottom: 0.75rem;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+/* Social buttons en cards de perfil */
+.card--profile {
+  position: relative; /* para posicionar .card__social */
+}
+
+.card__social {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.btn--social {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0; /* icon button */
+  border-radius: 0.75rem;
+}
+
+.btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
 }

@@ -1,66 +1,70 @@
 .timeline {
-    position: relative;
-    margin-top: 2rem;
+  position: relative;
+  margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
-    .timeline__line {
-        position: absolute;
-        top: 24px;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background-color: var(--color-border);
-        z-index: 0;
-    }
+  .timeline__line {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-border);
+    z-index: 0;
+  }
 }
 
 .timeline__item {
-    position: relative;
-    z-index: 10;
-    display: flex;
-    gap: 1rem;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 1rem;
 }
 
 .timeline__icon {
-    flex-shrink: 0;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background-color: var(--color-bg-white);
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-bg-surface);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .timeline__content {
-    padding-top: 0.25rem;
+  padding-top: 0.25rem;
 }
 
 .timeline__year {
-    display: block;
-    color: var(--color-primary);
-    font-weight: 700;
-    font-size: 0.875rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 0.25rem;
+  display: block;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
 }
 
 .timeline__title {
-    font-size: 1.125rem;
-    margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
 }
 
 .timeline__text {
-    font-size: 0.875rem;
-    color: var(--color-text-muted);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
 }
 
 @media (min-width: 768px) {
-    .timeline__item { flex-direction: column; }
-    .timeline__content { padding-top: 1rem; }
+  .timeline__item {
+    flex-direction: column;
+  }
+  .timeline__content {
+    padding-top: 1rem;
+  }
 }

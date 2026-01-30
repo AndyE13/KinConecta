@@ -1,30 +1,23 @@
 :root {
-    /* Colors */
-    --color-primary: #db7006;
-    --color-primary-hover: #b85d05;
-    
-    --color-bg-light: #f8f7f5;
-    --color-bg-white: #ffffff;
-    --color-bg-dark: #181411;
-    
-    --color-text-main: #181411;
-    --color-text-muted: #8c755f;
-    --color-text-inverse: #ffffff;
-    
-    --color-border: #e6e0db;
-    --color-border-nav: #f5f2f0;
+  /* Brand */
+  --color-primary: #db7006;
+  --color-primary-hover: #b85d05;
 
-    /* Fonts */
-    --font-family-base: "Spline Sans", "Noto Sans", sans-serif;
-}
+  /* Backgrounds (modo claro solamente) */
+  --color-bg-page: #f6f1e8; /* arena suave */
+  --color-bg-surface: #ffffff; /* cards contenedores */
+  --color-bg-elevated: #ffffff;
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-bg-light: #23190f;
-        --color-bg-white: #1a120b;
-        --color-text-main: #ffffff;
-        --color-text-muted: #9ca3af;
-        --color-border: #3a2e26;
-        --color-border-nav: #3a2e26;
-    }
+  /* Text */
+  --color-text-main: #181411;
+  --color-text-muted: #7a6a5c;
+  --color-text-inverse: #ffffff;
+
+  /* Borders / shadows */
+  --color-border: #e8e0d7;
+  --color-border-nav: #eadfd4;
+  --shadow-card: 0 12px 30px rgba(24, 20, 17, 0.06);
+
+  /* Fonts */
+  --font-family-base: "Spline Sans", "Noto Sans", sans-serif;
 }

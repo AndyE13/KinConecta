@@ -1,162 +1,272 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Sobre Nosotros - Kin Conecta</title>
-    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    
-    <link rel="stylesheet" href="../styles/main.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="../styles/main.css" />
+  </head>
+  <body>
     <!-- NAVBAR -->
     <header class="header">
-        <div class="container header__container">
-            <div class="header__brand">
-                <div class="header__logo-icon">
-                    <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path></svg>
-                </div>
-                <h2 class="header__title">Kin Conecta</h2>
-            </div>
-            
-            <div class="header__nav-wrapper">
-                <nav class="header__nav">
-                    <a href="#" class="header__link">Inicio</a>
-                    <a href="#" class="header__link">Explorar</a>
-                    <a href="#" class="header__link header__link--active">Nosotros</a>
-                    <a href="#" class="header__link">Iniciar Sesión</a>
-                </nav>
-                <button class="btn btn--primary">Registrarse</button>
-            </div>
-            
-            <div class="header__menu-btn">
-                <span class="material-symbols-outlined">menu</span>
-            </div>
+      <div class="container header__container">
+        <!-- Izquierda: navegación -->
+        <div class="header__nav-wrapper">
+          <nav class="header__nav">
+            <a href="#" class="header__link">Inicio</a>
+            <a href="#" class="header__link">Explorar</a>
+            <a href="#" class="header__link header__link--active">Nosotros</a>
+          </nav>
         </div>
+
+        <!-- Centro: marca -->
+        <div class="header__brand">
+          <div class="header__logo-icon">
+            <svg
+              fill="currentColor"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
+            </svg>
+          </div>
+          <h2 class="header__title">Kin Conecta</h2>
+        </div>
+
+        <!-- Derecha: acciones -->
+        <div class="header__actions">
+          <a href="#" class="header__link">Iniciar Sesión</a>
+          <button class="btn btn--primary">Registrarse</button>
+        </div>
+
+        <!-- Mobile menu button (se mantiene) -->
+        <div class="header__menu-btn">
+          <span class="material-symbols-outlined">menu</span>
+        </div>
+      </div>
     </header>
 
-    <!-- NOSOTROS -->
+    <!-- HERO (CARD con background image) -->
     <section class="hero">
-        <div class="container hero__container">
-            <div class="hero__content">
-                <h1 class="hero__title">Conectando Viajeros,<br/><span class="text-primary"> Descubriendo el México Real</span></h1>
-                <p class="hero__description">Kin Conecta es el lugar donde nacen las experiencias auténticas. Nos dedicamos a eliminar la barrera del turismo genérico conectando a visitantes curiosos con guías locales apasionados, fomentando un intercambio cultural seguro y personalizado.</p>
-                <div class="hero__actions">
-                    <button class="btn btn--primary btn--large btn--icon">
-                        <span>Saber más</span>
-                        <span class="material-symbols-outlined">arrow_forward</span>
-                    </button>
-                </div>
-            </div>
-            <div class="hero__media">
-                <div class="hero__image-wrapper">
-                    <div class="hero__bg-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkWDMF_5-94A3ZewwYxqJX-lhI_bXpvQJgihosseImfWchsYhqWxUaQTXgK37Q9kwwaG4bsC6AozTtjdyeO2uzgnBhhRf2QJsUvhqwc1db6KUm21CQDqIGKyPftlnMSl2QQzWlp1jzIw7LOnbtKhkqEY1H_VsdcnQti0Km3ko065NxLpNMsYHRjvrxa_2ASZb8GkzMxlc1zNsFyocwbMjGH85TXFOOWeEtgdUQ3jzSPr5zUbEfxB779U9IPLLBGVIT212TrJFj_Hk3");'></div>
-                    <div class="hero__overlay"></div>
-                </div>
-            </div>
+      <div class="container">
+        <div
+          class="page-card page-card--hero hero__card"
+          style="
+            background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCkWDMF_5-94A3ZewwYxqJX-lhI_bXpvQJgihosseImfWchsYhqWxUaQTXgK37Q9kwwaG4bsC6AozTtjdyeO2uzgnBhhRf2QJsUvhqwc1db6KUm21CQDqIGKyPftlnMSl2QQzWlp1jzIw7LOnbtKhkqEY1H_VsdcnQti0Km3ko065NxLpNMsYHRjvrxa_2ASZb8GkzMxlc1zNsFyocwbMjGH85TXFOOWeEtgdUQ3jzSPr5zUbEfxB779U9IPLLBGVIT212TrJFj_Hk3&quot;);
+          "
+        >
+          <div class="hero__overlay"></div>
+
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Conectando Viajeros,<br />
+              <span class="text-primary">Descubriendo el México Real</span>
+            </h1>
+
+            <p class="hero__description">
+              Kin Conecta es el lugar donde nacen las experiencias auténticas.
+              Nos dedicamos a eliminar la barrera del turismo genérico
+              conectando a visitantes curiosos con guías locales apasionados,
+              fomentando un intercambio cultural seguro y personalizado.
+            </p>
+
+            <!-- Barra de búsqueda centrada -->
+            <form class="search" action="#" method="get">
+              <label class="search__label" for="search-destino"
+                >¿A dónde quieres ir?</label
+              >
+              <div class="search__bar">
+                <span class="material-symbols-outlined search__icon"
+                  >search</span
+                >
+                <input
+                  class="search__input"
+                  id="search-destino"
+                  name="q"
+                  type="text"
+                  placeholder="Ej. Oaxaca, CDMX, Mérida..."
+                  autocomplete="off"
+                />
+                <button
+                  class="btn btn--primary btn--large search__btn"
+                  type="submit"
+                >
+                  Buscar
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
 
+    <!-- NUESTRA ENERGÍA KIN (CARD) -->
     <section class="section">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Nuestra Energía KIN</h2>
-                <p class="section__subtitle">Nos impulsa el deseo de iluminar el turismo en México, guiándonos por principios que transforman viajes ordinarios en conexiones humanas genuinas.</p>
+      <div class="container">
+        <div class="page-card">
+          <div class="section__header">
+            <h2 class="section__title">Nuestra Energía KIN</h2>
+            <p class="section__subtitle">
+              Nos impulsa el deseo de iluminar el turismo en México, guiándonos
+              por principios que transforman viajes ordinarios en conexiones
+              humanas genuinas.
+            </p>
+          </div>
+
+          <div class="grid grid--3-cols">
+            <div class="card card--value">
+              <div class="card__icon-wrapper">
+                <span class="material-symbols-outlined">public</span>
+              </div>
+              <h3 class="card__title">Nuestra Misión</h3>
+              <p class="card__text">
+                Conectar a turistas con guías locales en México mediante una
+                plataforma digital segura, facilitando la creación de agendas de
+                recorrido personalizadas y el acceso a recomendaciones
+                auténticas.
+              </p>
             </div>
-            
-            <div class="grid grid--3-cols">
-                <div class="card card--value">
-                    <div class="card__icon-wrapper">
-                        <span class="material-symbols-outlined">public</span>
-                    </div>
-                    <h3 class="card__title">Nuestra Misión</h3>
-                    <p class="card__text">Conectar a turistas con guías locales en México mediante una plataforma digital segura, facilitando la creación de agendas de recorrido personalizadas y el acceso a recomendaciones auténticas.</p>
-                </div>
-                
-                <div class="card card--value">
-                    <div class="card__icon-wrapper">
-                        <span class="material-symbols-outlined">visibility</span>
-                    </div>
-                    <h3 class="card__title">Nuestra Visión</h3>
-                    <p class="card__text">Ser la plataforma referente para el turismo personalizado en México, permitiendo que cualquier viajero pueda encontrar un guía confiable y planes a su medida en destinos nacionales.</p>
-                </div>
-                
-                <div class="card card--value">
-                    <div class="card__icon-wrapper">
-                        <span class="material-symbols-outlined">favorite</span>
-                    </div>
-                    <h3 class="card__title">Nuestros Valores</h3>
-                    <p class="card__text">Actuamos con agilidad, proactividad y resiliencia para cumplir nuestros compromisos con absoluta transparencia. Fomentamos la sinergia y la solidaridad mediante una comunicación clara, trabajando con pasión.</p>
-                </div>
+
+            <div class="card card--value">
+              <div class="card__icon-wrapper">
+                <span class="material-symbols-outlined">visibility</span>
+              </div>
+              <h3 class="card__title">Nuestra Visión</h3>
+              <p class="card__text">
+                Ser la plataforma referente para el turismo personalizado en
+                México, permitiendo que cualquier viajero pueda encontrar un
+                guía confiable y planes a su medida en destinos nacionales.
+              </p>
             </div>
+
+            <div class="card card--value">
+              <div class="card__icon-wrapper">
+                <span class="material-symbols-outlined">favorite</span>
+              </div>
+              <h3 class="card__title">Nuestros Valores</h3>
+              <p class="card__text">
+                Actuamos con agilidad, proactividad y resiliencia para cumplir
+                nuestros compromisos con absoluta transparencia. Fomentamos la
+                sinergia y la solidaridad mediante una comunicación clara,
+                trabajando con pasión.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- METAS -->
+    <!-- KIN EN LA HISTORIA (CARD) -->
     <section class="section">
-        <div class="container">
-            <div class="section__header section__header--left">
-                <h2 class="section__title">KIN en la historia</h2>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline__line"></div>
-                <div class="grid grid--4-cols">
-                    <div class="timeline__item">
-                        <div class="timeline__icon">
-                            <span class="material-symbols-outlined">lightbulb</span>
-                        </div>
-                        <div class="timeline__content">
-                            <span class="timeline__year">2026</span>
-                            <h4 class="timeline__title">Nace la idea</h4>
-                            <p class="timeline__text">Lanzamos nuestro MVP enfocado exclusivamente en México, priorizando la seguridad y la conexión humana real entre turistas y guías locales.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline__item">
-                        <div class="timeline__icon">
-                            <span class="material-symbols-outlined">rocket_launch</span>
-                        </div>
-                        <div class="timeline__content">
-                            <span class="timeline__year">2027</span>
-                            <h4 class="timeline__title">Ecosistema Digital</h4>
-                            <p class="timeline__text">Implementaremos mapas interactivos y un sistema de pagos seguro dentro de la plataforma para centralizar toda la experiencia de viaje.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline__item">
-                        <div class="timeline__icon">
-                            <span class="material-symbols-outlined">travel_explore</span>
-                        </div>
-                        <div class="timeline__content">
-                            <span class="timeline__year">2028</span>
-                            <h4 class="timeline__title">Inteligencia en Viajes</h4>
-                            <p class="timeline__text">Integraremos algoritmos de matching avanzado y automatizaciones para unir a las personas basándonos en pasiones compartidas con mayor precisión.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline__item">
-                        <div class="timeline__icon">
-                            <span class="material-symbols-outlined">public</span>
-                        </div>
-                        <div class="timeline__content">
-                            <span class="timeline__year">2030</span>
-                            <h4 class="timeline__title">Expansión Sin Fronteras</h4>
-                            <p class="timeline__text">Llevaremos la filosofía "Kin" al mundo, iniciando nuestra expansión internacional para democratizar el turismo auténtico globalmente.</p>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="page-card">
+          <div class="section__header section__header--left">
+            <h2 class="section__title">KIN en la historia</h2>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline__line"></div>
+            <div class="grid grid--4-cols">
+              <div class="timeline__item">
+                <div class="timeline__icon">
+                  <span class="material-symbols-outlined">lightbulb</span>
                 </div>
+                <div class="timeline__content">
+                  <span class="timeline__year">2026</span>
+                  <h4 class="timeline__title">Nace la idea</h4>
+                  <p class="timeline__text">
+                    Lanzamos nuestro MVP enfocado exclusivamente en México,
+                    priorizando la seguridad y la conexión humana real entre
+                    turistas y guías locales.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <div class="timeline__icon">
+                  <span class="material-symbols-outlined">rocket_launch</span>
+                </div>
+                <div class="timeline__content">
+                  <span class="timeline__year">2027</span>
+                  <h4 class="timeline__title">Ecosistema Digital</h4>
+                  <p class="timeline__text">
+                    Implementaremos mapas interactivos y un sistema de pagos
+                    seguro dentro de la plataforma para centralizar toda la
+                    experiencia de viaje.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <div class="timeline__icon">
+                  <span class="material-symbols-outlined">travel_explore</span>
+                </div>
+                <div class="timeline__content">
+                  <span class="timeline__year">2028</span>
+                  <h4 class="timeline__title">Inteligencia en Viajes</h4>
+                  <p class="timeline__text">
+                    Integraremos algoritmos de matching avanzado y
+                    automatizaciones para unir a las personas basándonos en
+                    pasiones compartidas con mayor precisión.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <div class="timeline__icon">
+                  <span class="material-symbols-outlined">public</span>
+                </div>
+                <div class="timeline__content">
+                  <span class="timeline__year">2030</span>
+                  <h4 class="timeline__title">Expansión Sin Fronteras</h4>
+                  <p class="timeline__text">
+                    Llevaremos la filosofía "Kin" al mundo, iniciando nuestra
+                    expansión internacional para democratizar el turismo
+                    auténtico globalmente.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
+    <!-- EQUIPO (CARD) -->
     <section class="section section--bg-white">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Conoce al equipo</h2>
-                <p class="section__subtitle">Un equipo ágil y versátil cuya energía se transforma para conectar viajeros y locales.</p>
+      <div class="container">
+        <div class="page-card">
+          <div class="section__header">
+            <h2 class="section__title">Conoce al equipo</h2>
+            <p class="section__subtitle">
+              Un equipo ágil y versátil cuya energía se transforma para conectar
+              viajeros y locales.
+            </p>
+          </div>
+
+          <div class="grid grid--3-cols">
+            <div class="card card--profile">
+              <div class="card__avatar">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJn2cDotk7_jR5TAzCoWKzWudN5Tne_CeMKR7wDr5jZHeFo_Mmw8YH6DAVpAD-i0XG6g3ZQDoBuXYfO3lpzhZpVKWWN59-88IZGtjZkIkXA1Ztqg3Kav-4TQ0-0JwDf3xX_HvlHsdN0-78zVXjDWv_wE1Plhzh9jPWzN_tqefRSIRcG1HpcNfiOHHpz0jO3HhdZmGgxVUR10qJrMMRyiLSb2o8nh1qq_MgiCHDfYH_249vMci5Qv2lV6jLDffamYiik_whMLpRKaXR"
+                  alt="Alex Rivera"
+                />
+              </div>
+              <h3 class="card__title">Nombre</h3>
+              <p class="card__role">Cofundador y CEO</p>
+              <p class="card__text">
+                Líder visionario enfocado en el crecimiento comunitario
+                sostenible y el bienestar digital.
+              </p>
             </div>
             
             <!-- EQUIPO -->
@@ -181,16 +291,85 @@
                     <p class="card__text">Enfocada en el crecimiento creativo y sostenible.</p>
                 </div>
 
-                <!-- Monroy Téllez Oscar -->
-                <div class="card card--profile">
-                    <div class="card__avatar">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSmWLdhTlyDUR26Fi0aMBE8OEoNrN2_qF4WADgL0B-7CcS4Jn0CuALcfTVInIsfTmjB9wj0ZPrMxv5RWTRCfwAsA5jqyuNUaOQRScTyhbYVuq1a9ZottIw3Me17x-ecQxenATTlOJdBiKK5eNHEIgTxo_K0QRWs3ZeLmAfqE45oRDhQTsMBmcYDJtqePMBnIqNQr8c3EAhghpjXrBqePR2uF0NEQc3r-FjItBSsBv1XEk1JqKu3b52Oix3vy_Q3ahxQ4enhUYZBXih" alt="Marcus Johnson">
-                    </div>
-                    <h3 class="card__title">Nombre</h3>
-                    <p class="card__role">Desarrollo Frontend</p>
-                    <p class="card__text">Arquitecto tecnológico construyendo sistemas robustos para conexiones escalables en tiempo real.</p>
-                </div>
+            <div class="card card--profile">
+              <div class="card__avatar">
+                <img
+                  src="../assets/team/monroy.png"
+                  alt="Oscar Monroy Téllez - Front-End Developer"
+                />
+              </div>
+              <h3 class="card__title">Oscar Monroy</h3>
+              <p class="card__role">Desarrollador Front-End</p>
+              <p class="card__text">
+                Construyo experiencias visuales que hacen que interactuar con el
+                producto sea simple y agradable.
+              </p>
+              <div class="card__social">
+                <a
+                  class="btn btn--primary btn--icon btn--social"
+                  href="https://www.linkedin.com/in/oscarmonroytellez/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="btn__icon" aria-hidden="true">
+                    <!-- LinkedIn SVG -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill="currentColor"
+                        d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM3.56 20.45h3.56V9H3.56v11.45z"
+                      />
+                    </svg>
+                  </span>
+                </a>
 
+                <a
+                  class="btn btn--primary btn--icon btn--social"
+                  href="https://github.com/omonroyt"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="btn__icon" aria-hidden="true">
+                    <!-- GitHub SVG -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill="currentColor"
+                        d="M12 .5A11.5 11.5 0 0 0 8.37 23c.58.1.8-.25.8-.56v-2.04c-3.26.71-3.95-1.39-3.95-1.39-.54-1.36-1.32-1.72-1.32-1.72-1.08-.74.08-.73.08-.73 1.19.08 1.82 1.22 1.82 1.22 1.06 1.82 2.78 1.29 3.46.98.1-.77.41-1.29.75-1.59-2.6-.3-5.34-1.3-5.34-5.8 0-1.28.46-2.33 1.22-3.15-.12-.3-.53-1.5.12-3.13 0 0 1-.32 3.28 1.2a11.3 11.3 0 0 1 5.98 0c2.28-1.52 3.28-1.2 3.28-1.2.65 1.63.24 2.83.12 3.13.76.82 1.22 1.87 1.22 3.15 0 4.52-2.74 5.5-5.35 5.79.42.37.8 1.1.8 2.22v3.29c0 .31.22.66.8.56A11.5 11.5 0 0 0 12 .5z"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <div class="card card--profile">
+              <div class="card__avatar">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdVda9SsGuV1erzrvO_Dv7WqB6peqroqJp-mw-zlOnuO_kag_tz8DswRpF7DWvUsdb3HiluWw9wn0yteSjc7WxeiHB8R9kTc09Murf7q2x3sTGwUX16dV8e7zjrcMX-qWvZmgzfv36Yx404kup_Vi9zQJpbr0PYxHU132WzvlO-06ahyDyfFqbHzP9MTzG3MF4ZCSAZl_nEtq19rqbQPUgsPZfJDgCFQeCNkVPSmfwnW5XnmQHCbCLue8uCctwl3AKaoamYe0BJT7t"
+                  alt="Elena Rodriguez"
+                />
+              </div>
+              <h3 class="card__title">Nombre</h3>
+              <p class="card__role">Líder de Comunidad</p>
+              <p class="card__text">
+                Fomentando apasionadamente entornos inclusivos y moderando
+                discusiones saludables.
+              </p>
+            </div>
+
+            <div class="card card--profile">
+              <div class="card__avatar">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJn2cDotk7_jR5TAzCoWKzWudN5Tne_CeMKR7wDr5jZHeFo_Mmw8YH6DAVpAD-i0XG6g3ZQDoBuXYfO3lpzhZpVKWWN59-88IZGtjZkIkXA1Ztqg3Kav-4TQ0-0JwDf3xX_HvlHsdN0-78zVXjDWv_wE1Plhzh9jPWzN_tqefRSIRcG1HpcNfiOHHpz0jO3HhdZmGgxVUR10qJrMMRyiLSb2o8nh1qq_MgiCHDfYH_249vMci5Qv2lV6jLDffamYiik_whMLpRKaXR"
+                  alt="Alex Rivera"
+                />
+              </div>
+              <h3 class="card__title">Nombre</h3>
+              <p class="card__role">Marketing Lead</p>
+              <p class="card__text">
+                Experta en conectar historias con audiencias globales mediante
+                estrategias digitales.
+              </p>
+            </div>
                 <!-- Carmona Hinojosa Mariana -->
                 <div class="card card--profile">
                     <div class="card__avatar">
@@ -221,15 +400,20 @@
                     <p class="card__text">Desarrollo la plataforma que conecta guías locales con extranjeros para crear experiencias auténticas y seguras.</p>
                 </div>
 
-                <!-- Balam Mendez Hageo Buda -->
-                <div class="card card--profile">
-                    <div class="card__avatar">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSmWLdhTlyDUR26Fi0aMBE8OEoNrN2_qF4WADgL0B-7CcS4Jn0CuALcfTVInIsfTmjB9wj0ZPrMxv5RWTRCfwAsA5jqyuNUaOQRScTyhbYVuq1a9ZottIw3Me17x-ecQxenATTlOJdBiKK5eNHEIgTxo_K0QRWs3ZeLmAfqE45oRDhQTsMBmcYDJtqePMBnIqNQr8c3EAhghpjXrBqePR2uF0NEQc3r-FjItBSsBv1XEk1JqKu3b52Oix3vy_Q3ahxQ4enhUYZBXih" alt="Marcus Johnson">
-                    </div>
-                    <h3 class="card__title">Nombre</h3>
-                    <p class="card__role">Backend Dev</p>
-                    <p class="card__text">Especialista en seguridad de datos y optimización de servidores de alta demanda.</p>
-                </div>
+            <div class="card card--profile">
+              <div class="card__avatar">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVYuypMeQLv5cllXtheNRSGB27VfUjdqqo3Q8jMtV23wqOP2jQKVhq8A-kJ5Da2g7dT4QPzPx5GWRLzlpGf4DACXmm3-X7yWPE5tUh67b_gVBLhTLElvSYOL7vRzaGrzwEo-TGcE3f3X3-6pqvzbi7I8u_nR7OI_l5SFoZ71NI94oslrUlnKtzZqA3i0PRj55IdJo1lLxp6aEGWmusdfb4QzkogRnRjy1y15Kd62zNnOxLkXgMbXwPkAorfZZiOBet7s6FYjQhFvBB"
+                  alt="Sarah Chen"
+                />
+              </div>
+              <h3 class="card__title">Nombre</h3>
+              <p class="card__role">UX Researcher</p>
+              <p class="card__text">
+                Analiza el comportamiento de los usuarios para mejorar la
+                accesibilidad de la plataforma.
+              </p>
+            </div>
 
                 <!-- Alarcón García Juan Ariel -->
                 <div class="card card--profile">
@@ -251,43 +435,104 @@
                     <p class="card__text">Uso los datos para entender qué mueve a nuestros viajeros y cómo mejorar su experiencia.</p>
                 </div>
 
+            <div class="card card--profile">
+              <div class="card__avatar">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJn2cDotk7_jR5TAzCoWKzWudN5Tne_CeMKR7wDr5jZHeFo_Mmw8YH6DAVpAD-i0XG6g3ZQDoBuXYfO3lpzhZpVKWWN59-88IZGtjZkIkXA1Ztqg3Kav-4TQ0-0JwDf3xX_HvlHsdN0-78zVXjDWv_wE1Plhzh9jPWzN_tqefRSIRcG1HpcNfiOHHpz0jO3HhdZmGgxVUR10qJrMMRyiLSb2o8nh1qq_MgiCHDfYH_249vMci5Qv2lV6jLDffamYiik_whMLpRKaXR"
+                  alt="Alex Rivera"
+                />
+              </div>
+              <h3 class="card__title">Isaura C.</h3>
+              <p class="card__role">Data Analyst</p>
+              <p class="card__text">
+                Uso los datos para entender qué mueve a nuestros viajeros y cómo
+                mejorar su experiencia.
+              </p>
+              <div class="card__social">
+                <a
+                  class="btn btn--primary btn--icon btn--social"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="btn__icon" aria-hidden="true">
+                    <!-- LinkedIn SVG -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill="currentColor"
+                        d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM3.56 20.45h3.56V9H3.56v11.45z"
+                      />
+                    </svg>
+                  </span>
+                </a>
+
+                <a
+                  class="btn btn--primary btn--icon btn--social"
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="btn__icon" aria-hidden="true">
+                    <!-- GitHub SVG -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill="currentColor"
+                        d="M12 .5A11.5 11.5 0 0 0 8.37 23c.58.1.8-.25.8-.56v-2.04c-3.26.71-3.95-1.39-3.95-1.39-.54-1.36-1.32-1.72-1.32-1.72-1.08-.74.08-.73.08-.73 1.19.08 1.82 1.22 1.82 1.22 1.06 1.82 2.78 1.29 3.46.98.1-.77.41-1.29.75-1.59-2.6-.3-5.34-1.3-5.34-5.8 0-1.28.46-2.33 1.22-3.15-.12-.3-.53-1.5.12-3.13 0 0 1-.32 3.28 1.2a11.3 11.3 0 0 1 5.98 0c2.28-1.52 3.28-1.2 3.28-1.2.65 1.63.24 2.83.12 3.13.76.82 1.22 1.87 1.22 3.15 0 4.52-2.74 5.5-5.35 5.79.42.37.8 1.1.8 2.22v3.29c0 .31.22.66.8.56A11.5 11.5 0 0 0 12 .5z"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- llamado a la acción -->
+    <!-- CTA (CARD BLANCO) -->
     <section class="section">
-        <div class="container">
-            <div class="cta">
-                <div class="cta__bg-effect"></div>
-                <div class="cta__content">
-                    <h2 class="cta__title">¿Listo para descubrir el México real?</h2>
-                    <p class="cta__text">Deja atrás los tours genéricos. Encuentra hoy mismo a tu guía local ideal y vive una experiencia diseñada a tu medida y sin intermediarios.</p>
-                </div>
-                <div class="cta__action">
-                    <button class="btn btn--primary btn--large btn--icon btn--shadow">
-                        <span>Conectar con Guías</span>
-                        <span class="material-symbols-outlined">arrow_outward</span>
-                    </button>
-                </div>
+      <div class="container">
+        <div class="page-card">
+          <div class="cta cta--light">
+            <div class="cta__bg-effect"></div>
+            <div class="cta__content">
+              <h2 class="cta__title">¿Listo para descubrir el México real?</h2>
+              <p class="cta__text">
+                Deja atrás los tours genéricos. Encuentra hoy mismo a tu guía
+                local ideal y vive una experiencia diseñada a tu medida y sin
+                intermediarios.
+              </p>
             </div>
+            <div class="cta__action">
+              <button class="btn btn--primary btn--large btn--icon btn--shadow">
+                <span>Conectar con Guías</span>
+                <span class="material-symbols-outlined">arrow_outward</span>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (como navbar invertida) -->
     <footer class="footer">
-        <div class="container footer__container">
-            <div class="footer__brand">
-                <div class="footer__logo-icon">
-                    <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path></svg>
-                </div>
-                <span>Kin Conecta</span>
-            </div>
-            <div class="footer__copyright">
-                © 2026 Kin Conecta. Todos los derechos reservados.
-            </div>
+      <div class="container footer__container">
+        <div class="footer__brand">
+          <div class="footer__logo-icon">
+            <svg
+              fill="currentColor"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
+            </svg>
+          </div>
+          <span>Kin Conecta</span>
         </div>
+        <div class="footer__copyright">
+          © 2026 Kin Conecta. Todos los derechos reservados.
+        </div>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>
