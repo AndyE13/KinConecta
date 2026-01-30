@@ -81,7 +81,7 @@ Este proyecto fue desarrollado por el equipo **Bugbusters** como parte del Proye
 | **Gabriel Flores** |   | [@Gabriel-Onitsuaf](https://github.com/Gabriel-Onitsuaf) |
 | **Emmanuel Montiel** |  Fullstack | [@esaumonti-blip](https://github.com/esaumonti-blip) |
 | **José Evelio** | / | [@josesnowdev](https://github.com/josesnowdev) | 
-| **Mariana Carmona**    |FullStack JavaScript Dev/| [@Carmonah-Mariana](https://github.com/Carmonah-Mariana
+| **Mariana Carmona**    |FullStack JavaScript Dev/| [https://github.com/Carmonah-Mariana] |
 | **Andrea Meneses** |  / | [@AndreaMeneses13](https://github.com/AndreaMeneses13) |
 | **Juan Ariel Alarcón** | /  | [@JuanAG1003](https://github.com/JuanAG1003) |
 
