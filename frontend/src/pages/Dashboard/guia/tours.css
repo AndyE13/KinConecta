@@ -1,0 +1,824 @@
+/* Variables de color y fuentes */
+:root {
+    --primary: #AE3708;
+    --secondary: #173D3C;
+    --background-light: #f8f6f5;
+    --background-dark: #23150f;
+    --text-dark: #181311;
+    --text-muted: #8c6c5f;
+    --border-light: #e6dedb;
+    --border-dark: #f5f1f0;
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Spline Sans', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    overflow: hidden;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined.filled {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 256px;
+    flex-shrink: 0;
+    background-color: var(--secondary);
+    color: white;
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        display: flex;
+    }
+}
+
+.sidebar-header {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.logo-icon .material-symbols-outlined {
+    color: white;
+    font-size: 28px;
+}
+
+.logo-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.logo-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+/* Navegación de la barra lateral */
+.sidebar-nav {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.2s;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border-left: 4px solid transparent;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.nav-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: var(--primary);
+    color: white;
+}
+
+.nav-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.badge {
+    margin-left: auto;
+    background-color: var(--primary);
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 9999px;
+}
+
+/* Pie de la barra lateral */
+.sidebar-footer {
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-profile {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 16px;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLNn56x8nKLiIkJ2Oimg0m7Jj13PDy_dn1S-8Br7qaIZu_jW_FqRxokHLeLv8EK78MrsvmlTIM-PPBduPFiWrwUVoEWW21D2F9ZZosGcpnmGinUtXKPFXfGaIO1S9wZ4neppeugzOPPvzcfZ3dTGnO2Hpztor9_9AUUH4Knx5ObQAUFz77Emu-nr3TPx54oBaJu6ruA6XhZI1U2N5LrhmXT6RGXNcXz81Bwm2B6eo0hiKXX0rv7SnDK3-ghIvcMqcom-wjncjYEAka');
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.user-logout {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Encabezado */
+.header {
+    background-color: white;
+    border-bottom: 1px solid var(--border-light);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.mobile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+@media (min-width: 1024px) {
+    .mobile-header {
+        display: none;
+    }
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-dark);
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-logo {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.header-title {
+    display: none;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .header-title {
+        display: flex;
+    }
+}
+
+.page-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Toggle de disponibilidad */
+.availability-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--border-dark);
+    padding: 8px 16px;
+    border-radius: 9999px;
+    border: 1px solid var(--border-light);
+}
+
+.toggle-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.toggle-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-switch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    width: 36px;
+    height: 20px;
+    background-color: #d1d5db;
+    border-radius: 9999px;
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.toggle-slider::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    border: 1px solid #d1d5db;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: #16a34a;
+}
+
+.toggle-switch input:checked + .toggle-slider::after {
+    transform: translateX(16px);
+    border-color: white;
+}
+
+.toggle-text {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #15803d;
+}
+
+/* Divisor */
+.divider {
+    height: 32px;
+    width: 1px;
+    background-color: #e5e7eb;
+}
+
+/* Badge de verificado */
+.verified-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(174, 55, 8, 0.1);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 9999px;
+}
+
+.verified-badge .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.verified-text {
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.notification-button {
+    position: relative;
+    padding: 8px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: background-color 0.2s;
+}
+
+.notification-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.notification-dot {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Área de contenido scrolleable */
+.content-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 32px;
+    background-color: var(--background-light);
+}
+
+@media (max-width: 768px) {
+    .content-area {
+        padding: 24px;
+    }
+}
+
+.content-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Sección de crear tour */
+.create-tour-section {
+    margin-bottom: 32px;
+}
+
+.create-tour-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.create-tour-button:hover {
+    background-color: #962f06;
+}
+
+.create-tour-button .material-symbols-outlined {
+    font-size: 20px;
+}
+
+/* Grid de tours */
+.tours-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .tours-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .tours-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tarjeta de tour */
+.tour-card {
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+}
+
+.tour-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.tour-card.draft {
+    opacity: 0.9;
+}
+
+.tour-card.draft:hover {
+    opacity: 1;
+}
+
+/* Imagen del tour */
+.tour-image {
+    position: relative;
+    height: 192px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s;
+}
+
+.tour-image.active-tour {
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApI0qS1IBqh6RsN8vDUZY32oL91VzTdpswvD1Tw_uqj73mMx5DXFn9gQUbRBGHiLwY0_gA9OsPm-FgHxiMcw8zk1aDTr7h7qBMHH6xJ_yFJLCfpRE7wKvBMI69Km_THp_hB-4h_E7JZH8jg60E0M3iSY1BwdtMWWDwVMmPPgaZBPzHTNjqEbJxkfP1E0vQi0EovmGGxz2o3_Ou8LPVZKaGZivyZJzaUSfB_o1SACIu8rTg30XNvT7kIrvMqWkNh5yLJ8RHPJwIBTnP');
+}
+
+.tour-image.teotihuacan {
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBjl0lYhFVUNvPBIE22V18kJxKH3qoW4_MxVlITGGckFYDh_QNBXPGdRjPB6Goe0w5gy4Y9mwi1P8ZqV_oMYvpV3XQzblxaMUdkvs-Wgdq2t60zy9x1TuIxUeDbdoEZcOFqczG1MlqN4sLbUQGR1W9w2VWUU4LLO-1TaBkGMt_9gLZJ2-wbhaBFHMtNukr82XXMkZPMVHdj-NZLgjdLmJdm37W-hzKmrJhvKSXNqD_OZMgm6NcOy1p3EQvz3K-hE7rIcVwbVPz-RDDXGw');
+}
+
+.tour-image.architecture {
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1LG2-FtjlyTa8gr8eone2W6JPS8hC-WaCblxKa4H96xY27XNBsCwqzxRH7VlmXW-DOeyGts5Hfh2MMiwsRDBXW1jGkCJ5aRwepVpXZdnOcqfS6YkPinhNlkPZzIF4iwxCAifB-1zq9twLRbSE-b4XiJiY5EAwuOQ5wQWutj-HGsGs0ZOknnUdRl5EvW2cKxNRkj7N1Kpw9UFTMLSQz8UnczdAEk9JKj5EMdTNN1eSLoduNSKMoQo5Po_6QMTL-1rRhfBKV6zBOlUR');
+    filter: grayscale(50%);
+}
+
+.tour-card:hover .tour-image.architecture {
+    filter: grayscale(0%);
+}
+
+.tour-image.coyoacan {
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0wdq3l4Y2_6gYpiGIr_6g5YlQ19qCbn0fQZL0RtM6T55puasww9zMp69_v_DJ84ee0OSlfNkKLuv0K6btMgTaWNPiABZgr8QrG9gaJooelygQrXAagFOhHP0Pv_o-q0mhU4OYeepCBp4jjCKkFsDSwhk4rHrVMlSlOuX3P-KvekIcR_zKVHGrIyAXenJZGd5kSL1aeS7dxOBurVNRAPcFg8Ki0F2KqDGm1epJ7HHijFZ6ee0llFZqREPjqXBDj2cZNFeIr8gudu_w');
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.tour-card:hover .image-overlay {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Estado del tour */
+.tour-status {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tour-status.active {
+    color: #16a34a;
+}
+
+.tour-status.draft {
+    color: #6b7280;
+}
+
+.tour-status.pending {
+    color: #ea580c;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.tour-status.active .status-indicator {
+    background-color: #22c55e;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.tour-status.draft .status-indicator {
+    background-color: #9ca3af;
+}
+
+.tour-status.pending .status-indicator {
+    background-color: #f97316;
+}
+
+/* Contenido de la tarjeta */
+.tour-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.tour-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.2;
+    transition: color 0.2s;
+}
+
+.tour-card:hover .tour-title {
+    color: var(--primary);
+}
+
+/* Rating del tour */
+.tour-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: rgba(234, 179, 8, 0.1);
+    color: #ca8a04;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid rgba(234, 179, 8, 0.2);
+}
+
+.tour-rating .material-symbols-outlined {
+    font-size: 16px;
+}
+
+.tour-rating.empty {
+    background-color: rgba(0, 0, 0, 0.03);
+    color: #9ca3af;
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Descripción del tour */
+.tour-description {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Estadísticas del tour */
+.tour-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 24px;
+    background-color: var(--background-light);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+}
+
+.tour-stats.dashed {
+    border-style: dashed;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stat-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #9ca3af;
+}
+
+.stat-value {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.stat-value .material-symbols-outlined {
+    color: var(--primary);
+    font-size: 18px;
+}
+
+.stat-value.empty {
+    color: #9ca3af;
+}
+
+.stat-value.empty .material-symbols-outlined {
+    color: #9ca3af;
+}
+
+/* Acciones del tour */
+.tour-actions {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.btn-edit,
+.btn-view,
+.btn-continue,
+.btn-disabled {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.btn-edit {
+    border: 1px solid var(--border-light);
+    background-color: white;
+    color: var(--text-dark);
+}
+
+.btn-edit:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.btn-view {
+    background-color: var(--secondary);
+    color: white;
+    box-shadow: 0 1px 2px rgba(23, 61, 60, 0.2);
+}
+
+.btn-view:hover {
+    background-color: rgba(23, 61, 60, 0.9);
+}
+
+.btn-continue {
+    grid-column: 1 / -1;
+    border: 1px solid var(--primary);
+    background-color: white;
+    color: var(--primary);
+}
+
+.btn-continue:hover {
+    background-color: rgba(174, 55, 8, 0.05);
+}
+
+.btn-disabled {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.btn-edit .material-symbols-outlined,
+.btn-view .material-symbols-outlined,
+.btn-continue .material-symbols-outlined,
+.btn-disabled .material-symbols-outlined {
+    font-size: 18px;
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-dark);
+        color: white;
+    }
+    
+    .header {
+        background-color: var(--background-dark);
+    }
+    
+    .page-title,
+    .tour-title,
+    .stat-value,
+    .toggle-label {
+        color: white;
+    }
+    
+    .content-area {
+        background-color: #1a1614;
+    }
+    
+    .tour-card {
+        background-color: #2c2420;
+        border-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .availability-toggle {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .tour-stats {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .tour-stats.dashed {
+        border-style: dashed;
+    }
+    
+    .btn-edit {
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+    
+    .btn-edit:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .btn-disabled {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .notification-button {
+        color: white;
+    }
+    
+    .notification-button:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .tour-status {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .divider {
+        background-color: #374151;
+    }
+}

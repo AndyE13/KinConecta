@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Mis Tours - Kin Conecta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="misTours.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <span class="material-symbols-outlined">travel_explore</span>
+                </div>
+                <div>
+                    <h1 class="logo-title">Kin Conecta</h1>
+                    <p class="logo-subtitle">Portal de Guía</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a class="nav-item" href="#">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span class="nav-text">Tablero</span>
+                </a>
+                <a class="nav-item active" href="#">
+                    <span class="material-symbols-outlined filled">map</span>
+                    <span class="nav-text">Mis Tours</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                    <span class="nav-text">Calendario</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="material-symbols-outlined">chat_bubble</span>
+                    <span class="nav-text">Mensajes</span>
+                    <span class="badge">3</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="nav-text">Reseñas</span>
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="material-symbols-outlined">payments</span>
+                    <span class="nav-text">Ingresos</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a class="nav-item" href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    <span class="nav-text">Configuración</span>
+                </a>
+                <div class="user-profile">
+                    <div class="user-avatar"></div>
+                    <div class="user-info">
+                        <span class="user-name">Carlos Rivera</span>
+                        <span class="user-logout">Cerrar sesión</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <!-- Encabezado -->
+            <header class="header">
+                <div class="mobile-header">
+                    <button class="menu-button">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <span class="mobile-logo">Kin Conecta</span>
+                </div>
+                <div class="header-title">
+                    <h2 class="page-title">Mis Tours</h2>
+                    <p class="page-subtitle">Administra tus experiencias y disponibilidad.</p>
+                </div>
+                <div class="header-actions">
+                    <div class="availability-toggle">
+                        <span class="toggle-label">Estado:</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked/>
+                            <div class="toggle-slider"></div>
+                            <span class="toggle-text">Disponible</span>
+                        </label>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="verified-badge">
+                        <span class="material-symbols-outlined">verified</span>
+                        <span class="verified-text">Guía Verificado</span>
+                    </div>
+                    <button class="notification-button">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="notification-dot"></span>
+                    </button>
+                </div>
+            </header>
+            
+            <!-- Área de contenido scrolleable -->
+            <div class="content-area">
+                <div class="content-wrapper">
+                    <!-- Botón de crear nuevo tour -->
+                    <div class="create-tour-section">
+                        <button class="create-tour-button">
+                            <span class="material-symbols-outlined">add_circle</span>
+                            Crear Nuevo Tour
+                        </button>
+                    </div>
+                    
+                    <!-- Grid de tours -->
+                    <div class="tours-grid">
+                        <!-- Tour Card 1 - Activo -->
+                        <div class="tour-card">
+                            <div class="tour-image active-tour">
+                                <div class="image-overlay"></div>
+                                <div class="tour-status active">
+                                    <span class="status-indicator"></span> Activo
+                                </div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-header">
+                                    <h3 class="tour-title">Comida Callejera & Cultura</h3>
+                                    <div class="tour-rating">
+                                        <span class="material-symbols-outlined">star</span> 4.8
+                                    </div>
+                                </div>
+                                <p class="tour-description">Explora los sabores auténticos de México en un tour gastronómico por mercados locales.</p>
+                                <div class="tour-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">Reservas</span>
+                                        <div class="stat-value">
+                                            <span class="material-symbols-outlined">group</span>
+                                            <span>42</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Precio</span>
+                                        <div class="stat-value">
+                                            <span class="material-symbols-outlined">payments</span>
+                                            <span>$850 MXN</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tour-actions">
+                                    <button class="btn-edit">
+                                        <span class="material-symbols-outlined">edit</span> Editar
+                                    </button>
+                                    <button class="btn-view">
+                                        <span class="material-symbols-outlined">calendar_month</span> Ver Reservas
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tour Card 2 - Activo -->
+                        <div class="tour-card">
+                            <div class="tour-image teotihuacan">
+                                <div class="image-overlay"></div>
+                                <div class="tour-status active">
+                                    <span class="status-indicator"></span> Activo
+                                </div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-header">
+                                    <h3 class="tour-title">Amanecer en Teotihuacan</h3>
+                                    <div class="tour-rating">
+                                        <span class="material-symbols-outlined">star</span> 5.0
+                                    </div>
+                                </div>
+                                <p class="tour-description">Vive la experiencia mística de ver el amanecer sobre las pirámides del sol y la luna.</p>
+                                <div class="tour-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">Reservas</span>
+                                        <div class="stat-value">
+                                            <span class="material-symbols-outlined">group</span>
+                                            <span>38</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Precio</span>
+                                        <div class="stat-value">
+                                            <span class="material-symbols-outlined">payments</span>
+                                            <span>$1,200 MXN</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tour-actions">
+                                    <button class="btn-edit">
+                                        <span class="material-symbols-outlined">edit</span> Editar
+                                    </button>
+                                    <button class="btn-view">
+                                        <span class="material-symbols-outlined">calendar_month</span> Ver Reservas
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tour Card 3 - Borrador -->
+                        <div class="tour-card draft">
+                            <div class="tour-image architecture">
+                                <div class="image-overlay"></div>
+                                <div class="tour-status draft">
+                                    <span class="status-indicator"></span> Borrador
+                                </div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-header">
+                                    <h3 class="tour-title">Paseo Arquitectónico</h3>
+                                    <div class="tour-rating empty">
+                                        <span class="material-symbols-outlined">star</span> --
+                                    </div>
+                                </div>
+                                <p class="tour-description">Descubre las joyas ocultas del Art Deco y la arquitectura colonial en la ciudad.</p>
+                                <div class="tour-stats dashed">
+                                    <div class="stat-item">
+                                        <span class="stat-label">Reservas</span>
+                                        <div class="stat-value empty">
+                                            <span class="material-symbols-outlined">group</span>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Precio</span>
+                                        <div class="stat-value empty">
+                                            <span class="material-symbols-outlined">payments</span>
+                                            <span>--</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tour-actions">
+                                    <button class="btn-continue">
+                                        <span class="material-symbols-outlined">edit_note</span> Continuar Editando
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tour Card 4 - Pendiente -->
+                        <div class="tour-card">
+                            <div class="tour-image coyoacan">
+                                <div class="image-overlay"></div>
+                                <div class="tour-status pending">
+                                    <span class="status-indicator"></span> Pendiente
+                                </div>
+                            </div>
+                            <div class="tour-content">
+                                <div class="tour-header">
+                                    <h3 class="tour-title">Coyoacán & Frida Kahlo</h3>
+                                    <div class="tour-rating empty">
+                                        <span class="material-symbols-outlined">star</span> New
+                                    </div>
+                                </div>
+                                <p class="tour-description">Visita la Casa Azul y camina por las coloridas calles del barrio bohemio.</p>
+                                <div class="tour-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">Reservas</span>
+                                        <div class="stat-value">
+                                            <span class="material-symbols-outlined">group</span>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Precio</span>
+                                        <div class="stat-value">
+                                            <span class="material-symbols-outlined">payments</span>
+                                            <span>$950 MXN</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tour-actions">
+                                    <button class="btn-edit">
+                                        <span class="material-symbols-outlined">edit</span> Editar
+                                    </button>
+                                    <button class="btn-disabled" disabled>
+                                        <span class="material-symbols-outlined">hourglass_empty</span> En Revisión
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
