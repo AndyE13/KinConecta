@@ -1,223 +1,467 @@
-<html class="light" lang="es"><head></head><body class="bg-background-light dark:bg-background-dark text-[#181311] dark:text-gray-100 overflow-hidden">```html
-
-
-
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ajustes de Idioma - Kin Conecta</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                "primary": "#af3808",
-                "background-light": "#f8f6f5",
-                "background-dark": "#221510",
-                "teal-brand": "#173D3C",
-                "highlight-brand": "#FB9D0B",
-              },
-              fontFamily: {
-                "display": ["Plus Jakarta Sans", "sans-serif"]
-              },
-              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
-            },
-          },
-        }
-    </script>
+
+<!-- ================= GOOGLE FONTS ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ================= MATERIAL ICONS ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: transparent; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #d1d5db; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #9ca3af; 
-        }
-    </style>
+
+/* =====================================================
+   1️⃣ RESET GENERAL
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background: #f8f6f5;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  color: #1e1e1e;
+}
+
+/* =====================================================
+   2️⃣ SIDEBAR (MISMO QUE PERFIL)
+===================================================== */
+.sidebar {
+  width: 260px;
+  background: #fff;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #173D3C;
+  margin-bottom: 30px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.25s ease;
+}
+
+.nav-item:hover {
+  background: #f2f2f2;
+}
+
+.nav-item:hover .material-symbols-outlined {
+  transform: scale(1.15);
+  color: #af3808;
+}
+
+.material-symbols-outlined {
+  transition: all 0.25s ease;
+}
+
+/* =====================================================
+   3️⃣ MAIN LAYOUT
+===================================================== */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* =====================================================
+   4️⃣ HEADER SUPERIOR
+===================================================== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* izquierda y derecha */
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;
+  background: #f8f6f5;
+}
 
 
-<div class="flex h-screen w-full overflow-hidden">
-<aside class="w-64 flex-shrink-0 bg-white dark:bg-[#1E1E1E] border-r border-[#f0ebe9] dark:border-gray-800 flex flex-col justify-between overflow-y-auto z-50 relative">
-<div>
-<div class="px-6 py-8 flex items-center gap-3">
-<div class="bg-primary/10 p-2 rounded-lg">
-<span class="material-symbols-outlined text-primary" style="font-size: 28px;">travel_explore</span>
-</div>
-<h1 class="text-teal-brand dark:text-white text-xl font-bold tracking-tight">Kin Conecta</h1>
-</div>
-<nav class="flex flex-col gap-2 px-4">
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group" href="#">
-<span class="material-symbols-outlined group-hover:text-primary transition-colors">home</span>
-<span class="text-sm font-medium">Inicio</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group" href="#">
-<span class="material-symbols-outlined group-hover:text-primary transition-colors">explore</span>
-<span class="text-sm font-medium">Explorar</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group" href="#">
-<span class="material-symbols-outlined group-hover:text-primary transition-colors">favorite</span>
-<span class="text-sm font-medium">Favoritos</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group" href="#">
-<span class="material-symbols-outlined group-hover:text-primary transition-colors">map</span>
-<span class="text-sm font-medium">Mis Viajes</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group" href="#">
-<span class="material-symbols-outlined group-hover:text-primary transition-colors">chat_bubble</span>
-<span class="text-sm font-medium">Mensajes</span>
-<span class="ml-auto bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group" href="#">
-<span class="material-symbols-outlined group-hover:text-primary transition-colors">star</span>
-<span class="text-sm font-medium">Reseñas</span>
-</a>
-</nav>
-</div>
-<div class="p-4 border-t border-[#f0ebe9] dark:border-gray-800 relative">
-<button class="flex items-center gap-3 w-full p-2 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 transition-colors relative z-40 shadow-sm">
-<div class="h-10 w-10 rounded-full bg-cover bg-center" data-alt="User Avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfFmC8OK9sh1n8CUEtELdkqASvpoFFqWQAouhYn008y4afi1bJYJhAbWL6ocr3ry8sMosNXuBdKEQ4Xosr396hZtP6ZaFuICC-t4XHHC43D4SeE8TORCCeWTg1jTy1v3E0gANzhZXLX7uYmPsNgFn6H7xbwIyKJ2O38xPWS-HuvbdDK5eQJu2AALZyyngWIjHHvc2__vb_wNPYP_XZvsCf2J2hHkxm7_Ayfw0COww9QOtmyH0kQ8p-VSvB5aBodPhyW_EiLkb9hg4L');"></div>
-<div class="flex flex-col items-start">
-<p class="text-sm font-bold text-teal-brand dark:text-white">Alejandro M.</p>
-<p class="text-xs text-gray-500">Turista Premium</p>
-</div>
-<span class="material-symbols-outlined ml-auto text-primary text-lg">expand_more</span>
-</button>
-</div>
-</aside>
-<main class="flex-1 flex flex-col min-w-0 overflow-hidden relative">
-<header class="flex items-center justify-between px-8 py-5 bg-background-light dark:bg-background-dark border-b border-gray-100 dark:border-gray-800 z-10">
-<div class="flex flex-1 max-w-lg">
-<div class="relative w-full text-gray-500 focus-within:text-primary">
-<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-<span class="material-symbols-outlined">search</span>
-</div>
-<input class="block w-full pl-10 pr-3 py-2.5 border-none rounded-xl bg-white dark:bg-[#1E1E1E] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm sm:text-sm" placeholder="Buscar destinos, guías..." type="text"/>
-</div>
-</div>
-<div class="flex items-center gap-4 pl-4">
-<button class="relative p-2 text-gray-500 hover:bg-white dark:hover:bg-[#1E1E1E] hover:text-primary rounded-full transition-colors">
-<span class="material-symbols-outlined">notifications</span>
-<span class="absolute top-2 right-2.5 block h-2 w-2 rounded-full bg-highlight-brand ring-2 ring-background-light dark:ring-background-dark"></span>
-</button>
-<button class="p-2 text-gray-500 hover:bg-white dark:hover:bg-[#1E1E1E] hover:text-primary rounded-full transition-colors">
-<span class="material-symbols-outlined">chat</span>
-</button>
-</div>
-</header>
-<div class="flex-1 overflow-y-auto p-8 pb-20 scroll-smooth relative z-20">
-<div class="max-w-[800px] mx-auto flex flex-col gap-6">
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-2 text-sm text-gray-500 mb-2">
-<span>Configuración</span>
-<span class="material-symbols-outlined text-xs">chevron_right</span>
-<span class="text-primary font-medium">Idioma</span>
-</div>
-<h1 class="text-teal-brand dark:text-white text-3xl font-bold font-display leading-tight">Ajustes de Idioma</h1>
-<p class="text-gray-500 dark:text-gray-400">Selecciona tu idioma preferido para la interfaz de Kin Conecta. Esto no afectará el idioma del contenido traducido automáticamente.</p>
-</div>
-<div class="bg-white dark:bg-[#1E1E1E] rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col">
-<div class="p-4 border-b border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-white/5">
-<div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-[20px]">search</span>
-<input class="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-black/20 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm transition-all outline-none" placeholder="Buscar idioma..." type="text"/>
-</div>
-</div>
-<div class="flex flex-col max-h-[500px] overflow-y-auto">
-<label class="flex items-center justify-between p-4 px-6 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer border-b border-gray-50 dark:border-gray-800 last:border-0 group transition-colors">
-<div class="flex items-center gap-4">
-<span class="text-2xl shadow-sm rounded-sm overflow-hidden">🇪🇸</span>
-<div class="flex flex-col">
-<span class="font-bold text-gray-900 dark:text-gray-100">Español</span>
-<span class="text-xs text-gray-500">Spanish</span>
-</div>
-</div>
-<div class="relative flex items-center">
-<input checked="" class="peer h-5 w-5 text-primary border-gray-300 focus:ring-primary cursor-pointer" name="language" type="radio"/>
-</div>
-</label>
-<label class="flex items-center justify-between p-4 px-6 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer border-b border-gray-50 dark:border-gray-800 last:border-0 group transition-colors">
-<div class="flex items-center gap-4">
-<span class="text-2xl shadow-sm rounded-sm overflow-hidden">🇺🇸</span>
-<div class="flex flex-col">
-<span class="font-bold text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">English</span>
-<span class="text-xs text-gray-500">Inglés</span>
-</div>
-</div>
-<div class="relative flex items-center">
-<input class="peer h-5 w-5 text-primary border-gray-300 focus:ring-primary cursor-pointer" name="language" type="radio"/>
-</div>
-</label>
-<label class="flex items-center justify-between p-4 px-6 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer border-b border-gray-50 dark:border-gray-800 last:border-0 group transition-colors">
-<div class="flex items-center gap-4">
-<span class="text-2xl shadow-sm rounded-sm overflow-hidden">🇫🇷</span>
-<div class="flex flex-col">
-<span class="font-bold text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">Français</span>
-<span class="text-xs text-gray-500">Francés</span>
-</div>
-</div>
-<div class="relative flex items-center">
-<input class="peer h-5 w-5 text-primary border-gray-300 focus:ring-primary cursor-pointer" name="language" type="radio"/>
-</div>
-</label>
-<label class="flex items-center justify-between p-4 px-6 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer border-b border-gray-50 dark:border-gray-800 last:border-0 group transition-colors">
-<div class="flex items-center gap-4">
-<span class="text-2xl shadow-sm rounded-sm overflow-hidden">🇧🇷</span>
-<div class="flex flex-col">
-<span class="font-bold text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">Português</span>
-<span class="text-xs text-gray-500">Portugués</span>
-</div>
-</div>
-<div class="relative flex items-center">
-<input class="peer h-5 w-5 text-primary border-gray-300 focus:ring-primary cursor-pointer" name="language" type="radio"/>
-</div>
-</label>
-<label class="flex items-center justify-between p-4 px-6 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer border-b border-gray-50 dark:border-gray-800 last:border-0 group transition-colors">
-<div class="flex items-center gap-4">
-<span class="text-2xl shadow-sm rounded-sm overflow-hidden">🇩🇪</span>
-<div class="flex flex-col">
-<span class="font-bold text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">Deutsch</span>
-<span class="text-xs text-gray-500">Alemán</span>
-</div>
-</div>
-<div class="relative flex items-center">
-<input class="peer h-5 w-5 text-primary border-gray-300 focus:ring-primary cursor-pointer" name="language" type="radio"/>
-</div>
-</label>
-<label class="flex items-center justify-between p-4 px-6 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer border-b border-gray-50 dark:border-gray-800 last:border-0 group transition-colors">
-<div class="flex items-center gap-4">
-<span class="text-2xl shadow-sm rounded-sm overflow-hidden">🇮🇹</span>
-<div class="flex flex-col">
-<span class="font-bold text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">Italiano</span>
-<span class="text-xs text-gray-500">Italiano</span>
-</div>
-</div>
-<div class="relative flex items-center">
-<input class="peer h-5 w-5 text-primary border-gray-300 focus:ring-primary cursor-pointer" name="language" type="radio"/>
-</div>
-</label>
-</div>
-<div class="p-4 bg-gray-50 dark:bg-[#1E1E1E] border-t border-gray-100 dark:border-gray-800 flex justify-end">
-<button class="bg-primary text-white font-bold py-2.5 px-6 rounded-xl hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 text-sm">
-                                Guardar cambios
-                            </button>
-</div>
-</div>
-</div>
-</div>
-</main>
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 14px;
+  width: 350px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  margin-left: 8px;
+  width: 100%;
+}
+
+/* ================= HEADER ACTIONS ================= */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+/* Iconos (campana y mensajes) */
+.icon-wrapper {
+  position: relative;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.icon-wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.icon-wrapper .material-symbols-outlined {
+  color: #555;
+  font-size: 22px;
+}
+
+/* Badge de notificación */
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #af3808;
+  color: white;
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+/* ================= BOTÓN NUEVO VIAJE ================= */
+.btn-new-trip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-new-trip:hover {
+  background: #af3808;
+  color: white;
+  transform: scale(1.05);
+}
+
+.btn-new-trip .material-symbols-outlined {
+  font-size: 20px;
+}
+
+
+/* =====================================================
+   5️⃣ CONTENIDO CENTRAL
+===================================================== */
+.content {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #173D3C;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* =====================================================
+   6️⃣ CARD DE IDIOMAS
+===================================================== */
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+/* Buscador interno */
+.language-search {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.language-search input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+}
+
+/* Lista idiomas */
+.language-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.language-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 25px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.language-item:hover {
+  background: #fafafa;
+}
+
+.language-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.language-info span.flag {
+  font-size: 24px;
+}
+
+/* =====================================================
+   7️⃣ BOTÓN GUARDAR
+===================================================== */
+.save-container {
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+.btn-save {
+  background: #af3808;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 14px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0 8px 20px rgba(175,56,8,0.3);
+}
+
+.btn-save:hover {
+  background: #922f06;
+  transform: translateY(-3px);
+}
+
+</style>
+</head>
+<body>
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+<div class="sidebar">
+  <div>
+    <div class="logo">
+      <span class="material-symbols-outlined">travel_explore</span>
+      Kin Conecta
+    </div>
+
+    <div class="nav-item"><span class="material-symbols-outlined">home</span> Inicio</div>
+    <div class="nav-item"><span class="material-symbols-outlined">explore</span> Explorar</div>
+    <div class="nav-item"><span class="material-symbols-outlined">favorite</span> Favoritos</div>
+    <div class="nav-item"><span class="material-symbols-outlined">map</span> Mis Viajes</div>
+    <div class="nav-item"><span class="material-symbols-outlined">chat</span> Mensajes</div>
+    <div class="nav-item"><span class="material-symbols-outlined">star</span> Reseñas</div>
+  </div>
 </div>
 
-</body></html>
+<!-- =====================================================
+     MAIN
+===================================================== -->
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="search-box">
+      <span class="material-symbols-outlined">search</span>
+      <input placeholder="Buscar destinos, guías...">
+    </div>
+    <!-- ================= HEADER ACTIONS ================= -->
+<div class="header-actions">
+
+  <!-- Campana Notificaciones -->
+  <a href="#">
+    <!-- aqui va el link -->
+    <div class="icon-wrapper">
+      <span class="material-symbols-outlined">notifications</span>
+      <span class="badge">2</span>
+    </div>
+  </a>
+
+  <!-- Mensajes -->
+  <a href="#">
+    <!-- aqui va el link -->
+    <div class="icon-wrapper">
+      <span class="material-symbols-outlined">mail</span>
+    </div>
+  </a>
+
+  <!-- Botón Nuevo Viaje -->
+  <a href="#">
+    <!-- aqui va el link -->
+    <button class="btn-new-trip">
+      <span class="material-symbols-outlined">add</span>
+      Nuevo Viaje
+    </button>
+  </a>
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="content">
+
+    <div class="title">Ajustes de Idioma</div>
+    <div class="subtitle">
+      Selecciona tu idioma preferido para la interfaz de Kin Conecta.
+    </div>
+
+    <div class="card">
+
+      <!-- Buscador de idiomas -->
+      <div class="language-search">
+        <input type="text" id="languageSearch" placeholder="Buscar idioma...">
+      </div>
+
+      <!-- Lista -->
+      <div class="language-list" id="languageList">
+
+        <!-- Cada label contiene un radio -->
+        <label class="language-item">
+          <div class="language-info">
+            <span class="flag">🇪🇸</span>
+            Español
+          </div>
+          <input type="radio" name="language" value="Español" checked>
+        </label>
+
+        <label class="language-item">
+          <div class="language-info">
+            <span class="flag">🇺🇸</span>
+            English
+          </div>
+          <input type="radio" name="language" value="English">
+        </label>
+
+        <label class="language-item">
+          <div class="language-info">
+            <span class="flag">🇫🇷</span>
+            Français
+          </div>
+          <input type="radio" name="language" value="Français">
+        </label>
+
+      </div>
+
+      <!-- Botón guardar -->
+      <div class="save-container">
+        <button class="btn-save" id="saveLanguage">
+          Guardar cambios
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     8️⃣ JAVASCRIPT
+===================================================== -->
+<script>
+
+/* ================================================
+   FILTRAR IDIOMAS
+   Escucha cuando el usuario escribe en el buscador
+   y oculta los idiomas que no coinciden.
+================================================ */
+
+const searchInput = document.getElementById("languageSearch");
+const languageItems = document.querySelectorAll(".language-item");
+
+searchInput.addEventListener("input", function() {
+
+  const value = this.value.toLowerCase();
+
+  languageItems.forEach(item => {
+    const text = item.textContent.toLowerCase();
+
+    if (text.includes(value)) {
+      item.style.display = "flex";
+    } else {
+      item.style.display = "none";
+    }
+  });
+
+});
+
+
+/* ================================================
+   GUARDAR IDIOMA SELECCIONADO
+   Detecta cuál radio está seleccionado
+   y muestra un mensaje.
+   (Aquí después iría conexión con backend)
+================================================ */
+
+const saveButton = document.getElementById("saveLanguage");
+
+saveButton.addEventListener("click", function() {
+
+  const selected = document.querySelector('input[name="language"]:checked');
+
+  if (selected) {
+    alert("Idioma guardado: " + selected.value);
+  } else {
+    alert("Selecciona un idioma primero.");
+  }
+
+});
+
+</script>
+
+</body>
+</html>
