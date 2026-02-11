@@ -1,0 +1,410 @@
+<!-- help.html -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ayuda y FAQ - Kin Conecta</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="help.css" />
+  </head>
+
+  <body class="app app--light">
+    <div class="layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar__top">
+          <div class="brand">
+            <div class="brand__icon">
+              <span class="material-symbols-outlined brand__icon-symbol">travel_explore</span>
+            </div>
+            <h1 class="brand__title">Kin Conecta</h1>
+          </div>
+
+          <nav class="nav">
+            <a class="nav__item" href="#">
+              <span class="material-symbols-outlined nav__icon">home</span>
+              <span class="nav__text">Inicio</span>
+            </a>
+
+            <a class="nav__item" href="#">
+              <span class="material-symbols-outlined nav__icon">explore</span>
+              <span class="nav__text">Explorar</span>
+            </a>
+
+            <a class="nav__item" href="#">
+              <span class="material-symbols-outlined nav__icon">favorite</span>
+              <span class="nav__text">Favoritos</span>
+            </a>
+
+            <a class="nav__item" href="#">
+              <span class="material-symbols-outlined nav__icon">map</span>
+              <span class="nav__text">Mis Viajes</span>
+            </a>
+
+            <a class="nav__item" href="#">
+              <span class="material-symbols-outlined nav__icon">chat_bubble</span>
+              <span class="nav__text">Mensajes</span>
+              <span class="nav__badge">3</span>
+            </a>
+          </nav>
+        </div>
+
+        <!-- ver el menu de opciones cuando seleccionas al usuario -->
+        <div class="sidebar__bottom">
+        <div class="user-menu" data-user-menu>
+            <!-- Dropdown -->
+            <div class="user-menu__dropdown" data-user-menu-dropdown aria-hidden="true">
+            <a class="user-menu__item" href="#">
+                <span class="material-symbols-outlined user-menu__item-icon">person</span>
+                <span class="user-menu__item-text">Perfil</span>
+            </a>
+
+            <a class="user-menu__item" href="#">
+                <span class="material-symbols-outlined user-menu__item-icon">notifications</span>
+                <span class="user-menu__item-text">Notificaciones</span>
+            </a>
+
+            <a class="user-menu__item" href="#">
+                <span class="material-symbols-outlined user-menu__item-icon">shield</span>
+                <span class="user-menu__item-text">Seguridad</span>
+            </a>
+
+            <a class="user-menu__item" href="#">
+                <span class="material-symbols-outlined user-menu__item-icon">language</span>
+                <span class="user-menu__item-text">Idioma</span>
+            </a>
+
+            <a class="user-menu__item" href="#">
+                <span class="material-symbols-outlined user-menu__item-icon">lock</span>
+                <span class="user-menu__item-text">Privacidad</span>
+            </a>
+
+            <a class="user-menu__item" href="#">
+                <span class="material-symbols-outlined user-menu__item-icon">help</span>
+                <span class="user-menu__item-text">Ayuda (FAQ)</span>
+            </a>
+
+            <div class="user-menu__divider" aria-hidden="true"></div>
+
+            <button class="user-menu__item user-menu__item--danger" type="button">
+                <span class="material-symbols-outlined user-menu__item-icon">logout</span>
+                <span class="user-menu__item-text">Cerrar Sesión</span>
+            </button>
+            </div>
+
+            <!-- Button -->
+            <button class="user user--menu" type="button" data-user-menu-button aria-expanded="false">
+            <div
+                class="user__avatar"
+                style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfFmC8OK9sh1n8CUEtELdkqASvpoFFqWQAouhYn008y4afi1bJYJhAbWL6ocr3ry8sMosNXuBdKEQ4Xosr396hZtP6ZaFuICC-t4XHHC43D4SeE8TORCCeWTg1jTy1v3E0gANzhZXLX7uYmPsNgFn6H7xbwIyKJ2O38xPWS-HuvbdDK5eQJu2AALZyyngWIjHHvc2__vb_wNPYP_XZvsCf2J2hHkxm7_Ayfw0COww9QOtmyH0kQ8p-VSvB5aBodPhyW_EiLkb9hg4L');
+                "
+                aria-label="User Avatar"
+            ></div>
+
+            <div class="user__info">
+                <p class="user__name">Alejandro M.</p>
+                <p class="user__role">Turista Premium</p>
+            </div>
+
+            <span class="material-symbols-outlined user__chevron user__chevron--down">expand_more</span>
+            </button>
+        </div>
+        </div>
+
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+        <header class="topbar">
+          <div class="breadcrumb">
+            <a class="breadcrumb__link" href="#">Inicio</a>
+            <span class="material-symbols-outlined breadcrumb__sep">chevron_right</span>
+            <span class="breadcrumb__current">Ayuda y FAQ</span>
+          </div>
+
+          <div class="topbar__actions">
+            <button class="icon-btn" type="button" aria-label="Notificaciones">
+              <span class="material-symbols-outlined icon-btn__icon">notifications</span>
+              <span class="icon-btn__dot" aria-hidden="true"></span>
+            </button>
+
+            <button class="icon-btn" type="button" aria-label="Mensajes">
+              <span class="material-symbols-outlined icon-btn__icon">chat</span>
+            </button>
+
+            <div class="topbar__divider" aria-hidden="true"></div>
+
+            <button class="btn btn--ghost" type="button">
+              <span class="material-symbols-outlined btn__icon">add_circle</span>
+              Nuevo Viaje
+            </button>
+          </div>
+        </header>
+
+        <section class="content">
+          <div class="help">
+            <!-- HERO -->
+            <div class="help__hero">
+              <div class="help__hero-icon">
+                <span class="material-symbols-outlined help__hero-icon-symbol">help_center</span>
+              </div>
+
+              <h2 class="help__title">Centro de Ayuda</h2>
+              <p class="help__subtitle">
+                Encuentra respuestas rápidas sobre tus reservas, pagos, seguridad y todo lo que necesitas saber.
+              </p>
+
+              <div class="search">
+                <span class="material-symbols-outlined search__icon">search</span>
+                <input
+                  class="search__input"
+                  type="text"
+                  placeholder="Buscar un tema (ej. cancelar reserva, reembolso...)"
+                />
+              </div>
+            </div>
+
+            <!-- GRID FAQ -->
+            <div class="help__grid">
+              <!-- CARD 1 -->
+              <article class="faq-card">
+                <div class="faq-card__head">
+                  <div class="faq-card__badge faq-card__badge--primary">
+                    <span class="material-symbols-outlined faq-card__badge-icon">calendar_month</span>
+                  </div>
+                  <h3 class="faq-card__title">Reservas y Viajes</h3>
+                </div>
+
+                <div class="faq">
+                  <details class="faq__item">
+                    <summary class="faq__summary">
+                      <span class="faq__question">¿Cómo cancelo una reserva?</span>
+                      <span class="material-symbols-outlined faq__chevron">expand_more</span>
+                    </summary>
+                    <p class="faq__answer faq__answer--primary">
+                      Ve a "Mis Viajes", selecciona la reserva y haz clic en "Cancelar". Recibirás un reembolso completo
+                      si cancelas 48h antes del inicio.
+                    </p>
+                  </details>
+
+                  <div class="faq__divider" aria-hidden="true"></div>
+
+                  <details class="faq__item">
+                    <summary class="faq__summary">
+                      <span class="faq__question">¿Puedo cambiar la fecha?</span>
+                      <span class="material-symbols-outlined faq__chevron">expand_more</span>
+                    </summary>
+                    <p class="faq__answer faq__answer--primary">
+                      Sí, puedes solicitar un cambio de fecha directamente en el chat con tu guía. Si el guía acepta, la
+                      reserva se actualizará automáticamente.
+                    </p>
+                  </details>
+                </div>
+              </article>
+
+              <!-- CARD 2 -->
+              <article class="faq-card">
+                <div class="faq-card__head">
+                  <div class="faq-card__badge faq-card__badge--teal">
+                    <span class="material-symbols-outlined faq-card__badge-icon">credit_card</span>
+                  </div>
+                  <h3 class="faq-card__title">Pagos y Facturación</h3>
+                </div>
+
+                <div class="faq">
+                  <details class="faq__item">
+                    <summary class="faq__summary">
+                      <span class="faq__question">¿Qué métodos de pago aceptan?</span>
+                      <span class="material-symbols-outlined faq__chevron">expand_more</span>
+                    </summary>
+                    <p class="faq__answer faq__answer--teal">
+                      Aceptamos todas las tarjetas de crédito y débito principales (Visa, Mastercard, Amex), así como
+                      PayPal y Apple Pay.
+                    </p>
+                  </details>
+
+                  <div class="faq__divider" aria-hidden="true"></div>
+
+                  <details class="faq__item">
+                    <summary class="faq__summary">
+                      <span class="faq__question">¿Cuándo se realiza el cargo?</span>
+                      <span class="material-symbols-outlined faq__chevron">expand_more</span>
+                    </summary>
+                    <p class="faq__answer faq__answer--teal">
+                      El cargo se retiene al momento de reservar, pero solo se transfiere al guía 24 horas después de
+                      que el tour haya finalizado exitosamente.
+                    </p>
+                  </details>
+                </div>
+              </article>
+
+              <!-- CARD 3 -->
+              <article class="faq-card">
+                <div class="faq-card__head">
+                  <div class="faq-card__badge faq-card__badge--highlight">
+                    <span class="material-symbols-outlined faq-card__badge-icon">verified_user</span>
+                  </div>
+                  <h3 class="faq-card__title">Verificación de Guías</h3>
+                </div>
+
+                <div class="faq">
+                  <details class="faq__item">
+                    <summary class="faq__summary">
+                      <span class="faq__question">¿Cómo sé que un guía es confiable?</span>
+                      <span class="material-symbols-outlined faq__chevron">expand_more</span>
+                    </summary>
+                    <p class="faq__answer faq__answer--highlight">
+                      Todos nuestros guías pasan por un riguroso proceso de verificación de identidad y antecedentes.
+                      Busca el badge de "Verificado" en sus perfiles.
+                    </p>
+                  </details>
+
+                  <div class="faq__divider" aria-hidden="true"></div>
+
+                  <details class="faq__item">
+                    <summary class="faq__summary">
+                      <span class="faq__question">¿Qué hacer si el guía no aparece?</span>
+                      <span class="material-symbols-outlined faq__chevron">expand_more</span>
+                    </summary>
+                    <p class="faq__answer faq__answer--highlight">
+                      Contáctanos inmediatamente. Te ofreceremos un guía alternativo si es posible, o procesaremos un
+                      reembolso completo del 100% más un crédito para tu próximo viaje.
+                    </p>
+                  </details>
+                </div>
+              </article>
+
+              <!-- CARD 4 -->
+              <article class="faq-card">
+                <div class="faq-card__head">
+                  <div class="faq-card__badge faq-card__badge--blue">
+                    <span class="material-symbols-outlined faq-card__badge-icon">lock</span>
+                  </div>
+                  <h3 class="faq-card__title">Cuenta y Seguridad</h3>
+                </div>
+
+                <div class="faq">
+                  <details class="faq__item">
+                    <summary class="faq__summary">
+                      <span class="faq__question">He olvidado mi contraseña</span>
+                      <span class="material-symbols-outlined faq__chevron">expand_more</span>
+                    </summary>
+                    <p class="faq__answer faq__answer--blue">
+                      Puedes restablecerla desde la pantalla de inicio de sesión haciendo clic en "¿Olvidaste tu
+                      contraseña?". Te enviaremos un email con las instrucciones.
+                    </p>
+                  </details>
+
+                  <div class="faq__divider" aria-hidden="true"></div>
+
+                  <details class="faq__item">
+                    <summary class="faq__summary">
+                      <span class="faq__question">¿Cómo elimino mi cuenta?</span>
+                      <span class="material-symbols-outlined faq__chevron">expand_more</span>
+                    </summary>
+                    <p class="faq__answer faq__answer--blue">
+                      Para eliminar tu cuenta permanentemente, ve a Configuración &gt; Privacidad y selecciona "Eliminar
+                      cuenta". Esta acción no se puede deshacer.
+                    </p>
+                  </details>
+                </div>
+              </article>
+            </div>
+
+            <!-- CTA -->
+            <section class="cta">
+              <div class="cta__glow cta__glow--a" aria-hidden="true"></div>
+              <div class="cta__glow cta__glow--b" aria-hidden="true"></div>
+
+              <div class="cta__inner">
+                <div class="cta__icon">
+                  <span class="material-symbols-outlined cta__icon-symbol">support_agent</span>
+                </div>
+
+                <h3 class="cta__title">¿No encuentras lo que buscas?</h3>
+                <p class="cta__text">
+                  Nuestro equipo de soporte está disponible todos los días de 8:00 a 22:00 para ayudarte con cualquier
+                  problema.
+                </p>
+
+                <button class="btn btn--primary" type="button">
+                  Contactar Soporte
+                  <span class="material-symbols-outlined btn__icon btn__icon--end">arrow_forward</span>
+                </button>
+              </div>
+            </section>
+
+            <!-- FOOTER LINKS -->
+            <footer class="footer-links">
+              <a class="footer-links__link" href="#">Términos de Servicio</a>
+              <span class="footer-links__dot">•</span>
+              <a class="footer-links__link" href="#">Política de Privacidad</a>
+              <span class="footer-links__dot">•</span>
+              <a class="footer-links__link" href="#">Mapa del Sitio</a>
+            </footer>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- JavaScript para desplegar el menu de perfil -->
+        <script>
+    (function () {
+        const menu = document.querySelector("[data-user-menu]");
+        if (!menu) return;
+
+        const btn = menu.querySelector("[data-user-menu-button]");
+        const dropdown = menu.querySelector("[data-user-menu-dropdown]");
+
+        function openMenu() {
+        menu.classList.add("user-menu--open");
+        btn.setAttribute("aria-expanded", "true");
+        dropdown.setAttribute("aria-hidden", "false");
+        }
+
+        function closeMenu() {
+        menu.classList.remove("user-menu--open");
+        btn.setAttribute("aria-expanded", "false");
+        dropdown.setAttribute("aria-hidden", "true");
+        }
+
+        function toggleMenu() {
+        const isOpen = menu.classList.contains("user-menu--open");
+        isOpen ? closeMenu() : openMenu();
+        }
+
+        btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleMenu();
+        });
+
+        // Cerrar al dar click fuera
+        document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target)) closeMenu();
+        });
+
+        // Cerrar con ESC
+        document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+        });
+    })();
+    </script>
+
+  </body>
+</html>
