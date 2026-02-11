@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes de Idioma - Kin Conecta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="lenguage.css">
+</head>
+<body class="layout">
+
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo">
+                <span class="material-symbols-outlined">travel_explore</span>
+                Kin Conecta
+            </div>
+        </div>
+
+        <nav class="sidebar__nav">
+            <div class="sidebar__nav-item"><span class="material-symbols-outlined">home</span> Inicio</div>
+            <div class="sidebar__nav-item"><span class="material-symbols-outlined">explore</span> Explorar</div>
+            <div class="sidebar__nav-item"><span class="material-symbols-outlined">favorite</span> Favoritos</div>
+            <div class="sidebar__nav-item"><span class="material-symbols-outlined">map</span> Mis Viajes</div>
+            <div class="sidebar__nav-item"><span class="material-symbols-outlined">chat</span> Mensajes</div>
+            <div class="sidebar__nav-item"><span class="material-symbols-outlined">star</span> Reseñas</div>
+        </nav>
+    </aside>
+
+    <main class="main-view">
+        
+        <header class="header">
+            <div class="search-bar">
+                <span class="material-symbols-outlined">search</span>
+                <input class="search-bar__input" placeholder="Buscar destinos, guías...">
+            </div>
+
+            <div class="header-actions">
+                <div class="icon-btn">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="icon-btn__badge">2</span>
+                </div>
+                <div class="icon-btn">
+                    <span class="material-symbols-outlined">mail</span>
+                </div>
+                <button class="btn-primary btn-primary--outline">
+                    <span class="material-symbols-outlined">add</span>
+                    Nuevo Viaje
+                </button>
+            </div>
+        </header>
+
+        <section class="content-area">
+            <h1 class="content-area__title">Ajustes de Idioma</h1>
+            <p class="content-area__subtitle">Selecciona tu idioma preferido para la interfaz de Kin Conecta.</p>
+
+            <div class="card-languages">
+                <div class="card-languages__search">
+                    <div class="search-input">
+                        <input type="text" id="languageSearch" class="search-input__field" placeholder="Buscar idioma...">
+                    </div>
+                </div>
+
+                <div class="card-languages__list" id="languageList">
+                    
+                    <label class="lang-option">
+                        <div class="lang-option__info">
+                            <span class="lang-option__code">ES</span>
+                            <span class="lang-option__name">Español</span>
+                        </div>
+                        <input type="radio" name="language" value="Español" class="lang-option__radio" checked>
+                    </label>
+
+                    <label class="lang-option">
+                        <div class="lang-option__info">
+                            <span class="lang-option__code">US</span>
+                            <span class="lang-option__name">English</span>
+                        </div>
+                        <input type="radio" name="language" value="English" class="lang-option__radio">
+                    </label>
+
+                    <label class="lang-option">
+                        <div class="lang-option__info">
+                            <span class="lang-option__code">FR</span>
+                            <span class="lang-option__name">Français</span>
+                        </div>
+                        <input type="radio" name="language" value="Français" class="lang-option__radio">
+                    </label>
+
+                </div>
+
+                <div class="card-languages__footer">
+                    <button class="btn-primary" id="saveLanguage">Guardar cambios</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Filtrar idiomas
+        const searchInput = document.getElementById("languageSearch");
+        const languageItems = document.querySelectorAll(".lang-option");
+
+        searchInput.addEventListener("input", function() {
+            const value = this.value.toLowerCase();
+            languageItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(value) ? "flex" : "none";
+            });
+        });
+
+        // Guardar idioma
+        const saveButton = document.getElementById("saveLanguage");
+        saveButton.addEventListener("click", () => {
+            const selected = document.querySelector('input[name="language"]:checked');
+            alert(selected ? "Idioma guardado: " + selected.value : "Selecciona un idioma");
+        });
+    </script>
+</body>
+</html>

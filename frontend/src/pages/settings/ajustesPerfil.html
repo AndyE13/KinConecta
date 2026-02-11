@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes de Perfil - Kin Conecta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="ajustesPerfil.css">
+</head>
+<body class="page-body">
+
+    <aside class="sidebar">
+        <div class="sidebar__top">
+            <div class="sidebar__logo">
+                <span class="material-symbols-outlined">travel_explore</span>
+                Kin Conecta
+            </div>
+
+            <nav class="sidebar__nav">
+                <div class="sidebar__nav-item"><span class="material-symbols-outlined">home</span> Inicio</div>
+                <div class="sidebar__nav-item"><span class="material-symbols-outlined">explore</span> Explorar</div>
+                <div class="sidebar__nav-item"><span class="material-symbols-outlined">favorite</span> Favoritos</div>
+                <div class="sidebar__nav-item"><span class="material-symbols-outlined">map</span> Mis Viajes</div>
+                <div class="sidebar__nav-item"><span class="material-symbols-outlined">chat</span> Mensajes</div>
+                <div class="sidebar__nav-item"><span class="material-symbols-outlined">star</span> Reseñas</div>
+            </nav>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="header">
+            <div class="search-box">
+                <span class="material-symbols-outlined">search</span>
+                <input class="search-box__input" placeholder="Buscar destinos, guías...">
+            </div>
+
+            <div class="header-actions">
+                <a href="#" class="header-actions__link">
+                    <div class="icon-wrapper">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="icon-wrapper__badge">2</span>
+                    </div>
+                </a>
+
+                <a href="#" class="header-actions__link">
+                    <div class="icon-wrapper">
+                        <span class="material-symbols-outlined">mail</span>
+                    </div>
+                </a>
+
+                <button class="btn btn--new-trip">
+                    <span class="material-symbols-outlined">add</span>
+                    Nuevo Viaje
+                </button>
+            </div>
+        </header>
+
+        <section class="content">
+            <h1 class="content__title">Ajustes de Perfil</h1>
+            <p class="content__subtitle">Administra tu información personal y la seguridad de tu cuenta.</p>
+
+            <div class="profile-card">
+                <div class="photo-section">
+                    <div class="photo-section__avatar-container">
+                        <div class="photo-section__avatar"></div>
+                        <button class="photo-section__cam-btn">
+                            <span class="material-symbols-outlined">photo_camera</span>
+                        </button>
+                    </div>
+
+                    <div class="photo-section__info">
+                        <h3 class="photo-section__label">Tu Foto</h3>
+                        <p class="photo-section__text">Esta foto se mostrará en tu perfil público.</p>
+                        <div class="photo-section__actions">
+                            <button class="btn-action btn-action--change">Cambiar foto</button>
+                            <button class="btn-action btn-action--delete">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="form-grid">
+                    <div class="form-group">
+                        <label class="form-group__label">Nombre completo</label>
+                        <div class="input-wrapper">
+                            <span class="material-symbols-outlined">person</span>
+                            <input class="input-wrapper__field" type="text" value="Alejandro Martínez">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label">Correo electrónico</label>
+                        <div class="input-wrapper">
+                            <span class="material-symbols-outlined">mail</span>
+                            <input class="input-wrapper__field" type="email" value="alejandro.m@kinconecta.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label">Número de teléfono</label>
+                        <div class="input-wrapper">
+                            <span class="material-symbols-outlined">call</span>
+                            <input class="input-wrapper__field" type="text" value="+52 55 1234 5678">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label">Idioma preferido</label>
+                        <div class="input-wrapper">
+                            <span class="material-symbols-outlined">language</span>
+                            <select class="input-wrapper__field">
+                                <option>Español (Latinoamérica)</option>
+                                <option>English</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group--full-width">
+                        <label class="form-group__label">Biografía corta</label>
+                        <textarea class="form-group__textarea" id="bio" maxlength="250" placeholder="Cuéntanos un poco sobre ti..."></textarea>
+                        <div class="form-group__counter" id="counter">0/250 caracteres</div>
+                    </div>
+                </form>
+
+                <div class="profile-card__footer">
+                    <button class="btn-footer btn-footer--cancel">Cancelar</button>
+                    <button class="btn-footer btn-footer--save">Guardar Cambios</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const bio = document.getElementById("bio");
+        const counter = document.getElementById("counter");
+
+        bio.addEventListener("input", () => {
+            counter.textContent = bio.value.length + "/250 caracteres";
+        });
+    </script>
+</body>
+</html>
