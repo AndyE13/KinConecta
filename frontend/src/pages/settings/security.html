@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Ajustes de Seguridad - Kin Conecta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="security.css">
+</head>
+<body class="app">
+    <!-- Bloque: app-container -->
+    <div class="app__container">
+        <!-- Bloque: sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar__top">
+                <!-- Elemento: sidebar__header -->
+                <div class="sidebar__header">
+                    <div class="sidebar__logo-icon">
+                        <span class="material-symbols-outlined" style="font-size: 28px;">travel_explore</span>
+                    </div>
+                    <h1 class="sidebar__logo-text">Kin Conecta</h1>
+                </div>
+                <!-- Elemento: sidebar__nav -->
+                <nav class="sidebar__nav">
+                    <a href="#" class="sidebar__nav-link">
+                        <span class="material-symbols-outlined">home</span>
+                        <span class="sidebar__nav-text">Inicio</span>
+                    </a>
+                    <a href="#" class="sidebar__nav-link">
+                        <span class="material-symbols-outlined">explore</span>
+                        <span class="sidebar__nav-text">Explorar</span>
+                    </a>
+                    <a href="#" class="sidebar__nav-link">
+                        <span class="material-symbols-outlined">favorite</span>
+                        <span class="sidebar__nav-text">Favoritos</span>
+                    </a>
+                    <a href="#" class="sidebar__nav-link">
+                        <span class="material-symbols-outlined">map</span>
+                        <span class="sidebar__nav-text">Mis Viajes</span>
+                    </a>
+                    <a href="#" class="sidebar__nav-link">
+                        <span class="material-symbols-outlined">chat_bubble</span>
+                        <span class="sidebar__nav-text">Mensajes</span>
+                        <span class="sidebar__badge">3</span>
+                    </a>
+                    <a href="#" class="sidebar__nav-link">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="sidebar__nav-text">Reseñas</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- Elemento: sidebar__user-section -->
+            <div class="sidebar__user-section">
+                <button class="sidebar__user-btn">
+                    <div class="sidebar__user-avatar"></div>
+                    <div class="sidebar__user-info">
+                        <p class="sidebar__user-name">Alejandro M.</p>
+                        <p class="sidebar__user-role">Turista Premium</p>
+                    </div>
+                    <span class="material-symbols-outlined">expand_more</span>
+                </button>
+            </div>
+        </aside>
+        <!-- Fin Bloque: sidebar -->
+
+        <!-- Bloque: main-content -->
+        <main class="main-content">
+            <!-- Elemento: main-content__header -->
+            <header class="main-header">
+                <!-- Bloque: search-bar -->
+                <div class="search-bar">
+                    <div class="search-bar__icon">
+                        <span class="material-symbols-outlined">search</span>
+                    </div>
+                    <input type="text" class="search-bar__input" placeholder="Buscar..."/>
+                </div>
+                <!-- Fin Bloque: search-bar -->
+
+                <div class="main-header__actions">
+                    <button class="btn btn--icon">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="btn__badge"></span>
+                    </button>
+                    <button class="btn btn--icon">
+                        <span class="material-symbols-outlined">chat</span>
+                    </button>
+                    <div class="main-header__divider"></div>
+                    <button class="btn btn--primary btn--text">
+                        <span class="material-symbols-outlined">add_circle</span>
+                        Nuevo Viaje
+                    </button>
+                </div>
+            </header>
+            <!-- Fin Elemento: main-content__header -->
+
+            <!-- Elemento: main-content__body -->
+            <div class="main-content__body">
+                <!-- Bloque: security-settings -->
+                <div class="security-settings">
+                    <div class="security-settings__header">
+                        <h1 class="security-settings__title">Ajustes de Seguridad</h1>
+                        <p class="security-settings__subtitle">Gestiona tu contraseña y los métodos de acceso a tu cuenta.</p>
+                    </div>
+
+                    <!-- Bloque: settings-section -->
+                    <section class="settings-section">
+                        <div class="settings-section__header">
+                            <div class="settings-section__icon-wrapper settings-section__icon-wrapper--primary">
+                                <span class="material-symbols-outlined">lock_reset</span>
+                            </div>
+                            <h2 class="settings-section__title">Cambiar Contraseña</h2>
+                        </div>
+                        <form class="settings-section__form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-group__label">Contraseña Actual</label>
+                                    <div class="form-group__input-wrapper">
+                                        <input type="password" class="form-group__input" placeholder="Ingresa tu contraseña actual"/>
+                                        <button type="button" class="form-group__toggle-password">
+                                            <span class="material-symbols-outlined text-xl">visibility_off</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-group__label">Nueva Contraseña</label>
+                                    <input type="password" class="form-group__input" placeholder="Mínimo 8 caracteres"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-group__label">Confirmar Nueva Contraseña</label>
+                                    <input type="password" class="form-group__input" placeholder="Repite la contraseña"/>
+                                </div>
+                            </div>
+                            <div class="settings-section__actions">
+                                <button type="submit" class="btn btn--primary btn--full-width">
+                                    <span class="material-symbols-outlined text-sm">save</span>
+                                    Actualizar Contraseña
+                                </button>
+                            </div>
+                        </form>
+                    </section>
+                    <!-- Fin Bloque: settings-section -->
+
+                    <!-- Bloque: settings-section -->
+                    <section class="settings-section">
+                        <div class="settings-section__header settings-section__header--row">
+                            <div class="settings-section__content">
+                                <div class="settings-section__icon-wrapper settings-section__icon-wrapper--teal">
+                                    <span class="material-symbols-outlined">encrypted</span>
+                                </div>
+                                <h2 class="settings-section__title">Autenticación de Dos Factores (2FA)</h2>
+                                <p class="settings-section__description">
+                                    Aumenta la seguridad de tu cuenta. Te pediremos un código de verificación enviado a tu dispositivo móvil cada vez que inicies sesión.
+                                </p>
+                            </div>
+                            <!-- Bloque: toggle-switch -->
+                            <label class="toggle-switch">
+                                <input type="checkbox" class="toggle-switch__input"/>
+                                <span class="toggle-switch__track"></span>
+                            </label>
+                            <!-- Fin Bloque: toggle-switch -->
+                        </div>
+                    </section>
+                    <!-- Fin Bloque: settings-section -->
+
+                    <!-- Bloque: settings-section -->
+                    <section class="settings-section">
+                        <div class="settings-section__header settings-section__header--between">
+                            <div class="settings-section__icon-wrapper settings-section__icon-wrapper--orange">
+                                <span class="material-symbols-outlined">devices</span>
+                            </div>
+                            <h2 class="settings-section__title">Dispositivos Conectados</h2>
+                            <button class="btn btn--text">Cerrar sesión en todos</button>
+                        </div>
+                        <div class="settings-section__content">
+                            <!-- Bloque: device-item -->
+                            <div class="device-item device-item--active">
+                                <div class="device-item__icon">
+                                    <span class="material-symbols-outlined">laptop_mac</span>
+                                </div>
+                                <div class="device-item__info">
+                                    <div class="device-item__header">
+                                        <p class="device-item__name">MacBook Pro 16"</p>
+                                        <span class="device-item__badge">Este dispositivo</span>
+                                    </div>
+                                    <p class="device-item__details">Ciudad de México, MX • Chrome 118.0 • Activo ahora</p>
+                                </div>
+                            </div>
+                            <!-- Fin Bloque: device-item -->
+
+                            <!-- Bloque: device-item -->
+                            <div class="device-item">
+                                <div class="device-item__icon">
+                                    <span class="material-symbols-outlined">smartphone</span>
+                                </div>
+                                <div class="device-item__info">
+                                    <p class="device-item__name">iPhone 14 Pro</p>
+                                    <p class="device-item__details">Guadalajara, MX • App Kin Conecta • Hace 2 horas</p>
+                                </div>
+                                <button class="btn btn--icon btn--small">
+                                    <span class="material-symbols-outlined">logout</span>
+                                    Salir
+                                </button>
+                            </div>
+                            <!-- Fin Bloque: device-item -->
+
+                            <!-- Bloque: device-item -->
+                            <div class="device-item">
+                                <div class="device-item__icon">
+                                    <span class="material-symbols-outlined">desktop_windows</span>
+                                </div>
+                                <div class="device-item__info">
+                                    <p class="device-item__name">PC Escritorio Windows</p>
+                                    <p class="device-item__details">Madrid, ES • Firefox • Hace 5 días</p>
+                                </div>
+                                <button class="btn btn--icon btn--small">
+                                    <span class="material-symbols-outlined">logout</span>
+                                    Salir
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
