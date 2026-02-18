@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Turista - Kin Conecta</title>
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="profileTourist.css">
+</head>
+
+<body class="app-body">
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-top">
+
+            <div class="brand">
+                <div class="brand-icon">
+                    <span class="material-symbols-outlined">travel_explore</span>
+                </div>
+                <h1>Kin Conecta</h1>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a class="nav-item active" href="#">
+                    <span class="material-symbols-outlined fill-1">home</span>
+                    <span>Inicio</span>
+                </a>
+
+                <a class="nav-item" href="#">
+                    <span class="material-symbols-outlined">explore</span>
+                    <span>Explorar</span>
+                </a>
+
+                <a class="nav-item" href="#">
+                    <span class="material-symbols-outlined">favorite</span>
+                    <span>Favoritos</span>
+                </a>
+
+                <a class="nav-item" href="#">
+                    <span class="material-symbols-outlined">map</span>
+                    <span>Mis Viajes</span>
+                </a>
+
+                <a class="nav-item" href="#">
+                    <span class="material-symbols-outlined">chat_bubble</span>
+                    <span>Mensajes</span>
+                    <span class="badge">3</span>
+                </a>
+
+                <a class="nav-item" href="#">
+                    <span class="material-symbols-outlined">star</span>
+                    <span>Reseñas</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- USER -->
+        <div class="sidebar-user">
+            <button class="user-card">
+                <div class="avatar" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfFmC8OK9sh1n8CUEtELdkqASvpoFFqWQAouhYn008y4afi1bJYJhAbWL6ocr3ry8sMosNXuBdKEQ4Xosr396hZtP6ZaFuICC-t4XHHC43D4SeE8TORCCeWTg1jTy1v3E0gANzhZXLX7uYmPsNgFn6H7xbwIyKJ2O38xPWS-HuvbdDK5eQJu2AALZyyngWIjHHvc2__vb_wNPYP_XZvsCf2J2hHkxm7_Ayfw0COww9QOtmyH0kQ8p-VSvB5aBodPhyW_EiLkb9hg4L')"></div>
+
+                <div class="user-info">
+                    <p class="user-name">Alejandro M.</p>
+                    <p class="user-role">Turista Premium</p>
+                </div>
+
+                <span class="material-symbols-outlined expand">expand_less</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+        <!-- HEADER -->
+        <header class="topbar">
+            <div class="search-box">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" placeholder="Buscar destinos, guías...">
+            </div>
+
+            <div class="topbar-actions">
+                <button class="icon-btn">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="dot"></span>
+                </button>
+
+                <button class="icon-btn">
+                    <span class="material-symbols-outlined">chat</span>
+                </button>
+
+                <div class="divider"></div>
+
+                <button class="primary-outline">
+                    <span class="material-symbols-outlined">add_circle</span>
+                    Nuevo Viaje
+                </button>
+            </div>
+        </header>
+            <section class="dashboard-content">
+
+        <!-- VIAJE ACTIVO -->
+        <section class="trip-card">
+            <div class="trip-image" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuD38i8s-uwg9YG-jHvz2FKnTKIgurlBKrjDv_uNIHaTMTg7hXUa1-2pBsFyjd2FcQ7iZKKWR8C-su9mxrdYGZtuZ8PZNne3CUVD-N0CPWU7BJOqnIwIJzGWopvDd8fqVkQEOLUvUnEMzhKesbZ_R1JnnZb4eTFW7NIwO6ZgwiVfAEmVKVDSoOwat_B3osoWT1SaQPSCsk5A47dZlByH88JXkDWS555UWcR4uIQpMn4VQTiqcJdg6GL3H7prKlkPydt8mkjo8JOQexJ6')">
+                <div class="trip-overlay">
+                    <span class="trip-location">Cusco, Perú</span>
+                </div>
+            </div>
+
+            <div class="trip-info">
+                <div class="trip-header">
+                    <h3>Aventura en los Andes</h3>
+                    <span class="trip-status">Confirmado</span>
+                </div>
+
+                <p class="trip-date">15 Oct - 20 Oct, 2023</p>
+
+                <div class="trip-guide">
+                    <div class="guide-avatar" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlYm4HsCs81h02e-xY34x1aLfdrge09n0dj1q7GHdaz-chnb7V4EUC6YUak84FIHCLkugdhG_BF5nBj_e91SCG8yniWQQJ4phi5qqK6lfef0p_4LsAujNHPaQjQsioSrDd2IrV-_0nRVZY9KrjDT4SbOKOor58iyQ62T1IbFzZ2aXXwjTH1hriGvzC2rQ185DSb8ybK55IoWoRdKGUxCcMyHcf-chxIpILE1j1B9RJ4dyzvFYv3F6s-XdkybsS7FSDSQd0J4BXgJ9j')"></div>
+                    <div>
+                        <small>Tu guía</small>
+                        <strong>Maria Lopez</strong>
+                    </div>
+                </div>
+
+                <div class="trip-actions">
+                    <button class="btn-primary">Ver Detalles</button>
+                    <button class="btn-secondary">Gestionar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECOMENDADOS -->
+        <section>
+            <h2 class="section-title">Recomendados para ti</h2>
+
+            <div class="card-grid">
+                <div class="guide-card">
+                    <div class="guide-photo" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVVwzL0hj3qjOwJZ612Qb-fQVDWLJKn1ESB5u8V7q9ciXgwxdqIJ-LacekuGSKlJkltE2k3Scdx5r92Kqtjp3jRd2ndJCiL-ga-qWK4bRxHKE2NYDE6FHIFsmXIK3sC5RbZSTbsO2au_VJtKskEk3VbOMFFXm7P9m1enGmOrFo_BqO7TrYjSHus3Go-cbLNn5R4IxThxSnsRI77e_RcMB3YQF6CJMbD3hEYhJAvp9DJQJdgyXt_5u0rbVMqImwGdvYiXKbZ9BAGlLo')"></div>
+
+                    <div class="guide-info">
+                        <h4>Ana García</h4>
+                        <p>Especialista en rutas y cultura local.</p>
+
+                        <div class="guide-footer">
+                            <span class="price">€25/h</span>
+                            <button class="btn-outline">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+
+        <!-- CONTENIDO -->
+        <section class="content">
+            <h1 class="greeting">Hola, Alejandro! 👋</h1>
+            <p class="subtitle">¿A dónde quieres ir hoy? Tu aventura comienza aquí.</p>
+        </section>
+
+    </main>
+
+</div>
+</body>
+</html>
