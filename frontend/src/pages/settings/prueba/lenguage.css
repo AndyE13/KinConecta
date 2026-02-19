@@ -1,0 +1,305 @@
+/* =====================================================
+    1️⃣ CONFIGURACIÓN DE POSICIÓN (LAYOUT)
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #f8f6f5;
+}
+
+.sidebar {
+    width: 260px;
+    min-width: 260px;
+    flex-shrink: 0;
+    background: #fff;
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    height: 100vh;
+}
+
+.main-view {
+    flex: 1;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* =====================================================
+    2️⃣ SIDEBAR INTERNO (CON EFECTOS)
+===================================================== */
+.sidebar__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #173D3C;
+    margin-bottom: 40px;
+}
+
+.sidebar__nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.25s ease;
+}
+
+.sidebar__nav-item:hover {
+    background: #f2f2f2;
+    color: #af3808;
+    padding-left: 18px;
+}
+
+.sidebar__nav-item:hover .material-symbols-outlined {
+    transform: scale(1.15);
+    color: #af3808;
+}
+
+/* =====================================================
+    3️⃣ HEADER Y ACTIONS (ESTILO PERFIL)
+===================================================== */
+.header {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f6f5;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 8px 14px;
+    border-radius: 14px;
+    width: 350px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.search-bar__input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-btn {
+    position: relative;
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+}
+
+.icon-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.icon-btn .material-symbols-outlined {
+    color: #555;
+    font-size: 22px;
+}
+
+.icon-btn__badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #af3808;
+    color: white;
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.btn-primary--outline {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.btn-primary--outline:hover {
+    background: #af3808;
+    color: white;
+    transform: scale(1.05);
+    border-color: #af3808;
+}
+
+/* =====================================================
+    4️⃣ CARD DE IDIOMAS Y LISTA
+===================================================== */
+.content-area {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.content-area__title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #173D3C;
+}
+
+.content-area__subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.card-languages {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.card-languages__search {
+    padding: 25px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.search-input__field {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 14px;
+    border: 1px solid #eee;
+    background: #f9f9f9;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input__field:focus {
+    border-color: #af3808;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(175, 56, 8, 0.05);
+}
+
+/* Estilo para cada opción de la lista */
+.lang-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid #f9f9f9;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lang-option:hover {
+    background: #fcfcfc;
+}
+
+/* Contenedor de Info del idioma (Código + Nombre) */
+.lang-option__info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-option__code {
+    font-weight: 700;
+    color: #173D3C;
+    background: #f0f4f4;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.lang-option__name {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.lang-option__radio {
+    accent-color: #af3808;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* =====================================================
+    5️⃣ FOOTER Y BOTÓN GUARDAR
+===================================================== */
+.card-languages__footer {
+    padding: 25px 30px;
+    background: #fafafa;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-primary {
+    padding: 12px 30px;
+    background: #af3808;
+    color: white;
+    border-radius: 14px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(175,56,8,0.3);
+    transition: 0.25s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background: #922f06;
+}
+
+/* Para que la barra de Google no empuje tu diseño */
+body {
+    top: 0 !important;
+}
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+.goog-te-gadget {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    color: #173D3C !important;
+}

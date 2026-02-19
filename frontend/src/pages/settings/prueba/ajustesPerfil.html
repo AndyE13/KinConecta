@@ -7,13 +7,13 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="ajustesPerfilTurista.css">
+    <link rel="stylesheet" href="ajustesPerfil.css">
 </head>
 <body class="page-body">
 
     <aside class="sidebar">
         <div class="sidebar__top">
-            <div class="sidebar__logo">
+            <div class="sidebar__logo" id="sidebarLogo">
                 <span class="material-symbols-outlined">travel_explore</span>
                 Kin Conecta
             </div>
@@ -30,7 +30,6 @@
     </aside>
 
     <main class="main-content">
-
         <header class="header">
             <div class="search-box">
                 <span class="material-symbols-outlined">search</span>
@@ -44,13 +43,11 @@
                         <span class="icon-wrapper__badge">2</span>
                     </div>
                 </a>
-
                 <a href="#" class="header-actions__link">
                     <div class="icon-wrapper">
                         <span class="material-symbols-outlined">mail</span>
                     </div>
                 </a>
-
                 <button class="btn btn--new-trip">
                     <span class="material-symbols-outlined">add</span>
                     Nuevo Viaje
@@ -59,13 +56,13 @@
         </header>
 
         <section class="content">
-            <h1 class="content__title">Ajustes de Perfil</h1>
-            <p class="content__subtitle">Administra tu información personal y la seguridad de tu cuenta.</p>
+            <h1 class="content__title" id="pageTitle">Ajustes de Perfil</h1>
+            <p class="content__subtitle">Administra tu información personal y la congruencia de tu cuenta en Kin Conecta.</p>
 
             <div class="profile-card">
                 <div class="photo-section">
                     <div class="photo-section__avatar-container">
-                        <div class="photo-section__avatar"></div>
+                        <div class="photo-section__avatar" id="profileDisplay"></div>
                         <button class="photo-section__cam-btn">
                             <span class="material-symbols-outlined">photo_camera</span>
                         </button>
@@ -81,12 +78,12 @@
                     </div>
                 </div>
 
-                <form class="form-grid">
+                <form class="form-grid" id="profileForm">
                     <div class="form-group">
                         <label class="form-group__label">Nombre completo</label>
                         <div class="input-wrapper">
                             <span class="material-symbols-outlined">person</span>
-                            <input class="input-wrapper__field" type="text" value="Alejandro Martínez">
+                            <input class="input-wrapper__field" type="text" name="name" value="Alejandro Martínez">
                         </div>
                     </div>
 
@@ -94,7 +91,15 @@
                         <label class="form-group__label">Correo electrónico</label>
                         <div class="input-wrapper">
                             <span class="material-symbols-outlined">mail</span>
-                            <input class="input-wrapper__field" type="email" value="alejandro.m@kinconecta.com">
+                            <input class="input-wrapper__field" type="email" name="email" value="alejandro.m@kinconecta.com" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label">País de origen</label>
+                        <div class="input-wrapper">
+                            <span class="material-symbols-outlined">public</span>
+                            <input class="input-wrapper__field" type="text" name="country" placeholder="Ej. México, España, USA">
                         </div>
                     </div>
 
@@ -102,43 +107,46 @@
                         <label class="form-group__label">Número de teléfono</label>
                         <div class="input-wrapper">
                             <span class="material-symbols-outlined">call</span>
-                            <input class="input-wrapper__field" type="text" value="+52 55 1234 5678">
+                            <input class="input-wrapper__field" type="text" name="phone" value="+52 55 1234 5678">
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label class="form-group__label">Idioma preferido</label>
+                    <div id="turista-fields" style="display: none;" class="form-group form-group--full-width">
+                        <label class="form-group__label">¿Qué prefieres visitar?</label>
                         <div class="input-wrapper">
-                            <span class="material-symbols-outlined">language</span>
-                            <select class="input-wrapper__field">
-                                <option>Español (Latinoamérica)</option>
-                                <option>English</option>
+                            <span class="material-symbols-outlined">interests</span>
+                            <select class="input-wrapper__field" name="interests">
+                                <option value="pueblos">Pueblos Mágicos</option>
+                                <option value="zonas">Zonas Arqueológicas</option>
+                                <option value="gastronomia">Gastronomía y Mercados</option>
+                                <option value="playas">Playas y Naturaleza</option>
                             </select>
+                        </div>
+                    </div>
+
+                    <div id="guia-fields" style="display: none;" class="form-group form-group--full-width">
+                        <label class="form-group__label">Certificación de Guía (SECTUR)</label>
+                        <div class="input-wrapper">
+                            <span class="material-symbols-outlined">verified_user</span>
+                            <input class="input-wrapper__field" type="text" name="certification" placeholder="Número de credencial">
                         </div>
                     </div>
 
                     <div class="form-group form-group--full-width">
                         <label class="form-group__label">Biografía corta</label>
-                        <textarea class="form-group__textarea" id="bio" maxlength="250" placeholder="Cuéntanos un poco sobre ti..."></textarea>
+                        <textarea class="form-group__textarea" id="bio" name="bio" maxlength="250" placeholder="Cuéntanos un poco sobre ti..."></textarea>
                         <div class="form-group__counter" id="counter">0/250 caracteres</div>
                     </div>
                 </form>
 
                 <div class="profile-card__footer">
                     <button class="btn-footer btn-footer--cancel">Cancelar</button>
-                    <button class="btn-footer btn-footer--save">Guardar Cambios</button>
+                    <button class="btn-footer btn-footer--save" id="saveProfile">Guardar Cambios</button>
                 </div>
             </div>
         </section>
     </main>
 
-    <script>
-        const bio = document.getElementById("bio");
-        const counter = document.getElementById("counter");
-
-        bio.addEventListener("input", () => {
-            counter.textContent = bio.value.length + "/250 caracteres";
-        });
-    </script>
+    <script src="ajustes.js"></script>
 </body>
 </html>

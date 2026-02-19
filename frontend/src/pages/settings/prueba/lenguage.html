@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes de Idioma - Kin Conecta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="lenguage.css">
+    
+    <style>
+        #google_translate_element {
+            padding: 15px;
+            background: #fdfdfd;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px dashed #af3808; /* Un borde sutil con tu color naranja */
+        }
+        .goog-te-gadget span { display: none; } /* Oculta el texto "Con la tecnología de Google" */
+    </style>
+</head>
+<body class="layout">
+
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo" id="sidebarLogo">
+                <span class="material-symbols-outlined">travel_explore</span>
+                Kin Conecta
+            </div>
+        </div>
+
+        <nav class="sidebar__nav">
+            <div class="sidebar__nav-item">
+                <span class="material-symbols-outlined">home</span> 
+                <span class="i18n" data-key="nav_home">Inicio</span>
+            </div>
+            <div class="sidebar__nav-item">
+                <span class="material-symbols-outlined">explore</span> 
+                <span class="i18n" data-key="nav_explore">Explorar</span>
+            </div>
+            <div class="sidebar__nav-item">
+                <span class="material-symbols-outlined">favorite</span> 
+                <span class="i18n" data-key="nav_favs">Favoritos</span>
+            </div>
+            <div class="sidebar__nav-item">
+                <span class="material-symbols-outlined">map</span> 
+                <span class="i18n" data-key="nav_trips">Mis Viajes</span>
+            </div>
+            <div class="sidebar__nav-item">
+                <span class="material-symbols-outlined">chat</span> 
+                <span class="i18n" data-key="nav_messages">Mensajes</span>
+            </div>
+            <div class="sidebar__nav-item">
+                <span class="material-symbols-outlined">star</span> 
+                <span class="i18n" data-key="nav_reviews">Reseñas</span>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main-view">
+        
+        <header class="header">
+            <div class="search-bar">
+                <span class="material-symbols-outlined">search</span>
+                <input class="search-bar__input" placeholder="Buscar destinos, guías...">
+            </div>
+
+            <div class="header-actions">
+                <div class="icon-btn">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="icon-btn__badge">2</span>
+                </div>
+                <div class="icon-btn">
+                    <span class="material-symbols-outlined">mail</span>
+                </div>
+                <button class="btn-primary--outline">
+                    <span class="material-symbols-outlined">add</span>
+                    <span class="i18n" data-key="btn_new_trip">Nuevo Viaje</span>
+                </button>
+            </div>
+        </header>
+
+        <section class="content-area">
+            <h1 class="content-area__title i18n" data-key="lang_title">Ajustes de Idioma</h1>
+            <p class="content-area__subtitle">Selecciona tu idioma preferido para la interfaz de Kin Conecta.</p>
+
+            <div class="card-languages">
+                <div class="card-languages__search">
+                    
+                    <div id="google_translate_element"></div>
+                    
+                    <div class="search-input">
+                        <input type="text" id="languageSearch" class="search-input__field" placeholder="Buscar idioma manual...">
+                    </div>
+                </div>
+
+                <div class="card-languages__list" id="languageList">
+                    <label class="lang-option">
+                        <div class="lang-option__info">
+                            <span class="lang-option__code">ES</span>
+                            <span class="lang-option__name">Español</span>
+                        </div>
+                        <input type="radio" name="language" value="es" class="lang-option__radio">
+                    </label>
+
+                    <label class="lang-option">
+                        <div class="lang-option__info">
+                            <span class="lang-option__code">EN</span>
+                            <span class="lang-option__name">English</span>
+                        </div>
+                        <input type="radio" name="language" value="en" class="lang-option__radio">
+                    </label>
+
+                    <label class="lang-option">
+                        <div class="lang-option__info">
+                            <span class="lang-option__code">FR</span>
+                            <span class="lang-option__name">Français</span>
+                        </div>
+                        <input type="radio" name="language" value="fr" class="lang-option__radio">
+                    </label>
+                </div>
+
+                <div class="card-languages__footer">
+                    <button class="btn-primary" id="saveLanguage">Guardar cambios</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', // Idioma original de tu app
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="ajustes.js"></script>
+</body>
+</html>
+
+<!--Paso B: Agrega este script antes de cerrar el </body> en todos tus HTML:
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'es', 
+    includedLanguages: '', // Déjalo vacío para todos los idiomas o pon 'en,fr,de,zh,ja'
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+-->
