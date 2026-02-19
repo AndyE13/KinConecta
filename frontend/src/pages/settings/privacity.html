@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajustes de Privacidad - Kin Conecta</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link rel="stylesheet" href="privacity.css"/>
+</head>
+
+<body class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+
+        <div class="sidebar__brand">
+            <span class="material-symbols-outlined sidebar__logo">travel_explore</span>
+            <h1 class="sidebar__title">Kin Conecta</h1>
+        </div>
+        
+        <nav class="nav">
+            <a class="nav__item nav__item--active" href="#">
+                <span class="material-symbols-outlined nav__icon">home</span>
+                Inicio
+            </a>
+            <a class="nav__item" href="#">
+                <span class="material-symbols-outlined nav__icon">explore</span>
+                Explorar
+            </a>
+            <a class="nav__item" href="#">
+                <span class="material-symbols-outlined nav__icon">favorite</span>
+                Favoritos
+            </a>
+    <a class="nav__item" href="#">
+    <span class="material-symbols-outlined nav__icon">map</span>
+    Mis Viajes
+    </a>
+
+    <a class="nav__item" href="#">
+    <span class="material-symbols-outlined nav__icon">chat_bubble</span>
+    Mensajes
+    <span class="nav__badge">3</span>
+    </a>
+
+    <a class="nav__item" href="#">
+    <span class="material-symbols-outlined nav__icon">star</span>
+    Reseñas
+    </a>
+
+        </nav>
+        
+    </div>
+ <!-- CONTENT -->
+    <div class="settings-layout">
+
+  <!-- MENÚ LATERAL DE AJUSTES -->
+  <aside class="settings-menu">
+    <a class="settings-menu__item" href="#">
+      <span class="material-symbols-outlined">person</span>
+      Perfil
+    </a>
+
+    <a class="settings-menu__item" href="#">
+      <span class="material-symbols-outlined">notifications</span>
+      Notificaciones
+    </a>
+
+    <a class="settings-menu__item" href="#">
+      <span class="material-symbols-outlined">security</span>
+      Seguridad
+    </a>
+
+    <a class="settings-menu__item" href="#">
+      <span class="material-symbols-outlined">language</span>
+      Idioma
+    </a>
+
+    <a class="settings-menu__item settings-menu__item--active" href="#">
+      <span class="material-symbols-outlined">lock</span>
+      Privacidad
+    </a>
+
+    <a class="settings-menu__item" href="#">
+      <span class="material-symbols-outlined">help</span>
+      Ayuda (FAQ)
+    </a>
+
+    <div class="settings-menu__divider"></div>
+
+    <a class="settings-menu__item settings-menu__item--danger" href="#">
+      <span class="material-symbols-outlined">logout</span>
+      Cerrar Sesión
+    </a>
+        <!--AVATAR-->
+  <div class="sidebar-profile">
+      <img
+      src="https://i.pravatar.cc/40"
+      alt="Usuario"
+      class="sidebar-profile__avatar"
+      />
+      
+      <div class="sidebar-profile__info">
+          <strong>Alejandro M.</strong>
+          <span>Turista Premium</span>
+        </div>
+        
+        <span class="material-symbols-outlined sidebar-profile__icon">
+            expand_more
+        </span>
+    </div>
+  </aside>
+
+  </section>
+      
+    </aside>
+</div>
+
+  <!-- MAIN -->
+  <main class="content">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="search">
+        <span class="material-symbols-outlined search__icon">search</span>
+        <input class="search__input" type="text" placeholder="Buscar en ajustes..." />
+      </div>
+<div class="header__icon-container">
+
+    <div class="header__actions">
+        <button class="header__icon">
+            <span class="material-symbols-outlined">notifications</span>
+            <span class="header__badge"></span>
+        </button>
+        
+        <button class="header__icon">
+            <span class="material-symbols-outlined">chat</span>
+        </button>
+    </div>
+    
+    
+    <button class="button button--primary">
+        <span class="material-symbols-outlined">add_circle</span>
+        Nuevo Viaje
+    </button>
+    
+</div>
+    </header>
+
+   
+  <!-- CONTENIDO PRINCIPAL -->
+  
+    <section class="privacy">
+      <h1 class="privacy__title">Ajustes de Privacidad</h1>
+      <p class="privacy__subtitle">
+        Gestiona quién puede ver tu actividad y cómo se utilizan tus datos.
+      </p>
+
+      <article class="card">
+        <h2 class="card__title">
+          <span class="material-symbols-outlined">visibility</span>
+          Visibilidad del Perfil
+        </h2>
+
+        
+        <label class="privacy-option privacy-option--active">
+          <input type="radio" name="visibility" checked />
+          <div class="privacy-option__content">
+            <strong>Público</strong>
+            <p>Tu perfil es visible para todos.</p>
+          </div>
+        </label>
+
+        <label class="privacy-option">
+          <input type="radio" name="visibility" />
+          <div class="privacy-option__content">
+            <strong>Privado</strong>
+            <p>Solo guías confirmados.</p>
+          </div>
+        </label>
+      </article>
+
+      <article class="card">
+  <h2 class="card__title">
+    <span class="material-symbols-outlined">history</span>
+    Historial de Viajes
+  </h2>
+
+  <p class="card__description">
+    Decide quién puede ver los destinos que has visitado anteriormente.
+  </p>
+
+  <div class="history">
+    <label class="history__option history__option--active">
+      <input type="radio" name="history" checked hidden />
+      <span class="material-symbols-outlined history__icon">groups</span>
+      <strong class="history__title">Público</strong>
+      <span class="history__text">Visible en tu perfil</span>
+    </label>
+
+    <label class="history__option">
+      <input type="radio" name="history" hidden />
+      <span class="material-symbols-outlined history__icon">handshake</span>
+      <strong class="history__title">Mis Guías</strong>
+      <span class="history__text">Solo guías contratados</span>
+    </label>
+
+    <label class="history__option">
+      <input type="radio" name="history" hidden />
+      <span class="material-symbols-outlined history__icon">visibility_off</span>
+      <strong class="history__title">Solo yo</strong>
+      <span class="history__text">Oculto para todos</span>
+    </label>
+  </div>
+</article>
+
+
+<article class="card">
+  <h2 class="card__title">
+    <span class="material-symbols-outlined">share_reviews</span>
+    Preferencias de Datos
+  </h2>
+
+  <p class="card__description">
+    Gestiona cómo compartimos y utilizamos tus datos.
+  </p>
+
+  <!-- OPCIÓN 1 -->
+  <div class="data-option">
+    <div class="data-option__text">
+      <strong class="data-option__title">Mejorar Kin Conecta</strong>
+      <p class="data-option__description">
+        Compartir estadísticas de uso anónimas para ayudarnos a mejorar la plataforma y detectar errores.
+      </p>
+    </div>
+
+    <label class="switch">
+      <input type="checkbox" checked>
+      <span class="switch__slider"></span>
+    </label>
+  </div>
+
+  <hr class="divider">
+
+  <!-- OPCIÓN 2 -->
+  <div class="data-option">
+    <div class="data-option__text">
+      <strong class="data-option__title">Publicidad Personalizada</strong>
+      <p class="data-option__description">
+        Permitir promociones basadas en tus intereses y búsquedas recientes.
+      </p>
+    </div>
+
+    <label class="switch">
+      <input type="checkbox">
+      <span class="switch__slider"></span>
+    </label>
+  </div>
+</article>
+
+
+      <div class="actions">
+        <button class="button">Cancelar</button>
+        <button class="button button--primary">
+          <span class="material-symbols-outlined">save</span>
+          Guardar Cambios
+        </button>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Términos de Servicio - Kin Conecta</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Reutiliza estilos -->
+    <link rel="stylesheet" href="help.css" />
+  </head>
+
+  <body class="app app--light">
+    <main class="legal">
+      <section class="legal__modal" role="dialog" aria-modal="true" aria-label="Términos de Servicio">
+        <header class="legal__top">
+          <h1 class="legal__title">Términos de Servicio</h1>
+          <button class="legal__close" type="button" aria-label="Cerrar" data-legal-close>
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </header>
+
+        <div class="legal__body">
+          <div class="legal__scroll">
+            <div class="legal__content">
+              <p><strong>Última actualización:</strong> 2026-02-11</p>
+
+              <h3>1. Aceptación</h3>
+              <p>
+                Al acceder o utilizar Kin Conecta, aceptas estos Términos de Servicio. Si no estás de acuerdo, por favor
+                no utilices la plataforma.
+              </p>
+
+              <h3>2. Descripción del servicio</h3>
+              <p>
+                Kin Conecta es una plataforma que facilita la conexión entre turistas y guías/experiencias. Kin Conecta
+                no presta directamente servicios turísticos; actúa como intermediario tecnológico.
+              </p>
+
+              <h3>3. Requisitos de uso</h3>
+              <ul>
+                <li>Tener capacidad legal para contratar conforme a las leyes aplicables en México.</li>
+                <li>Proporcionar información veraz y mantenerla actualizada.</li>
+                <li>No utilizar el servicio para fines ilícitos o fraudulentos.</li>
+              </ul>
+
+              <h3>4. Reservas, pagos y reembolsos</h3>
+              <p>
+                Los pagos, cargos y políticas de cancelación/reembolso se muestran durante el flujo de reserva. Kin
+                Conecta podrá retener y liberar pagos conforme a reglas operativas (por ejemplo, liberación posterior al
+                servicio).
+              </p>
+
+              <h3>5. Conducta y seguridad</h3>
+              <ul>
+                <li>No publicar contenido ilegal, ofensivo o que vulnere derechos de terceros.</li>
+                <li>No suplantar identidad ni acceder a cuentas ajenas.</li>
+                <li>Reportar conductas sospechosas a soporte.</li>
+              </ul>
+
+              <h3>6. Propiedad intelectual</h3>
+              <p>
+                El diseño, marca, código y contenidos de Kin Conecta son propiedad de sus titulares. Queda prohibida su
+                reproducción sin autorización.
+              </p>
+
+              <h3>7. Limitación de responsabilidad</h3>
+              <p>
+                Kin Conecta no garantiza disponibilidad ininterrumpida. La relación de servicio turístico ocurre entre
+                usuario y guía/proveedor. Kin Conecta no será responsable por hechos fuera de su control, sin perjuicio
+                de los derechos aplicables del consumidor.
+              </p>
+
+              <h3>8. Ley aplicable y jurisdicción</h3>
+              <p>
+                Estos términos se rigen por las leyes de los Estados Unidos Mexicanos. Cualquier controversia se
+                someterá a las autoridades competentes conforme a derecho.
+              </p>
+
+              <h3>9. Contacto</h3>
+              <p>Para dudas sobre estos términos: <strong>hola@kinconecta.com</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="legal__footer">
+          <a class="legal__back" href="help.html">← Volver a Ayuda</a>
+          <span>Kin Conecta</span>
+        </footer>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        const closeBtn = document.querySelector("[data-legal-close]");
+        const goBack = () => (window.location.href = "help.html");
+
+        closeBtn?.addEventListener("click", goBack);
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") goBack();
+        });
+      })();
+    </script>
+  </body>
+</html>

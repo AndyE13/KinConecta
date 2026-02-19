@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kin Conecta - Perfil de Aldo</title>
+    <link rel="stylesheet" href="profileTourist.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo-circle"></div>
+                <span class="brand-name">Kin Conecta</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item"><span class="material-symbols-outlined">home</span> Inicio</a>
+                <a href="#" class="nav-item"><span class="material-symbols-outlined">search</span> Explorar</a>
+                <a href="#" class="nav-item"><span class="material-symbols-outlined">favorite</span> Favoritos</a>
+                <a href="#" class="nav-item"><span class="material-symbols-outlined">auto_stories</span> Mis viajes <span class="badge">2</span></a>
+                <a href="#" class="nav-item"><span class="material-symbols-outlined">chat_bubble</span> Mensajes <span class="badge">3</span></a>
+                <a href="#" class="nav-item"><span class="material-symbols-outlined">star</span> Reseñas</a>
+                <a href="#" class="nav-item active"><span class="material-symbols-outlined">person</span> Perfil</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="header-right">
+                    <button class="btn-guide"><span class="material-symbols-outlined">person_add</span> Become a Guide</button>
+                    <span class="material-symbols-outlined icon-btn">notifications</span>
+                    <div class="msg-box">
+                        <span class="material-symbols-outlined icon-btn">chat_bubble</span>
+                        <span class="msg-badge">3</span>
+                    </div>
+                    <div class="user-pill">
+                        <div class="avatar-sm">A</div>
+                        <div class="user-meta">
+                            <span class="u-name">aldo</span>
+                            <span class="u-role">Traveler</span>
+                        </div>
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <section class="profile-main-card">
+                    <div class="profile-header">
+                        <div class="avatar-edit">
+                            <img src="https://i.pravatar.cc/150?u=aldo" alt="Aldo">
+                            <div class="edit-icon"><span class="material-symbols-outlined">photo_camera</span></div>
+                        </div>
+                        <div class="profile-text">
+                            <h1>Aldo R.</h1>
+                            <p>Viajero desde 2024</p>
+                            <span class="tag-tourist">Turista</span>
+                        </div>
+                        <button class="btn-save-top">Guardar Perfil</button>
+                    </div>
+                    <hr class="divider">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label>Nombre</label>
+                            <input type="text" value="Aldo">
+                        </div>
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" value="aldo@kinconecta.com" readonly>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-area">
+                    <h2 class="section-title">Tu próximo viaje</h2>
+                    <div class="featured-trip-card">
+                        <img src="https://images.unsplash.com/photo-1585464231875-d9ef1f5ad396?w=600" alt="CDMX">
+                        <div class="trip-details">
+                            <h3>Historic Center Photo Tour</h3>
+                            <p class="trip-loc"><span class="material-symbols-outlined">location_on</span> Mexico City • Feb 15, 2026</p>
+                            <div class="guide-mini">
+                                <img src="https://i.pravatar.cc/100?u=luis" alt="Luis">
+                                <span>Your guide <strong>Luis Martinez</strong></span>
+                            </div>
+                            <button class="btn-orange">View Details</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-area">
+                    <div class="flex-title">
+                        <h2 class="section-title">Recomendados para ti</h2>
+                        <a href="#" class="link-orange">Ver todos <span class="material-symbols-outlined">arrow_forward</span></a>
+                    </div>
+                    <div class="guides-grid">
+                        <div class="guide-card">
+                            <div class="guide-img">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Guía">
+                                <span class="badge-v">Verified</span>
+                            </div>
+                            <div class="guide-info">
+                                <h4>Maria Lopez</h4>
+                                <p>Guadalajara</p>
+                                <div class="rating"><span class="material-symbols-outlined">star</span> 4.8</div>
+                                <button class="btn-contact">Contact Guide</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-area">
+                    <h2 class="section-title">Destinos populares</h2>
+                    <div class="destinations-grid">
+                        <div class="dest-item" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1512813195386-6cf811ad3542?w=400');">
+                            <div class="dest-text">
+                                <h4>Tulum</h4>
+                                <p>89 guías locales</p>
+                            </div>
+                        </div>
+                        <div class="dest-item" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=400');">
+                            <div class="dest-text">
+                                <h4>Guadalajara</h4>
+                                <p>64 guías locales</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-area" style="padding-bottom: 60px;">
+                    <h2 class="section-title">Tus guías guardados</h2>
+                    <div class="saved-grid">
+                        <div class="saved-item">
+                            <img src="https://i.pravatar.cc/150?u=ana" alt="Ana">
+                            <p class="s-name">Ana Garcia</p>
+                            <p class="s-cat">Gastronomy</p>
+                        </div>
+                        <div class="saved-item">
+                            <img src="https://i.pravatar.cc/150?u=roberto" alt="Roberto">
+                            <p class="s-name">Roberto Diaz</p>
+                            <p class="s-cat">History</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

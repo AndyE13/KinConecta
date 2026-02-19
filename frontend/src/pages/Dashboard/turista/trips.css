@@ -1,0 +1,108 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-page: #F8F9FA;
+    --white: #FFFFFF;
+    --border: #E2E8F0;
+    --text-dark: #1E293B;
+    --text-muted: #64748B;
+    --kin-orange: #F59E0B;
+    --kin-orange-dark: #C2410C;
+    --kin-hover: #FFF7ED;
+    --sidebar-w: 260px;
+}
+
+/* --- RESET & LAYOUT --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: var(--bg-page); color: var(--text-dark); overflow: hidden; }
+
+.app-layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    height: 100vh; /* Ocupa toda la ventana */
+}
+
+/* --- SIDEBAR (Consistencia 100%) --- */
+.sidebar {
+    background: var(--white);
+    border-right: 1px solid var(--border);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__brand { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; padding-left: 12px; }
+.logo-circle { width: 22px; height: 22px; background: #8B4513; border-radius: 50%; }
+.brand-name { font-weight: 600; font-size: 16px; }
+
+.sidebar__nav { display: flex; flex-direction: column; gap: 4px; }
+
+.nav-item {
+    display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+    text-decoration: none; color: var(--text-muted); border-radius: 12px;
+    font-size: 14px; font-weight: 500; transition: 0.2s;
+}
+
+/* HOVER y ACTIVE iguales al figma */
+.nav-item:hover, .nav-item--active {
+    background-color: var(--kin-hover);
+    color: var(--kin-orange-dark);
+}
+
+.nav-item--active { font-weight: 600; }
+.badge { margin-left: auto; background: var(--kin-orange-dark); color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+
+/* --- MAIN CONTENT (Con Scroll Independiente) --- */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Solo el contenido tiene scroll */
+}
+
+.main-header {
+    height: 64px; background: var(--white); border-bottom: 1px solid var(--border);
+    display: flex; justify-content: flex-end; align-items: center; padding: 0 40px;
+    position: sticky; top: 0; z-index: 100;
+}
+
+/* Header Elements */
+.header-right { display: flex; align-items: center; gap: 20px; }
+.btn-become-guide { padding: 8px 16px; border: 1px solid var(--border); border-radius: 8px; background: white; font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 8px; cursor: pointer; }
+
+.msg-container { position: relative; }
+.msg-badge { position: absolute; top: -5px; right: -5px; background: var(--kin-orange-dark); color: white; font-size: 9px; min-width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; display: flex; align-items: center; justify-content: center; }
+
+.user-pill { display: flex; align-items: center; gap: 10px; background: #F1F5F9; padding: 4px 12px; border-radius: 20px; }
+.avatar { width: 24px; height: 24px; background: var(--kin-orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; }
+
+/* --- SECCIONES DE INICIO --- */
+.page-content { padding: 40px; max-width: 1100px; margin: 0 auto; width: 100%; }
+
+.welcome-banner {
+    background: linear-gradient(135deg, #134e4a 0%, #064e3b 100%);
+    border-radius: 20px; padding: 40px; color: white; margin-bottom: 32px;
+}
+.welcome-label { font-size: 12px; opacity: 0.8; margin-bottom: 8px; }
+.welcome-banner h1 { font-size: 28px; margin-bottom: 4px; }
+
+.section-title { font-size: 18px; font-weight: 600; margin-bottom: 20px; }
+
+/* Card Destacada */
+.trip-card-featured {
+    background: var(--white); border: 1px solid var(--border); border-radius: 16px;
+    display: flex; overflow: hidden;
+}
+.trip-card-featured img { width: 40%; height: 250px; object-fit: cover; }
+.trip-info { padding: 24px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.trip-info h3 { font-size: 20px; margin-bottom: 12px; }
+.location, .date { display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 13px; margin-bottom: 8px; }
+.location span, .date span { font-size: 18px; }
+
+.guide-mini-pill { display: flex; align-items: center; gap: 12px; margin: 16px 0; }
+.guide-mini-pill img { width: 32px; height: 32px; border-radius: 50%; }
+.guide-tag { display: block; font-size: 10px; color: var(--text-muted); }
+.guide-name { font-weight: 600; font-size: 13px; }
+
+.btn-primary {
+    background: #ea580c; color: white; border: none; padding: 10px 20px;
+    border-radius: 8px; font-weight: 600; font-size: 13px; cursor: pointer; width: fit-content;
+}

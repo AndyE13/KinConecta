@@ -85,16 +85,29 @@
   }
 
   /* ----------------------------- 4) Active link en navbar por scroll ----------------------------- */
+  const navLinks = qsa(".header__link");
+  const navTargets = navLinks
+    .map((link) => {
+      const href = link.getAttribute("href") || "";
+      const hashIndex = href.indexOf("#");
+      if (hashIndex < 0) return null;
+
+      const base = href.slice(0, hashIndex);
+      const id = href.slice(hashIndex + 1);
+      if (base && !base.endsWith("aboutus.html")) return null;
+
+      return { link, id };
+    })
+    .filter(Boolean);
+
   const sections = ["#inicio", "#explorar", "#nosotros", "#contacto"]
     .map((id) => qs(id))
     .filter(Boolean);
 
-  const navLinks = qsa(".header__link");
-
   const setActive = (id) => {
     navLinks.forEach((a) => a.classList.remove("header__link--active"));
-    const match = navLinks.find((a) => a.getAttribute("href") === `#${id}`);
-    if (match) match.classList.add("header__link--active");
+    const match = navTargets.find((item) => item.id === id);
+    if (match) match.link.classList.add("header__link--active");
   };
 
   const spy = () => {
