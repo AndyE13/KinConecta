@@ -1,0 +1,132 @@
+@import url("../guide/dashboard-calendar.css");
+
+:root {
+  --tourist-primary: var(--kc-color-primary);
+  --tourist-primary-soft: rgba(255, 91, 4, 0.12);
+  --tourist-sea: var(--kc-color-sea);
+  --tourist-surface: var(--kc-surface);
+  --tourist-border: var(--kc-border);
+  --tourist-text: var(--kc-text);
+  --tourist-muted: var(--kc-text-muted);
+}
+
+.platform-page.role-tourist .topbar__heading {
+  min-width: 0;
+}
+
+.platform-page.role-tourist .topbar__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--tourist-sea);
+}
+
+.platform-page.role-tourist .topbar__subtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--tourist-muted);
+}
+
+.platform-page.role-tourist .topbar__notif-dot {
+  background: var(--tourist-primary);
+}
+
+.tourist-page {
+  flex: 1;
+  overflow: auto;
+  padding: 24px;
+  min-width: 0;
+}
+
+.tourist-page__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.tourist-panel {
+  background: var(--tourist-surface);
+  border: 1px solid var(--tourist-border);
+  border-radius: 16px;
+  box-shadow: var(--kc-shadow-soft);
+}
+
+.tourist-page .btn--primary {
+  background: var(--tourist-primary);
+}
+
+.tourist-page .btn--secondary {
+  border-color: rgba(255, 91, 4, 0.2);
+  color: var(--tourist-primary);
+}
+
+.tourist-page .btn--secondary:hover {
+  background: var(--tourist-primary-soft);
+}
+
+.tourist-search {
+  position: relative;
+  width: min(520px, 100%);
+}
+
+.tourist-search__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: var(--tourist-muted);
+}
+
+.tourist-search__input {
+  width: 100%;
+  padding: 12px 12px 12px 42px;
+  border-radius: 14px;
+  border: 1px solid var(--tourist-border);
+  background: var(--tourist-surface);
+  color: var(--tourist-text);
+  font-weight: 700;
+  box-shadow: var(--kc-shadow-soft);
+}
+
+.tourist-search__input:focus {
+  outline: none;
+  border-color: rgba(255, 91, 4, 0.35);
+  box-shadow: 0 0 0 4px rgba(255, 91, 4, 0.12);
+}
+
+.tourist-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tourist-section__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--tourist-sea);
+}
+
+.tourist-section__subtitle {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--tourist-muted);
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .tourist-page {
+    padding: 16px;
+  }
+
+  .tourist-page__container {
+    gap: 14px;
+  }
+
+  .platform-page.role-tourist .topbar {
+    padding-left: 62px;
+  }
+}

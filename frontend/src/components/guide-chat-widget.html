@@ -1,0 +1,54 @@
+<div class="guide-chat" data-guide-chat>
+  <button class="guide-chat__launcher" type="button" aria-label="Abrir chat con turistas">
+    <span class="material-symbols-outlined guide-chat__launcher-icon">chat</span>
+  </button>
+
+  <section class="guide-chat__panel" aria-label="Mensajes">
+    <header class="guide-chat__header">
+      <div>
+        <p class="guide-chat__title">Mensajes</p>
+        <p class="guide-chat__subtitle">Responde desde cualquier página</p>
+      </div>
+      <button class="guide-chat__close" type="button" aria-label="Cerrar chat">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </header>
+
+    <div class="guide-chat__body">
+      <aside class="guide-chat__threads" aria-label="Conversaciones">
+        <button class="guide-chat__thread is-active" type="button" data-thread="maria">
+          <span class="guide-chat__thread-avatar">MR</span>
+          <span class="guide-chat__thread-meta">
+            <span class="guide-chat__thread-name">María R.</span>
+            <span class="guide-chat__thread-snippet">¿Podemos mover el tour una hora?</span>
+          </span>
+        </button>
+
+        <button class="guide-chat__thread" type="button" data-thread="alejandro">
+          <span class="guide-chat__thread-avatar">AL</span>
+          <span class="guide-chat__thread-meta">
+            <span class="guide-chat__thread-name">Alejandro M.</span>
+            <span class="guide-chat__thread-snippet">Te confirmé para mañana.</span>
+          </span>
+        </button>
+      </aside>
+
+      <div class="guide-chat__conversation">
+        <div class="guide-chat__messages" data-guide-chat-messages aria-live="polite"></div>
+
+        <form class="guide-chat__composer" data-guide-chat-form>
+          <input
+            class="guide-chat__input"
+            type="text"
+            name="message"
+            placeholder="Escribe un mensaje..."
+            autocomplete="off"
+          />
+          <button class="guide-chat__send" type="submit" aria-label="Enviar mensaje">
+            <span class="material-symbols-outlined">send</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>

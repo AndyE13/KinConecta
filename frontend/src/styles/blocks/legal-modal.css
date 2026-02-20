@@ -1,0 +1,132 @@
+.legal-modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 180ms ease, visibility 180ms ease;
+  z-index: 150;
+}
+
+.legal-modal--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.legal-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.46);
+  backdrop-filter: blur(4px);
+}
+
+.legal-modal__panel {
+  position: relative;
+  width: min(980px, 100%);
+  max-height: min(88vh, 920px);
+  border-radius: 22px;
+  border: 1px solid #eef0f2;
+  background: #ffffff;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.legal-modal__header {
+  padding: 18px 18px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #f8fafb;
+  border-bottom: 1px solid #eef0f2;
+}
+
+.legal-modal__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: #173d3c;
+}
+
+.legal-modal__close {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #374151;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.legal-modal__close:hover {
+  transform: translateY(-1px);
+  background: #f9fafb;
+}
+
+.legal-modal__body {
+  padding: 18px;
+}
+
+.legal-modal__scroll {
+  max-height: min(64vh, 560px);
+  overflow: auto;
+  padding-right: 8px;
+}
+
+.legal-modal__content {
+  color: #374151;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.legal-modal__content h3 {
+  margin: 18px 0 10px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.legal-modal__content p {
+  margin: 0 0 10px;
+  color: #4b5563;
+}
+
+.legal-modal__content ul {
+  margin: 8px 0 12px 18px;
+  color: #4b5563;
+}
+
+.legal-modal__content li {
+  margin: 6px 0;
+}
+
+.legal-modal__footer {
+  padding: 14px 18px;
+  border-top: 1px solid #eef0f2;
+  display: flex;
+  justify-content: flex-end;
+  background: #ffffff;
+}
+
+.legal-modal__button {
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  background: #af3808;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.legal-modal__button:hover {
+  background: #c2410b;
+  transform: translateY(-1px);
+}

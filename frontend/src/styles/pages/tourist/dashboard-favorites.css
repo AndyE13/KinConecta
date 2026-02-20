@@ -1,0 +1,163 @@
+@import url("./dashboard-shell.css");
+
+.favorites-page {
+  display: grid;
+  gap: 18px;
+}
+
+.favorites-tabs {
+  border-bottom: 1px solid var(--tourist-border);
+  display: flex;
+  gap: 18px;
+}
+
+.favorites-tab {
+  border: none;
+  background: transparent;
+  color: var(--tourist-muted);
+  font-size: 14px;
+  font-weight: 800;
+  padding: 12px 4px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.favorites-tab__badge {
+  border-radius: 999px;
+  background: rgba(7, 80, 86, 0.1);
+  color: var(--tourist-sea);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 7px;
+}
+
+.favorites-tab.is-active {
+  color: var(--tourist-primary);
+  border-bottom-color: var(--tourist-primary);
+}
+
+.favorites-tab.is-active .favorites-tab__badge {
+  background: rgba(255, 91, 4, 0.12);
+  color: var(--tourist-primary);
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 1080px) {
+  .favorites-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .favorites-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.favorite-card {
+  background: #fff;
+  border: 1px solid var(--tourist-border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--kc-shadow-soft);
+  display: grid;
+}
+
+.favorite-card__media {
+  position: relative;
+  height: 186px;
+  background-size: cover;
+  background-position: center;
+}
+
+.favorite-card__remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--tourist-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.favorite-card__tags {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.favorite-card__tag {
+  border-radius: 9px;
+  background: rgba(7, 80, 86, 0.88);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 7px;
+}
+
+.favorite-card__body {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+}
+
+.favorite-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.favorite-card__title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--tourist-sea);
+}
+
+.favorite-card__price {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--tourist-sea);
+}
+
+.favorite-card__price small {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--tourist-muted);
+}
+
+.favorite-card__location {
+  margin: 0;
+  color: var(--tourist-muted);
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.favorite-card__description {
+  margin: 0;
+  color: var(--tourist-muted);
+  font-size: 13px;
+  line-height: 1.45;
+}

@@ -1,0 +1,102 @@
+<div class="auth-card" data-auth-fragment data-auth-type="register">
+  <div class="auth-card__head">
+    <p class="auth-card__eyebrow">Comienza hoy</p>
+    <h3 class="auth-card__title">Crear cuenta</h3>
+    <p class="auth-card__subtitle">Reg&iacute;strate para encontrar tu pr&oacute;xima experiencia.</p>
+  </div>
+
+  <form class="auth-form" data-auth-form="register" novalidate>
+    <input type="hidden" name="accountRole" value="" />
+
+    <div class="auth-role-step">
+      <p class="auth-role-step__title">Selecciona c&oacute;mo quieres registrarte:</p>
+      <div class="auth-role-grid">
+        <button class="auth-role-card" type="button" data-register-role="tourist">
+          <span class="material-symbols-outlined" aria-hidden="true">explore</span>
+          <strong>Turista</strong>
+          <small>Busca gu&iacute;as locales y experiencias personalizadas.</small>
+        </button>
+        <button class="auth-role-card" type="button" data-register-role="guide">
+          <span class="material-symbols-outlined" aria-hidden="true">map</span>
+          <strong>Gu&iacute;a</strong>
+          <small>Publica tus servicios y conecta con viajeros.</small>
+        </button>
+      </div>
+    </div>
+
+    <div class="auth-register-grid">
+      <label class="auth-form__field auth-form__field--full">
+        <span>Nombre completo</span>
+        <input
+          type="text"
+          name="fullName"
+          autocomplete="name"
+          placeholder="Nombre y apellidos"
+          required
+        />
+      </label>
+
+      <label class="auth-form__field">
+        <span>Clave LADA</span>
+        <select name="countryCode" required>
+          <option value="">Selecciona...</option>
+          <option value="+52">+52 (MX)</option>
+          <option value="+1">+1 (US/CA)</option>
+          <option value="+34">+34 (ES)</option>
+          <option value="+57">+57 (CO)</option>
+          <option value="+51">+51 (PE)</option>
+          <option value="+54">+54 (AR)</option>
+          <option value="+56">+56 (CL)</option>
+        </select>
+      </label>
+
+      <label class="auth-form__field">
+        <span>Tel&eacute;fono</span>
+        <input
+          type="tel"
+          name="phoneNumber"
+          inputmode="numeric"
+          autocomplete="tel"
+          placeholder="Ej. 5512345678"
+          required
+        />
+      </label>
+
+      <label class="auth-form__field auth-form__field--full">
+        <span>Correo electr&oacute;nico</span>
+        <input
+          type="email"
+          name="email"
+          autocomplete="email"
+          placeholder="tu-correo@ejemplo.com"
+          required
+        />
+      </label>
+
+      <label class="auth-form__field">
+        <span>Contrase&ntilde;a</span>
+        <input
+          type="password"
+          name="password"
+          autocomplete="new-password"
+          placeholder="M&iacute;nimo 8 caracteres"
+          required
+        />
+      </label>
+
+      <label class="auth-form__field">
+        <span>Confirmar contrase&ntilde;a</span>
+        <input
+          type="password"
+          name="confirmPassword"
+          autocomplete="new-password"
+          placeholder="Repite tu contrase&ntilde;a"
+          required
+        />
+      </label>
+    </div>
+
+    <p class="auth-form__feedback" data-auth-feedback aria-live="polite"></p>
+    <button class="auth-form__submit" type="submit">Registrarme</button>
+  </form>
+</div>

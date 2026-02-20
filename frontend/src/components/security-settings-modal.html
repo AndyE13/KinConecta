@@ -1,0 +1,70 @@
+<div class="security-modal" data-security-modal aria-hidden="true">
+  <div class="security-modal__backdrop" data-security-close></div>
+  <section
+    class="security-modal__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="security-modal-title"
+  >
+    <button class="security-modal__close" type="button" aria-label="Cerrar" data-security-close>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+
+    <div class="security-settings">
+      <header class="security-settings__header">
+        <div class="security-settings__icon">
+          <span class="material-symbols-outlined">lock</span>
+        </div>
+        <h2 class="security-settings__title" id="security-modal-title">Seguridad de la cuenta</h2>
+        <p class="security-settings__subtitle">
+          Actualiza tu correo electrónico y contraseña para proteger tu cuenta.
+        </p>
+      </header>
+
+      <form class="security-settings__form" data-security-form>
+        <div class="security-settings__grid">
+          <label class="security-field">
+            <span class="security-field__label">Correo actual</span>
+            <input class="security-field__input" name="currentEmail" type="email" placeholder="tu@correo.com" />
+          </label>
+
+          <label class="security-field">
+            <span class="security-field__label">Nuevo correo</span>
+            <input class="security-field__input" name="newEmail" type="email" placeholder="nuevo@correo.com" />
+          </label>
+        </div>
+
+        <div class="security-settings__grid">
+          <label class="security-field">
+            <span class="security-field__label">Contraseña actual</span>
+            <input class="security-field__input" name="currentPassword" type="password" placeholder="********" />
+          </label>
+
+          <label class="security-field">
+            <span class="security-field__label">Nueva contraseña</span>
+            <input class="security-field__input" name="newPassword" type="password" placeholder="********" />
+          </label>
+        </div>
+
+        <label class="security-field">
+          <span class="security-field__label">Confirmar nueva contraseña</span>
+          <input class="security-field__input" name="confirmNewPassword" type="password" placeholder="********" />
+        </label>
+
+        <p class="security-settings__hint">
+          La nueva contraseña debe tener al menos 8 caracteres.
+        </p>
+        <p class="security-settings__feedback" data-security-feedback aria-live="polite"></p>
+
+        <div class="security-settings__actions">
+          <button class="security-settings__btn security-settings__btn--ghost" type="button" data-security-close>
+            Cancelar
+          </button>
+          <button class="security-settings__btn security-settings__btn--primary" type="submit">
+            Guardar cambios
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>

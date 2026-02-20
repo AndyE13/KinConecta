@@ -3,100 +3,46 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Mis Tours - Kin Conecta</title>
+    <title>Mis recorridos - Kin Conecta</title>
     <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="tours.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../styles/pages/platform.css" />
+    <link rel="stylesheet" href="../../../styles/pages/guide/dashboard-tours.css"/>
 </head>
-<body>
+<body class="platform-page role-guide">
     <!-- Contenedor de alertas -->
     <div id="alertContainer" class="alert-container"></div>
     
     <div class="container">
         <!-- Barra lateral -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <div class="logo-icon">
-                    <span class="material-symbols-outlined">travel_explore</span>
-                </div>
-                <div>
-                    <h1 class="logo-title">Kin Conecta</h1>
-                    <p class="logo-subtitle">Portal de Guía</p>
-                </div>
-            </div>
-            
-            <nav class="sidebar-nav">
-                <a class="nav-item" href="#">
-                    <span class="material-symbols-outlined">dashboard</span>
-                    <span class="nav-text">Tablero</span>
-                </a>
-                <a class="nav-item active" href="#">
-                    <span class="material-symbols-outlined filled">map</span>
-                    <span class="nav-text">Mis Tours</span>
-                </a>
-                <a class="nav-item" href="#">
-                    <span class="material-symbols-outlined">calendar_month</span>
-                    <span class="nav-text">Calendario</span>
-                </a>
-                <a class="nav-item" href="#">
-                    <span class="material-symbols-outlined">chat_bubble</span>
-                    <span class="nav-text">Mensajes</span>
-                    <span class="badge">3</span>
-                </a>
-                <a class="nav-item" href="#">
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="nav-text">Reseñas</span>
-                </a>
-                <a class="nav-item" href="#">
-                    <span class="material-symbols-outlined">payments</span>
-                    <span class="nav-text">Ingresos</span>
-                </a>
-            </nav>
-            
-            <div class="sidebar-footer">
-                <a class="nav-item" href="#">
-                    <span class="material-symbols-outlined">settings</span>
-                    <span class="nav-text">Configuración</span>
-                </a>
-                <div class="user-profile">
-                    <div class="user-avatar"></div>
-                    <div class="user-info">
-                        <span class="user-name">Carlos Rivera</span>
-                        <span class="user-logout">Cerrar sesión</span>
-                    </div>
-                </div>
-            </div>
-        </aside>
+        <div
+          data-guide-sidebar
+          data-component-path="../../../components/guide-sidebar.html"
+          data-pages-prefix="../../"
+          data-assets-prefix="../../../"
+          data-guide-active="tours"
+        ></div>
         
         <!-- Contenido principal -->
         <main class="main-content">
             <!-- Encabezado -->
             <header class="header">
                 <div class="mobile-header">
-                    <button class="menu-button">
+                    <button class="menu-button" type="button" aria-label="Abrir menú">
                         <span class="material-symbols-outlined">menu</span>
                     </button>
                     <span class="mobile-logo">Kin Conecta</span>
                 </div>
                 <div class="header-title">
-                    <h2 class="page-title">Mis Tours</h2>
+                    <h2 class="page-title">Mis recorridos</h2>
                     <p class="page-subtitle">Administra tus experiencias y disponibilidad.</p>
                 </div>
                 <div class="header-actions">
-                    <div class="availability-toggle">
-                        <span class="toggle-label">Estado:</span>
-                        <label class="toggle-switch">
-                            <input type="checkbox" checked/>
-                            <div class="toggle-slider"></div>
-                            <span class="toggle-text">Disponible</span>
-                        </label>
-                    </div>
-                    <div class="divider"></div>
                     <div class="verified-badge">
                         <span class="material-symbols-outlined">verified</span>
-                        <span class="verified-text">Guía Verificado</span>
+                        <span class="verified-text">Guía verificado</span>
                     </div>
-                    <button class="notification-button">
+                    <button class="notification-button" type="button" aria-label="Notificaciones">
                         <span class="material-symbols-outlined">notifications</span>
                         <span class="notification-dot"></span>
                     </button>
@@ -108,35 +54,36 @@
                 <div class="content-wrapper">
                     <!-- Botón de crear nuevo tour -->
                     <div class="create-tour-section">
-                        <button class="create-tour-button">
+                        <button class="create-tour-button" id="btnCreateTour" type="button">
                             <span class="material-symbols-outlined">add_circle</span>
-                            Crear Nuevo Tour
+                            Crear nuevo recorrido
                         </button>
                     </div>
                     
                     <!-- Grid de tours (se llenará dinámicamente) -->
-                    <div class="tours-grid"></div>
+                    <div class="tours-grid" id="toursGrid"></div>
                 </div>
             </div>
         </main>
     </div>
     
-    <!-- Modal de Crear/Editar Tour -->
+    <!-- Modal de crear/editar recorrido -->
     <div id="tourModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="modalTitle">Crear Nuevo Tour</h2>
-                <button class="modal-close" type="button">
+                <h2 id="modalTitle">Crear nuevo recorrido</h2>
+                <button class="modal-close" id="btnCloseTourModal" type="button">
                     <span class="material-symbols-outlined">close</span>
                 </button>
             </div>
             
             <form id="tourForm" class="modal-body">
+                <input type="hidden" id="tourId" value="" />
                 <div class="form-row">
                     <div class="form-group full-width">
                         <label for="tourTitle">
                             <span class="material-symbols-outlined">title</span>
-                            Título del Tour
+                            Título del recorrido
                         </label>
                         <input 
                             type="text" 
@@ -262,7 +209,7 @@
                     <div class="form-group full-width">
                         <label for="tourIncluded">
                             <span class="material-symbols-outlined">checklist</span>
-                            Items Incluidos (separados por comas)
+                            Ítems incluidos (separados por comas)
                         </label>
                         <input 
                             type="text" 
@@ -278,7 +225,7 @@
                     <div class="form-group">
                         <label for="tourStatus">
                             <span class="material-symbols-outlined">visibility</span>
-                            Estado del Tour
+                            Estado del recorrido
                         </label>
                         <select id="tourStatus" class="form-control" required>
                             <option value="draft">Borrador</option>
@@ -289,18 +236,22 @@
                 </div>
                 
                 <div class="modal-footer">
-                    <button type="button" class="btn-cancel" onclick="closeTourModal()">
+                    <button type="button" class="btn-cancel" id="btnCancelTourModal">
                         Cancelar
                     </button>
                     <button type="submit" class="btn-submit">
                         <span class="material-symbols-outlined">check_circle</span>
-                        Guardar Tour
+                        Guardar recorrido
                     </button>
                 </div>
             </form>
         </div>
     </div>
     
-    <script src="../../../scripts/tours.js"></script>
+    <script src="../../../scripts/api/http-client.js"></script>
+    <script src="../../../scripts/api/guide-api-services.js"></script>
+    <script src="../../../scripts/pages/guide/dashboard-tours.js"></script>
+    <div data-guide-chat-widget data-component-path="../../../components/guide-chat-widget.html"></div>
+    <script src="../../../scripts/components/guide-shell.js"></script>
 </body>
 </html>

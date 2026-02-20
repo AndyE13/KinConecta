@@ -1,0 +1,129 @@
+@import url("./dashboard-shell.css");
+
+.tourist-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tourist-form-card {
+  background: #fff;
+  border: 1px solid var(--tourist-border);
+  border-radius: 16px;
+  box-shadow: var(--kc-shadow-soft);
+  padding: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.tourist-form-card h3 {
+  margin: 0;
+  color: var(--tourist-sea);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.tourist-form-card--full {
+  grid-column: 1 / -1;
+}
+
+.tourist-field-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.tourist-field-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tourist-field {
+  display: grid;
+  gap: 6px;
+}
+
+.tourist-field span {
+  color: var(--tourist-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tourist-field :is(input, select, textarea) {
+  width: 100%;
+  border: 1px solid var(--tourist-border);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--tourist-text);
+  font: inherit;
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.tourist-field :is(input, select, textarea):focus {
+  outline: none;
+  border-color: rgba(255, 91, 4, 0.42);
+  box-shadow: 0 0 0 4px rgba(255, 91, 4, 0.16);
+}
+
+.tourist-field textarea {
+  min-height: 96px;
+}
+
+.tourist-form-footer {
+  grid-column: 1 / -1;
+  background: #fff;
+  border: 1px solid var(--tourist-border);
+  border-radius: 16px;
+  box-shadow: var(--kc-shadow-soft);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tourist-form-feedback {
+  margin: 0;
+  color: var(--tourist-muted);
+  font-size: 14px;
+}
+
+.tourist-form-feedback.is-success {
+  color: #0b7a3f;
+  font-weight: 700;
+}
+
+.tourist-form-feedback.is-error {
+  color: #b42318;
+  font-weight: 700;
+}
+
+.tourist-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .tourist-form {
+    grid-template-columns: 1fr;
+  }
+
+  .tourist-form-card--full {
+    grid-column: auto;
+  }
+
+  .tourist-field-grid--two {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .tourist-form-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tourist-form-actions {
+    justify-content: flex-end;
+  }
+}

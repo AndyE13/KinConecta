@@ -1,210 +1,111 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explorar - Kin Conecta</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kin Conecta - Explorar</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="explore.css">
-</head>
+    <link rel="stylesheet" href="../../../styles/pages/platform.css" />
+    <link rel="stylesheet" href="../../../styles/pages/tourist/dashboard-explore.css" />
 
-<body class="app">
+    <script defer src="../../../scripts/api/http-client.js"></script>
+    <script defer src="../../../scripts/api/tourist-api-services.js"></script>
+    <script defer src="../../../scripts/pages/tourist/dashboard-explore.js"></script>
+  </head>
 
-<div class="layout">
+  <body class="app platform-page role-tourist">
+    <div class="layout">
+      <div
+        data-tourist-sidebar
+        data-component-path="../../../components/tourist-sidebar.html"
+        data-pages-prefix="../../"
+        data-assets-prefix="../../../"
+        data-tourist-active="explore"
+      ></div>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="sidebar__top">
-      <div class="sidebar__brand">
-        <span class="sidebar__icon material-symbols-outlined">travel_explore</span>
-        <h1 class="sidebar__title">Kin Conecta</h1>
-      </div>
-
-      <nav class="sidebar__nav">
-        <a class="sidebar__link" href="#">
-          <span class="material-symbols-outlined">home</span> Inicio
-        </a>
-
-        <a class="sidebar__link sidebar__link--active" href="#">
-          <span class="material-symbols-outlined">explore</span> Explorar
-        </a>
-
-        <a class="sidebar__link" href="#">
-          <span class="material-symbols-outlined">favorite</span> Favoritos
-        </a>
-
-        <a class="sidebar__link" href="#">
-          <span class="material-symbols-outlined">map</span> Mis Viajes
-        </a>
-
-        <a class="sidebar__link" href="#">
-          <span class="material-symbols-outlined">chat_bubble</span> Mensajes
-        </a>
-
-        <a class="sidebar__link" href="#">
-          <span class="material-symbols-outlined">star</span> Reseñas
-        </a>
-      </nav>
-    </div>
-
-    <div class="sidebar__user">
-        <button class="sidebar__btn-perfil">
-            <div class="sidebar__avatar"></div>
-            <div>
-                <p class="sidebar__name">Alejandro M.</p>
-                <span class="sidebar__role">Turista Premium</span>
-            </div>
-            <div class="sidebar__expand-container">
-                <span class="material-symbols-outlined" >expand_more</span>
-            </div>
-        </button>
-    </div>
-  </aside>
-
-  <!-- MAIN -->
-  <main class="main">
-
-    <header class="header">
-        <div class="header__container">
-            <button class="header__btn">
-                <span class="material-symbols-outlined">notifications</span>
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar__left">
+            <button
+              class="topbar__menu-btn"
+              id="btnSidebar"
+              type="button"
+              aria-controls="sidebar"
+              aria-expanded="false"
+            >
+              <span class="material-symbols-outlined">menu</span>
+              <span class="u-sr-only">Abrir menú</span>
             </button>
-            <button class="header__btn">
-                <span class="material-symbols-outlined">chat</span>
-            </button>
-            <div class="header__separador"></div>
-            <button class="header__btn">
-                <span class="material-symbols-outlined text-primary">add_circle</span> Nuevo Viaje
-            </button>
-        </div>
-    </header>
-    
-    <div class="explore__container-md">
-      <div class="explore__container">
-        <section class="explore">
-          <div class="explore__title-container">
-            <h1>Explorar Destinos y Guías</h1>
-            <p>Encuentra la experiencia perfecta para tu próxima aventura.</p>
-          </div>
-          <div class="explore__search">
-            <div class="explore__search-icon">
-              <span class="material-symbols-outlined">search</span>
-            </div>
-            <input type="text" placeholder="Buscar por ubicación, guía o tipo de actividad...">
-            <div class="explore__btn">
-              <button>Buscar</button>
+            <div class="topbar__heading">
+              <h2 class="topbar__title">Explorar</h2>
+              <p class="topbar__subtitle">Descubre destinos, experiencias y guías</p>
             </div>
           </div>
-          
-          <div class="explore__filters-container">
-            <div class="explore__filters">
-              <button class="filter filter-active">Todos</button>
-              <button class="filter">Gastronomía</button>
-              <button class="filter">Aventura</button>
-              <button class="filter">Historia</button>
-              <button class="filter">Cultura</button>
-              <div class="filter-division"></div>
-              <button class="filter">
-                <span>Precio</span>
-                <span class="material-symbols-outlined text-lg">expand_more</span>
-              </button>
-            </div>
-            <div class="explore__filters-LM">
-              <button class="filter-selection">
-                <span class="material-symbols-outlined text-sm">grid_view</span>Lista
-              </button>
-              <button>
-                <span class="material-symbols-outlined text-sm">map</span>Mapa
-              </button>
-            </div>
-          </div>
-        </section>
 
-        <section>
-          <div class="cards-container">
-              <div class="card">
-                <div class="card__image-container">
-                  <div class="card__image"></div>
-                  <button>
-                    <span class="material-symbols-outlined text-lg block">favorite</span>
-                  </button>
-                  <div class="card__img-etiqueta">Experiencia</div>
-                  <div class="card__img-start-container">
-                    <span class="material-symbols-outlined start-icon">star</span>
-                    <span class="stars-rank">4.9</span>
-                    <span class="stars-number">(120)</span>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <div class="card__title">
-                    <h3>Sabores de Oaxaca</h3>
-                  </div>
-                  <p class="card__location">
-                    <span class="material-symbols-outlined">location_on</span>
-                    Oaxaca, México
+          <div class="topbar__actions">
+            <button class="topbar__notif" id="btnNotif" type="button" aria-label="Notificaciones">
+              <span class="material-symbols-outlined">notifications</span>
+              <span class="topbar__notif-dot" aria-hidden="true"></span>
+            </button>
+          </div>
+        </header>
+
+        <section class="tourist-page">
+          <div class="tourist-page__container explore-page">
+            <header class="explore-hero">
+              <div class="tourist-section__header">
+                <div>
+                  <h1 class="tourist-section__title">Explorar destinos y guías</h1>
+                  <p class="tourist-section__subtitle">
+                    Encuentra la experiencia ideal para tu siguiente aventura.
                   </p>
-                  <div class="card__content-category">
-                    <span class="category">Gastronomía</span>
-                    <span class="category">Cultura</span>
-                  </div>
-                  <div class="card__footer">
-                    <div>
-                      <p class="card__footer-text">Desde</p>
-                      <p class="card__price">€45<span class="card__footer-person">/persona</span></p>
-                    </div>
-                    <div class="card__guide"></div>
-                  </div>
-                </div>
-              </div>
-              
-
-              
-              <div class="card">
-                <div class="card__image-container">
-                  <div class="card__image"></div>
-                  <button>
-                    <span class="material-symbols-outlined text-lg block">favorite</span>
-                  </button>
-                  <div class="card__img-etiqueta">Experiencia</div>
-                  <div class="card__img-start-container guia-start">
-                    <span class="material-symbols-outlined start-icon">star</span>
-                    <span class="stars-rank">4.9</span>
-                  </div>
-                </div>
-                <div class="card__content">
-                  <div class="card__title">
-                    <h3>Sabores de Oaxaca</h3>
-                  </div>
-                  <p class="card__location">
-                    <span class="material-symbols-outlined">location_on</span>
-                    Oaxaca, México
-                  </p>
-                  <div class="card__content-category">
-                    <span class="category">Gastronomía</span>
-                    <span class="category">Cultura</span>
-                  </div>
-                  <div class="card__footer">
-                    <div>
-                      <p class="card__footer-text">Tarifa</p>
-                      <p class="card__price">€45<span class="card__footer-person">/hora</span></p>
-                    </div>
-                    <div class="card__guide"></div>
-                  </div>
                 </div>
               </div>
 
-              
+              <div class="explore-search">
+                <span class="material-symbols-outlined explore-search__icon">search</span>
+                <input
+                  id="exploreSearchInput"
+                  class="explore-search__input"
+                  type="search"
+                  placeholder="Buscar por destino, guía o tipo de actividad"
+                />
+                <button class="explore-search__btn" id="exploreQuickSearch" type="button">Buscar</button>
+              </div>
 
+              <div class="explore-filters" role="tablist" aria-label="Filtros de exploración">
+                <button class="explore-filter is-active" type="button" data-filter="all">Todos</button>
+                <button class="explore-filter" type="button" data-filter="gastronomia">Gastronomía</button>
+                <button class="explore-filter" type="button" data-filter="aventura">Aventura</button>
+                <button class="explore-filter" type="button" data-filter="historia">Historia</button>
+                <button class="explore-filter" type="button" data-filter="cultura">Cultura</button>
+              </div>
+            </header>
+
+            <section class="explore-grid" id="exploreCards" aria-label="Resultados de exploración"></section>
           </div>
         </section>
-      </div>
-    </div>
-  </main>
 
-</div>
-</body>
+        <div class="backdrop" id="backdrop" hidden></div>
+      </main>
+    </div>
+
+    <div
+      data-tourist-chat-widget
+      data-component-path="../../../components/guide-chat-widget.html"
+    ></div>
+    <script src="../../../scripts/components/tourist-shell.js"></script>
+  </body>
 </html>
+

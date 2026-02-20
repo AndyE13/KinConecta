@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --kc-color-primary: #ff5b04;
+  --kc-color-primary-hover: #e65100;
+  --kc-color-accent: #f29f05;
+  --kc-color-ink: #16232a;
+  --kc-color-sea: #075056;
+
+  --kc-page-bg: #e4eef0;
+  --kc-page-bg-soft: #f3f8f9;
+  --kc-surface: #ffffff;
+  --kc-surface-muted: #f6fbfc;
+
+  --kc-text: #16232a;
+  --kc-text-muted: #55656e;
+  --kc-border: #d6e1e6;
+
+  --kc-shadow-soft: 0 10px 24px rgba(22, 35, 42, 0.1);
+  --kc-shadow-card: 0 18px 40px rgba(22, 35, 42, 0.12);
+
+  --kc-radius-xl: 28px;
+  --kc-radius-lg: 20px;
+  --kc-radius-md: 14px;
+  --kc-radius-sm: 10px;
+
+  --kc-font-family: "Spline Sans", "Noto Sans", system-ui, sans-serif;
+}

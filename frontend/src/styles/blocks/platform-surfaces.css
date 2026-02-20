@@ -1,0 +1,112 @@
+.platform-page :is(
+  .topbar,
+  .header,
+  .main-header,
+  .conversation-header,
+  .chat-list,
+  .conversation,
+  .panel,
+  .stat-card,
+  .trip-card,
+  .card,
+  .faq-card,
+  .review-card,
+  .help__hero,
+  .legal__modal,
+  .modal-content,
+  .profile-card,
+  .main-card,
+  .info-card,
+  .settings-menu,
+  .card-languages,
+  .result-card,
+  .create-panel,
+  .section-container,
+  .trip-card-featured,
+  .guide-card,
+  .saved-item,
+  .user-pill,
+  .sidebar-profile,
+  .profile-main-card
+) {
+  background: var(--kc-surface);
+  border: 1px solid var(--kc-border);
+  border-radius: var(--kc-radius-lg);
+  box-shadow: var(--kc-shadow-soft);
+}
+
+.platform-page :is(.content-wrapper, .page-wrapper, .privacy, .content, .content-area, .main-content) {
+  background: transparent;
+}
+
+.platform-page :is(.btn, button, .btn-primary, .btn-save, .btn-contact, .btn-reply, .btn-orange, .primary-btn, .secondary-btn) {
+  border-radius: 999px;
+}
+
+.platform-page :is(input, textarea, select, .search-input, .search__input, .navbar-search__field) {
+  border-radius: var(--kc-radius-md);
+  border: 1px solid var(--kc-border);
+  background: var(--kc-surface);
+}
+
+.platform-page :is(input, textarea, select):focus {
+  outline: none;
+  border-color: rgba(255, 91, 4, 0.45);
+  box-shadow: 0 0 0 4px rgba(255, 91, 4, 0.14);
+}
+
+.platform-page :is(.topbar, .header, .main-header, .conversation-header) {
+  margin: 10px;
+}
+
+@media (max-width: 900px) {
+  .platform-page :is(.topbar, .header, .main-header, .conversation-header) {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+.platform-page .guide-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 110px;
+  width: 100%;
+  padding: 20px 16px;
+  border: 1px dashed rgba(7, 80, 86, 0.24);
+  border-radius: var(--kc-radius-md);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--kc-text-muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.platform-page .guide-loading--compact {
+  min-height: 72px;
+  padding: 14px 12px;
+}
+
+.platform-page .guide-loading--table {
+  border-style: solid;
+  margin: 4px 0;
+}
+
+.platform-page .guide-loading--grid-full {
+  grid-column: 1 / -1;
+}
+
+.platform-page .guide-loading__spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 2px solid rgba(7, 80, 86, 0.2);
+  border-top-color: var(--kc-color-primary);
+  animation: guide-loading-spin 0.75s linear infinite;
+}
+
+@keyframes guide-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,107 +1,116 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kin Conecta - Inicio</title>
-    <link rel="stylesheet" href="trips.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kin Conecta - Mis viajes</title>
 
-    <div class="app-layout">
-        <aside class="sidebar">
-            <div class="sidebar__brand">
-                <div class="logo-circle"></div>
-                <span class="brand-name">Kin Conecta</span>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../../styles/pages/platform.css" />
+    <link rel="stylesheet" href="../../../styles/pages/tourist/dashboard-trips.css" />
+
+    <script defer src="../../../scripts/api/http-client.js"></script>
+    <script defer src="../../../scripts/api/tourist-api-services.js"></script>
+    <script defer src="../../../scripts/pages/tourist/dashboard-trips.js"></script>
+  </head>
+
+  <body class="app platform-page role-tourist">
+    <div class="layout">
+      <div
+        data-tourist-sidebar
+        data-component-path="../../../components/tourist-sidebar.html"
+        data-pages-prefix="../../"
+        data-assets-prefix="../../../"
+        data-tourist-active="trips"
+      ></div>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar__left">
+            <button
+              class="topbar__menu-btn"
+              id="btnSidebar"
+              type="button"
+              aria-controls="sidebar"
+              aria-expanded="false"
+            >
+              <span class="material-symbols-outlined">menu</span>
+              <span class="u-sr-only">Abrir menú</span>
+            </button>
+            <div class="topbar__heading">
+              <h2 class="topbar__title">Mis viajes</h2>
+              <p class="topbar__subtitle">Gestiona reservas, fechas y cambios de tus viajes.</p>
             </div>
+          </div>
 
-            <nav class="sidebar__nav">
-                <a href="#" class="nav-item nav-item--active">
-                    <span class="material-symbols-outlined">home</span>
-                    <span class="nav-text">Inicio</span>
-                </a>
-                <a href="#" class="nav-item">
-                    <span class="material-symbols-outlined">search</span>
-                    <span class="nav-text">Explorar</span>
-                </a>
-                <a href="#" class="nav-item">
-                    <span class="material-symbols-outlined">favorite</span>
-                    <span class="nav-text">Favoritos</span>
-                </a>
-                <a href="#" class="nav-item">
-                    <span class="material-symbols-outlined">auto_stories</span>
-                    <span class="nav-text">Mis viajes</span>
-                    <span class="badge">2</span>
-                </a>
-                <a href="#" class="nav-item">
-                    <span class="material-symbols-outlined">chat_bubble</span>
-                    <span class="nav-text">Mensajes</span>
-                    <span class="badge">3</span>
-                </a>
-                <a href="#" class="nav-item">
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="nav-text">Reseñas</span>
-                </a>
-            </nav>
-        </aside>
+          <div class="topbar__actions">
+            <button class="topbar__notif" id="btnNotif" type="button" aria-label="Notificaciones">
+              <span class="material-symbols-outlined">notifications</span>
+              <span class="topbar__notif-dot" aria-hidden="true"></span>
+            </button>
+          </div>
+        </header>
 
-        <main class="main-content">
-            <header class="main-header">
-                <div class="header-right">
-                    <button class="btn-become-guide">
-                        <span class="material-symbols-outlined">person_add</span> Become a Guide
-                    </button>
-                    <span class="material-symbols-outlined icon-btn">notifications</span>
-                    <div class="msg-container">
-                        <span class="material-symbols-outlined icon-btn">chat_bubble</span>
-                        <span class="msg-badge">3</span>
-                    </div>
-                    <div class="user-pill">
-                        <div class="avatar">A</div>
-                        <div class="user-meta">
-                            <span class="username">aldo</span>
-                            <span class="role">Traveler</span>
-                        </div>
-                        <span class="material-symbols-outlined">expand_more</span>
-                    </div>
-                </div>
+        <section class="tourist-page">
+          <div class="tourist-page__container trips-page">
+            <header class="tourist-section__header">
+              <div>
+                <h1 class="tourist-section__title">Próximo viaje</h1>
+                <p class="tourist-section__subtitle">Resumen rápido de tu reserva más cercana.</p>
+              </div>
             </header>
 
-            <div class="page-content">
-                
-                <section class="welcome-banner">
-                    <div class="welcome-text">
-                        <p class="welcome-label">Bienvenido de nuevo</p>
-                        <h1>¡Hola, aldo! 👋</h1>
-                        <p>¿Listo para tu siguiente aventura?</p>
-                    </div>
-                </section>
+            <article class="trip-featured">
+              <div class="trip-featured__image" id="featuredTripImage"></div>
+              <div class="trip-featured__body">
+                <h3 class="trip-featured__title" id="featuredTripTitle">Historic Center Photo Tour</h3>
+                <p class="trip-featured__meta">
+                  <span class="material-symbols-outlined">location_on</span>
+                  <span id="featuredTripLocation">Ciudad de México</span>
+                </p>
+                <p class="trip-featured__meta">
+                  <span class="material-symbols-outlined">calendar_month</span>
+                  <span id="featuredTripDate">15 Feb 2026</span>
+                </p>
+                <p class="trip-featured__guide">
+                  <img id="featuredTripGuideAvatar" src="https://i.pravatar.cc/100?u=luis" alt="Avatar de guía" />
+                  <span id="featuredTripGuideName">Luis Martínez</span>
+                </p>
+                <div class="trip-featured__actions">
+                  <button class="btn btn--primary" id="btnFeaturedDetails" type="button">Ver detalles</button>
+                  <button class="btn btn--secondary" id="btnFeaturedChat" type="button">Contactar guía</button>
+                </div>
+              </div>
+            </article>
 
-                <section class="section-container">
-                    <h2 class="section-title">Tu próximo viaje</h2>
-                    <div class="trip-card-featured">
-                        <img src="https://images.unsplash.com/photo-1585464231875-d9ef1f5ad396?auto=format&fit=crop&w=800" alt="CDMX">
-                        <div class="trip-info">
-                            <h3>Historic Center Photo Tour</h3>
-                            <p class="location"><span class="material-symbols-outlined">location_on</span> Mexico City</p>
-                            <p class="date"><span class="material-symbols-outlined">calendar_today</span> Feb 15, 2026</p>
-                            <div class="guide-mini-pill">
-                                <img src="https://i.pravatar.cc/100?u=luis" alt="Guía">
-                                <div>
-                                    <span class="guide-tag">Your guide</span>
-                                    <span class="guide-name">Luis Martinez</span>
-                                </div>
-                            </div>
-                            <button class="btn-primary">Ver detalles</button>
-                        </div>
-                    </div>
-                </section>
+            <section>
+              <div class="tourist-section__header">
+                <h2 class="tourist-section__title">Historial de viajes</h2>
+              </div>
+              <div class="trip-list" id="tripsList"></div>
+            </section>
+          </div>
+        </section>
 
-            </div>
-        </main>
+        <div class="backdrop" id="backdrop" hidden></div>
+      </main>
     </div>
 
-</body>
+    <div
+      data-tourist-chat-widget
+      data-component-path="../../../components/guide-chat-widget.html"
+    ></div>
+    <script src="../../../scripts/components/tourist-shell.js"></script>
+  </body>
 </html>
+

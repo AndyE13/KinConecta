@@ -1,0 +1,64 @@
+.platform-page {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--kc-text);
+  --primary: var(--kc-color-primary);
+  --primary-hover: var(--kc-color-primary-hover);
+  --secondary: var(--kc-color-sea);
+  --background-light: var(--kc-page-bg-soft);
+  --background-dark: var(--kc-color-ink);
+  --bg-light: var(--kc-page-bg-soft);
+  --white: var(--kc-surface);
+  --surface: var(--kc-surface);
+  --text-dark: var(--kc-text);
+  --text-main: var(--kc-text);
+  --text-muted: var(--kc-text-muted);
+  --border-light: var(--kc-border);
+  --border-dark: #e8eff2;
+  --kin-orange: var(--kc-color-accent);
+  --kin-orange-dark: var(--kc-color-primary);
+  --kin-hover: rgba(255, 91, 4, 0.08);
+  background:
+    radial-gradient(circle at 8% 5%, #f9fcfd 0%, transparent 30%),
+    radial-gradient(circle at 94% 0%, #edf5f7 0%, transparent 32%),
+    var(--kc-page-bg);
+  font-family: var(--kc-font-family);
+}
+
+.platform-page *:not(.material-symbols-outlined) {
+  font-family: inherit;
+}
+
+.platform-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0));
+}
+
+.platform-page .material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  display: inline-block;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 500,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+.platform-page :is(.layout, .app-layout, .app, .app-container, .app__container, .container) {
+  min-height: 100vh;
+}
+
+.platform-page :is(.main, .main-content, .main-view, .content, .content-area, .page-content, .content-wrapper) {
+  background: transparent;
+}
+
+.platform-page a {
+  color: inherit;
+}

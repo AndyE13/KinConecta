@@ -1,0 +1,76 @@
+<div class="language-modal" data-language-modal aria-hidden="true">
+  <div class="language-modal__backdrop" data-language-close></div>
+  <section
+    class="language-modal__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="language-modal-title"
+  >
+    <button class="language-modal__close" type="button" aria-label="Cerrar" data-language-close>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+
+    <div class="language-pref">
+      <div class="language-pref__header">
+        <div class="language-pref__icon">
+          <span class="material-symbols-outlined">language</span>
+        </div>
+        <h2 class="language-pref__title" id="language-modal-title">Idioma de preferencia</h2>
+        <p class="language-pref__subtitle">
+          Selecciona el idioma en el que deseas usar la plataforma.
+        </p>
+      </div>
+
+      <form class="language-pref__form" data-language-form>
+        <div class="language-pref__search">
+          <span class="material-symbols-outlined language-pref__search-icon">search</span>
+          <input
+            class="language-pref__search-input"
+            type="text"
+            data-language-search
+            placeholder="Buscar idioma"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="language-pref__list" data-language-list>
+          <label class="language-option" data-language-option>
+            <div class="language-option__info">
+              <span class="language-option__code">ES</span>
+              <span class="language-option__name">Espa&ntilde;ol</span>
+            </div>
+            <input class="language-option__radio" type="radio" name="language" value="es" checked />
+          </label>
+
+          <label class="language-option" data-language-option>
+            <div class="language-option__info">
+              <span class="language-option__code">EN</span>
+              <span class="language-option__name">English</span>
+            </div>
+            <input class="language-option__radio" type="radio" name="language" value="en" />
+          </label>
+
+          <label class="language-option" data-language-option>
+            <div class="language-option__info">
+              <span class="language-option__code">FR</span>
+              <span class="language-option__name">Fran&ccedil;ais</span>
+            </div>
+            <input class="language-option__radio" type="radio" name="language" value="fr" />
+          </label>
+
+          <label class="language-option" data-language-option>
+            <div class="language-option__info">
+              <span class="language-option__code">PT</span>
+              <span class="language-option__name">Portugu&ecirc;s</span>
+            </div>
+            <input class="language-option__radio" type="radio" name="language" value="pt" />
+          </label>
+        </div>
+
+        <p class="language-pref__feedback" data-language-feedback aria-live="polite"></p>
+
+        <button class="language-pref__submit" type="submit">Guardar idioma</button>
+      </form>
+    </div>
+  </section>
+</div>

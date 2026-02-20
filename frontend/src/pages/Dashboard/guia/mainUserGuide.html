@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" class="theme theme--light">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,104 +16,24 @@
       rel="stylesheet"
     />
 
-    <!-- Base compartida (la que ya corregimos) -->
-    <link rel="stylesheet" href="./styles.css" />
-    <!-- Estilos específicos del dashboard -->
-    <link rel="stylesheet" href="./mainUserGuide.css" />
+    <link rel="stylesheet" href="../../../styles/pages/platform.css" />
+    <link rel="stylesheet" href="../../../styles/pages/guide/dashboard-home.css" />
 
-    <script defer src="./mainUserGuide.js"></script>
-  </head>
+    <script defer src="../../../scripts/api/http-client.js"></script>
+    <script defer src="../../../scripts/api/guide-api-services.js"></script>
+    <script defer src="../../../scripts/pages/guide/dashboard-home.js"></script>
+</head>
 
-  <body class="app">
+  <body class="app platform-page role-guide">
     <div class="layout">
       <!-- SIDEBAR (reutiliza el mismo layout/estilos) -->
-      <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
-        <div class="sidebar__brand">
-          <div class="sidebar__brand-icon" aria-hidden="true">
-            <span class="material-symbols-outlined sidebar__icon"
-              >travel_explore</span
-            >
-          </div>
-          <div class="sidebar__brand-text">
-            <h1 class="sidebar__title">Kin Conecta</h1>
-            <p class="sidebar__subtitle">Portal de Guías</p>
-          </div>
-        </div>
-
-        <nav class="sidebar__nav">
-          <a class="sidebar__link sidebar__link--active" href="#">
-            <span class="material-symbols-outlined sidebar__icon"
-              >dashboard</span
-            >
-            <span class="sidebar__link-text">Inicio</span>
-          </a>
-
-          <a class="sidebar__link" href="#">
-            <span class="material-symbols-outlined sidebar__icon">map</span>
-            <span class="sidebar__link-text">Mis recorridos</span>
-          </a>
-
-          <a class="sidebar__link" href="#">
-            <span class="material-symbols-outlined sidebar__icon"
-              >calendar_month</span
-            >
-            <span class="sidebar__link-text">Calendario</span>
-          </a>
-
-          <a class="sidebar__link" href="#">
-            <span class="material-symbols-outlined sidebar__icon"
-              >chat_bubble</span
-            >
-            <span class="sidebar__link-text">Mensajes</span>
-            <span
-              class="sidebar__badge"
-              id="msgBadge"
-              aria-label="3 mensajes sin leer"
-              >3</span
-            >
-          </a>
-
-          <a class="sidebar__link" href="#">
-            <span class="material-symbols-outlined sidebar__icon">star</span>
-            <span class="sidebar__link-text">Reseñas</span>
-          </a>
-
-          <a class="sidebar__link" href="#">
-            <span class="material-symbols-outlined sidebar__icon"
-              >payments</span
-            >
-            <span class="sidebar__link-text">Ingresos</span>
-          </a>
-        </nav>
-
-        <div class="sidebar__footer">
-          <a class="sidebar__link sidebar__link--footer" href="#">
-            <span class="material-symbols-outlined sidebar__icon"
-              >settings</span
-            >
-            <span class="sidebar__link-text">Ajustes</span>
-          </a>
-
-          <div class="sidebar__user">
-            <div
-              class="sidebar__avatar"
-              role="img"
-              aria-label="Avatar de Carlos Rivera"
-              style="
-                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCLNn56x8nKLiIkJ2Oimg0m7Jj13PDy_dn1S-8Br7qaIZu_jW_FqRxokHLeLv8EK78MrsvmlTIM-PPBduPFiWrwUVoEWW21D2F9ZZosGcpnmGinUtXKPFXfGaIO1S9wZ4neppeugzOPPvzcfZ3dTGnO2Hpztor9_9AUUH4Knx5ObQAUFz77Emu-nr3TPx54oBaJu6ruA6XhZI1U2N5LrhmXT6RGXNcXz81Bwm2B6eo0hiKXX0rv7SnDK3-ghIvcMqcom-wjncjYEAka&quot;);
-              "
-            ></div>
-            <div class="sidebar__user-meta">
-              <span class="sidebar__user-name" id="userName"
-                >Carlos Rivera</span
-              >
-              <button class="sidebar__logout" id="btnLogout" type="button">
-                Cerrar sesión
-              </button>
-            </div>
-          </div>
-        </div>
-      </aside>
+      <div
+        data-guide-sidebar
+        data-component-path="../../../components/guide-sidebar.html"
+        data-pages-prefix="../../"
+        data-assets-prefix="../../../"
+        data-guide-active="home"
+      ></div>
 
       <!-- MAIN -->
       <main class="main">
@@ -140,30 +60,6 @@
           </div>
 
           <div class="topbar__actions">
-            <!-- Estado (Disponible / No disponible) -->
-            <div
-              class="status-pill"
-              role="group"
-              aria-label="Estado de disponibilidad"
-            >
-              <span class="status-pill__label">Estado:</span>
-
-              <label class="status-toggle" for="statusToggle">
-                <input
-                  id="statusToggle"
-                  class="status-toggle__input"
-                  type="checkbox"
-                  checked
-                />
-                <span class="status-toggle__track" aria-hidden="true"></span>
-                <span class="status-toggle__text" id="statusText"
-                  >Disponible</span
-                >
-              </label>
-            </div>
-
-            <span class="topbar__divider" aria-hidden="true"></span>
-
             <!-- Verificación -->
             <div class="badge badge--verified" aria-label="Guía verificado">
               <span class="material-symbols-outlined badge__icon"
@@ -181,16 +77,6 @@
             >
               <span class="material-symbols-outlined">notifications</span>
               <span class="topbar__notif-dot" aria-hidden="true"></span>
-            </button>
-
-            <!-- Tema -->
-            <button
-              class="topbar__theme"
-              id="btnTheme"
-              type="button"
-              aria-label="Cambiar tema"
-            >
-              <span class="material-symbols-outlined">dark_mode</span>
             </button>
           </div>
         </header>
@@ -318,79 +204,15 @@
                     aria-label="Lista de recorridos populares"
                   ></div>
                 </section>
-
-                <!-- Mini calendario disponibilidad -->
-                <section class="panel panel--mini-calendar">
-                  <header class="panel__header panel__header--compact">
-                    <h3 class="panel__title">Disponibilidad</h3>
-
-                    <div class="mini-cal__nav">
-                      <button
-                        class="icon-btn icon-btn--sm"
-                        id="miniPrev"
-                        type="button"
-                        aria-label="Mes anterior"
-                      >
-                        <span class="material-symbols-outlined"
-                          >chevron_left</span
-                        >
-                      </button>
-                      <span class="mini-cal__label" id="miniLabel"
-                        >Octubre 2023</span
-                      >
-                      <button
-                        class="icon-btn icon-btn--sm"
-                        id="miniNext"
-                        type="button"
-                        aria-label="Mes siguiente"
-                      >
-                        <span class="material-symbols-outlined"
-                          >chevron_right</span
-                        >
-                      </button>
-                    </div>
+                <section class="tours tours--secondary">
+                  <header class="tours__header">
+                    <h3 class="tours__title">Recorridos para destacar hoy</h3>
                   </header>
-
-                  <div class="panel__body">
-                    <div class="mini-cal" aria-label="Calendario pequeño">
-                      <div class="mini-cal__dow" id="miniDow"></div>
-                      <div class="mini-cal__grid" id="miniGrid"></div>
-                    </div>
-
-                    <div class="mini-cal__actions">
-                      <button
-                        class="btn btn--secondary btn--full"
-                        id="btnManageAvailability"
-                        type="button"
-                      >
-                        Administrar disponibilidad
-                      </button>
-
-                      <div class="mini-cal__legend" aria-label="Leyenda">
-                        <div class="mini-cal__legend-item">
-                          <span
-                            class="mini-cal__dot mini-cal__dot--today"
-                            aria-hidden="true"
-                          ></span>
-                          <span>Hoy</span>
-                        </div>
-                        <div class="mini-cal__legend-item">
-                          <span
-                            class="mini-cal__dot mini-cal__dot--booked"
-                            aria-hidden="true"
-                          ></span>
-                          <span>Reservado</span>
-                        </div>
-                        <div class="mini-cal__legend-item">
-                          <span
-                            class="mini-cal__dot mini-cal__dot--blocked"
-                            aria-hidden="true"
-                          ></span>
-                          <span>Bloqueado</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <div
+                    class="tour-grid tour-grid--compact"
+                    id="tourGridSecondary"
+                    aria-label="Lista de recorridos para destacar"
+                  ></div>
                 </section>
               </div>
             </div>
@@ -401,5 +223,11 @@
         </div>
       </main>
     </div>
+    <div
+      data-guide-chat-widget
+      data-component-path="../../../components/guide-chat-widget.html"
+    ></div>
+    <script src="../../../scripts/components/guide-shell.js"></script>
   </body>
 </html>
+

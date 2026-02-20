@@ -1,0 +1,161 @@
+@import url("./dashboard-shell.css");
+
+.trips-page {
+  display: grid;
+  gap: 18px;
+}
+
+.trip-featured {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) 1fr;
+  border: 1px solid var(--tourist-border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--kc-shadow-soft);
+}
+
+@media (max-width: 880px) {
+  .trip-featured {
+    grid-template-columns: 1fr;
+  }
+}
+
+.trip-featured__image {
+  min-height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+.trip-featured__body {
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.trip-featured__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--tourist-sea);
+}
+
+.trip-featured__meta {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--tourist-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.trip-featured__guide {
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--tourist-text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.trip-featured__guide img {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.trip-featured__actions {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.trip-featured__actions .btn {
+  border-radius: 999px;
+}
+
+.trip-list {
+  display: grid;
+  gap: 12px;
+}
+
+.trip-item {
+  background: #fff;
+  border: 1px solid var(--tourist-border);
+  border-radius: 14px;
+  box-shadow: var(--kc-shadow-soft);
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.trip-item__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.trip-item__title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--tourist-sea);
+}
+
+.trip-item__status {
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.14);
+  color: #166534;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 5px 9px;
+}
+
+.trip-item__status.is-pending {
+  background: rgba(234, 179, 8, 0.18);
+  color: #9a6405;
+}
+
+.trip-item__status.is-cancelled {
+  background: rgba(239, 68, 68, 0.16);
+  color: #991b1b;
+}
+
+.trip-item__meta {
+  margin: 0;
+  color: var(--tourist-muted);
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.trip-item__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.trip-item__actions {
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.trip-item__actions button {
+  border: 1px solid rgba(255, 91, 4, 0.25);
+  background: rgba(255, 91, 4, 0.08);
+  color: var(--tourist-primary);
+  border-radius: 999px;
+  padding: 6px 11px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}

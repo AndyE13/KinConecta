@@ -43,8 +43,8 @@
 
         <!-- Derecha: acciones -->
         <div class="header__actions">
-          <a href="./login/login.html" class="header__link">Iniciar Sesión</a>
-          <a href="./login/register.html" class="btn btn--primary btn--ripple">Registrarse</a>
+          <a href="./login/login.html" class="header__link" data-auth-open="login">Iniciar Sesión</a>
+          <a href="./login/register.html" class="btn btn--primary btn--ripple" data-auth-open="register">Registrarse</a>
         </div>
 
         <!-- Mobile menu button -->
@@ -68,8 +68,8 @@
           <a class="mobile-menu__link" href="aboutus.html#contacto">Contacto</a>
 
           <div class="mobile-menu__actions">
-            <a href="./login/login.html" class="btn btn--ghost btn--ripple">Iniciar Sesión</a>
-            <a href="./login/register.html" class="btn btn--primary btn--large btn--ripple">Registrarse</a>
+            <a href="./login/login.html" class="btn btn--ghost btn--ripple" data-auth-open="login">Iniciar Sesión</a>
+            <a href="./login/register.html" class="btn btn--primary btn--large btn--ripple" data-auth-open="register">Registrarse</a>
           </div>
         </nav>
       </div>
@@ -1397,7 +1397,16 @@
       </div>
     </footer>
 
-    <!-- IMPORTANTE: antes decía app.js -->
+    <div
+      data-auth-modal-mount
+      data-login-path="./login/login.html"
+      data-register-path="./login/register.html"
+    ></div>
+
+    <script src="../scripts/api/http-client.js"></script>
+    <script src="../scripts/api/auth-api-services.js"></script>
+    <script src="../scripts/components/onboarding-modal.js"></script>
+    <script src="../scripts/components/auth-modal.js"></script>
     <script src="../scripts/nosotros.js"></script>
   </body>
 </html>

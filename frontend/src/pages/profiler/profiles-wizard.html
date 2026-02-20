@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario de perfil | Kin Conecta</title>
+  <link rel="stylesheet" href="../../styles/pages/profiler/profile-onboarding.css" />
+</head>
+<body class="role-tourist">
+  <div class="overlay">
+    <section class="card" aria-live="polite">
+
+        <button class="close-btn" id="btnClose" aria-label="Cerrar">&times;</button>
+
+        <div class="stepper" id="stepper"></div>
+
+        <div class="card-head">
+          <h2 id="formTitle">Completa tu perfil</h2>
+          <p id="formSubtitle">Ay&uacute;danos a personalizar tu experiencia</p>
+        </div>
+
+        <form id="profileForm" autocomplete="off">
+          <div id="stepsContainer"></div>
+
+          <div class="footer">
+            <button type="button" class="btn ghost" id="btnBack">Atr&aacute;s</button>
+            <div class="footer-right">
+              <button type="button" class="btn ghost" id="btnSave">Guardar</button>
+              <button type="button" class="btn primary" id="btnNext">Siguiente</button>
+            </div>
+          </div>
+        </form>
+    </section>
+
+    <section class="result" id="resultPanel" aria-hidden="true">
+      <div class="result-card">
+        <div class="result-head">
+          <h3>Perfil listo</h3>
+          <button class="close-btn" id="btnCloseResult" aria-label="Cerrar">&times;</button>
+        </div>
+        <p class="muted">Este JSON es el payload para tu API de registro de perfil.</p>
+        <pre id="resultJson"></pre>
+        <div class="result-actions">
+          <button class="btn ghost" id="btnCopy">Copiar JSON</button>
+          <button class="btn primary" id="btnRestart">Editar respuestas</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="../../scripts/pages/profiler/ProfilesController.js"></script>
+  <script src="../../scripts/pages/profiler/storage.js"></script>
+  <script src="../../scripts/pages/profiler/profiles.js"></script>
+  <script src="../../scripts/pages/profiler/roleSync.js"></script>
+</body>
+</html>
+
