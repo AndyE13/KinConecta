@@ -20,5 +20,7 @@
 @import url("./blocks/select.css");
 @import url("./blocks/toast.css");
 @import url("./blocks/footer.css");
+@import url("./blocks/auth-modal.css");
+@import url("./blocks/onboarding-modal.css");
 
 @import url("./base/a11y.css");

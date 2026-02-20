@@ -1,0 +1,58 @@
+.onboarding-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 180ms ease, visibility 180ms ease;
+}
+
+.onboarding-modal--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.onboarding-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.64);
+  backdrop-filter: blur(3px);
+}
+
+.onboarding-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: auto;
+  height: auto;
+  border-radius: 1.5rem;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.onboarding-modal__frame {
+  width: min(760px, 95vw);
+  height: min(86vh, 860px);
+  border: 0;
+  background: transparent;
+  border-radius: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .onboarding-modal {
+    padding: 12px;
+  }
+
+  .onboarding-modal__panel {
+    width: auto;
+    height: auto;
+  }
+
+  .onboarding-modal__frame {
+    width: min(760px, 95vw);
+  }
+}

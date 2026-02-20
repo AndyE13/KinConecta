@@ -1,0 +1,128 @@
+@import url("./dashboard-shell.css");
+
+.reviews-page {
+  display: grid;
+  gap: 18px;
+}
+
+.reviews-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 1024px) {
+  .reviews-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .reviews-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reviews-stat {
+  background: #fff;
+  border: 1px solid var(--tourist-border);
+  border-radius: 14px;
+  box-shadow: var(--kc-shadow-soft);
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.reviews-stat__label {
+  color: var(--tourist-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.reviews-stat__value {
+  color: var(--tourist-sea);
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.reviews-list {
+  display: grid;
+  gap: 12px;
+}
+
+.review-card {
+  background: #fff;
+  border: 1px solid var(--tourist-border);
+  border-radius: 14px;
+  box-shadow: var(--kc-shadow-soft);
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.review-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.reviewer {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reviewer img {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.reviewer h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--tourist-sea);
+}
+
+.reviewer p {
+  margin: 2px 0 0;
+  color: var(--tourist-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.review-stars {
+  color: #f7a600;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.review-stars .material-symbols-outlined {
+  font-variation-settings: "FILL" 1;
+}
+
+.review-card__body {
+  margin: 0;
+  color: #304450;
+  font-size: 14px;
+  line-height: 1.54;
+}
+
+.review-card__footer {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: var(--tourist-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.review-card__footer span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}

@@ -50,12 +50,12 @@
         </a>
 
         <div class="header__actions">
-          <a href="./frontend/src/pages/login/login.html" class="header__link"
+          <a href="./frontend/src/pages/login/login.html" class="header__link" data-auth-open="login"
             >Iniciar Sesión</a
           >
           <a
             href="./frontend/src/pages/login/register.html"
-            class="btn btn--primary btn--ripple"
+            class="btn btn--primary btn--ripple" data-auth-open="register"
             >Registrarse</a
           >
         </div>
@@ -89,12 +89,12 @@
           <div class="mobile-menu__actions">
             <a
               href="./frontend/src/pages/login/login.html"
-              class="btn btn--ghost btn--ripple"
+              class="btn btn--ghost btn--ripple" data-auth-open="login"
               >Iniciar Sesión</a
             >
             <a
               href="./frontend/src/pages/login/register.html"
-              class="btn btn--primary btn--large btn--ripple"
+              class="btn btn--primary btn--large btn--ripple" data-auth-open="register"
               >Registrarme</a
             >
           </div>
@@ -866,6 +866,16 @@
       </div>
     </footer>
 
+    <div
+      data-auth-modal-mount
+      data-login-path="./frontend/src/pages/login/login.html"
+      data-register-path="./frontend/src/pages/login/register.html"
+    ></div>
+
+    <script src="./frontend/src/scripts/api/http-client.js"></script>
+    <script src="./frontend/src/scripts/api/auth-api-services.js"></script>
+    <script src="./frontend/src/scripts/components/onboarding-modal.js"></script>
+    <script src="./frontend/src/scripts/components/auth-modal.js"></script>
     <script src="./frontend/src/scripts/landing.js"></script>
   </body>
 </html>

@@ -1,0 +1,457 @@
+/* ============================
+   DASHBOARD (Guía) - estilos específicos
+   Requiere styles.css (base)
+   ============================ */
+@import url("./dashboard-calendar.css");
+.dashboard {
+  flex: 1;
+  overflow: auto;
+  padding: 24px;
+  min-width: 0;
+}
+
+.dashboard__container {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+/* ====== BADGE ====== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.badge__icon {
+  font-size: 18px;
+}
+
+.badge--verified {
+  background: rgba(255, 91, 4, 0.12);
+  color: var(--color-primary);
+}
+
+/* ====== STATS ====== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 10px;
+}
+
+.stat-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.stat-card__icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.stat-card--rating .stat-card__icon-wrap {
+  background: rgba(234, 179, 8, 0.18);
+  color: #a16207;
+}
+
+.stat-card--tours .stat-card__icon-wrap {
+  background: rgba(59, 130, 246, 0.18);
+  color: #1d4ed8;
+}
+
+.stat-card--income .stat-card__icon-wrap {
+  background: rgba(34, 197, 94, 0.18);
+  color: #166534;
+}
+
+.stat-card__delta {
+  font-size: 11px;
+  font-weight: 900;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #166534;
+  white-space: nowrap;
+}
+
+.stat-card__label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.stat-card__value {
+  margin: 6px 0 0;
+  font-size: 26px;
+  font-weight: 1000;
+}
+
+.stat-card__value-muted {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.35);
+  font-weight: 700;
+}
+
+/* ====== PANELS ====== */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+}
+
+.dashboard-grid--bottom {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid,
+  .dashboard-grid--bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel__header {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.panel__header--compact {
+  padding: 14px 16px;
+}
+
+.panel__title {
+  margin: 0;
+  font-weight: 1000;
+  font-size: 16px;
+}
+
+.panel__subtitle {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.panel__action {
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.panel__action:hover {
+  text-decoration: underline;
+}
+
+.panel__body {
+  padding: 16px;
+}
+
+.panel__body--stretch {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ====== SELECT ====== */
+.select__control {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid transparent;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* ====== SCHEDULE ====== */
+.schedule {
+  display: grid;
+  gap: 12px;
+}
+
+.schedule-item {
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.schedule-item__dot {
+  width: 10px;
+  height: 10px;
+  margin-top: 7px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.schedule-item__dot--active {
+  background: var(--color-primary);
+  box-shadow: 0 0 0 6px rgba(255, 91, 4, 0.14);
+}
+
+.schedule-item__dot--upcoming {
+  background: var(--color-secondary);
+}
+
+.schedule-item__time {
+  font-size: 12px;
+  font-weight: 1000;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 6px;
+}
+
+.schedule-item__card {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 12px;
+  background: rgba(255, 91, 4, 0.05);
+}
+
+.schedule-item__card--plain {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.schedule-item__title {
+  margin: 0;
+  font-weight: 1000;
+  font-size: 14px;
+}
+
+.schedule-item__meta {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 12px;
+  align-items: center;
+}
+
+.schedule-item__meta .material-symbols-outlined {
+  font-size: 16px;
+}
+
+/* ====== BAR CHART ====== */
+.bar-chart {
+  flex: 1;
+  min-height: 220px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.bar {
+  flex: 1;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.bar__col {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  background: rgba(255, 91, 4, 0.12);
+  position: relative;
+  transition:
+    transform 0.12s ease,
+    background 0.12s ease;
+  outline: none;
+}
+
+.bar__col:hover,
+.bar__col:focus {
+  transform: translateY(-2px);
+  background: rgba(255, 91, 4, 0.18);
+}
+
+.bar__col--highlight {
+  background: var(--color-primary);
+  box-shadow: 0 10px 24px rgba(255, 91, 4, 0.18);
+}
+
+.bar__label {
+  font-size: 12px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.bar__tooltip {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease;
+}
+
+.bar__col:hover .bar__tooltip,
+.bar__col:focus .bar__tooltip {
+  opacity: 1;
+}
+
+.bar-chart__hint {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* ====== TOURS ====== */
+.tours__header {
+  margin-bottom: 10px;
+}
+
+.tours__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 1000;
+}
+
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.tour-grid--compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 1100px) {
+  .tour-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .tour-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tour-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    transform 0.08s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 91, 4, 0.35);
+}
+
+.tour-card__media {
+  height: 130px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.tour-card__rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  font-weight: 1000;
+  font-size: 12px;
+}
+
+.tour-card__rating .material-symbols-outlined {
+  font-size: 16px;
+  color: #eab308;
+}
+
+.tour-card__body {
+  padding: 12px;
+}
+
+.tour-card__title {
+  margin: 0;
+  font-weight: 1000;
+  font-size: 14px;
+}
+
+.tour-card__meta {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.tour-card__meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tour-card__meta-item .material-symbols-outlined {
+  font-size: 18px;
+}
+

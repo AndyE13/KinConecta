@@ -683,6 +683,39 @@
 
 }
 
+@media (max-width: 1220px) and (min-width: 521px) {
+  .landing-hero__frame {
+    min-height: 560px;
+  }
+
+  .landing-hero__overlay {
+    max-width: 76%;
+    padding: 2rem;
+  }
+
+  .landing-hero__title {
+    font-size: 2.45rem;
+  }
+
+  .landing-hero__text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .landing-hero__actions {
+    row-gap: 0.65rem;
+  }
+
+  .landing-search {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin: 0.65rem auto 0;
+    width: min(760px, 96%);
+  }
+}
+
 .match-flow {
   display: grid;
   gap: 0.9rem;
